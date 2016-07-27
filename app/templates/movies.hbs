@@ -1,0 +1,17 @@
+{{outlet}}
+
+<h1>List of movies should be here, {{model.inventory}}</h1>
+
+
+<ul>
+  {{#each model as |movie|}}
+    <li>{{movie.title}}</li>
+  {{/each}}
+</ul>
+
+
+
+<form {{action "offSet" pageNumber on="submit"}}>
+{{input value=newColor}}
+  <button type="submit">Submit</button>
+</form>

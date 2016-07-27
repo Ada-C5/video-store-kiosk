@@ -2,9 +2,18 @@
 
 <ul>
   {{#each model as |movie|}}
-    <li>{{movie.title}}</li>
+    <li>
+      <h2>{{movie.title}}</h2>
+      <p>{{movie.overview}}</p>
+      <p>Inventory: {{movie.inventory}}</p>
+    </li>
   {{/each}}
 </ul>
+
+<aside>
+  <h2>Queue</h2>
+</aside>
+
 
 {{!-- {{#each movie in model}}
    {{#link-to 'movie' movie class="thumb"}}

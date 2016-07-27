@@ -2,6 +2,17 @@
 
 <ul>
   {{#each model as |movie|}}
-    <li>{{movie}}</li>
+    <li>{{movie.title}}</li>
   {{/each}}
 </ul>
+
+{{!-- {{#each movie in model}}
+   {{#link-to 'movie' movie class="thumb"}}
+      <img src="{{movie.poster_filename}}" class="movie-image"       
+          alt="" title="" />
+   {{/link-to}}
+
+   {{#link-to 'movie' movie}}
+       <h2 class="name">{{movie.title}}</h2>
+   {{/link-to}}
+{{/each}} --}}

@@ -7,4 +7,10 @@ export default DS.Model.extend({
   release_date: DS.attr('string'),
   inventory: DS.attr('number'),
   poster_filename: DS.attr('string'),
+
+  suspend(params) {
+    const adapter = this.store.adapterFor("movies");
+    console.log(adapter);
+    return adapter.suspend(this, params);
+  }
 });

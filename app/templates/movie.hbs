@@ -2,6 +2,12 @@
 
 <ul>
   {{#each model as |movie|}}
+  <fieldset>
     <li>{{movie.title}}</li>
+    <li>{{movie.overview}}</li>
+    <li>{{movie.release_date}}</li>
+    <li>{{movie.inventory}}</li>
+    <li>{{movie.poster_filename}}</li>
+  </fieldset>
   {{/each}}
 </ul>

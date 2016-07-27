@@ -1,0 +1,12 @@
+<h2>Movies Go Here!!!</h2>
+
+<ul>
+  {{#each model as |movie|}}
+    <li>{{movie}}</li>
+  {{/each}}
+</ul>
+
+<button {{action "toggleBody"}}>Previous</button>
+<button {{action "toggleBody"}}>Next</button>
+
+{{outlet}}

@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Adapter.extend({
-  host: 'http://localhost:3000/',
+  host: 'http://localhost:3000/?size=10',
   findAll: function(store, type, sinceToken) {
     var url = this.host;
     var query = { since: sinceToken };

@@ -8,9 +8,4 @@ export default DS.Model.extend({
   inventory: DS.attr('number'),
   poster_filename: DS.attr('string'),
 
-  suspend(params) {
-    const adapter = this.store.adapterFor("movies");
-    console.log(adapter);
-    return adapter.suspend(this, params);
-  }
 });

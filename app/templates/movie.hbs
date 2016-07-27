@@ -1,1 +1,7 @@
-{{outlet}}
+<h2>List of Movies</h2>
+
+<ul>
+  {{#each model as |movie|}}
+    <li>{{movie.title}}</li>
+  {{/each}}
+</ul>

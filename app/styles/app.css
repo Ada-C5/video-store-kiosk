@@ -1,8 +1,9 @@
 body {
   text-align: center;
-  background-color: #ccc;
+  background-color: #034f84;
   margin: 0 auto;
   width: 65%;
+  color: black;
 }
 
 .posters {
@@ -14,4 +15,21 @@ body {
 .overview {
   padding: 0 2%;
   line-height: 25px;
+}
+
+.next, .prev {
+  margin: 1%;
+  padding: 1%;
+  width: 15%;
+  background: #f7786b;
+  border-color: #f7786b;
+  border-radius: 5px;
+  border-style: outset;
+}
+
+fieldset {
+  border-color: #f7786b;
+  border-width: 20px;
+  margin: 10px;
+  background-color: #92a8d1;
 }

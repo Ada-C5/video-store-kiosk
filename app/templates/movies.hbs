@@ -1,11 +1,16 @@
-<h1>Movies</h1>
+<h2>Much Wow</h2>
 
-<ul>
-{{#each model as |movies|}}
- <li>{{movies.title}}</li>
-{{/each}}
-</ul>
-{{page-through-movies}}
+<table>
+  {{#each model as |movies|}}
+    <td>
+      {{movies.title}}
+      <br>
+      <img src="http://localhost:3000/images/posters/{{movies.poster_filename}}">
+    </td>
+  {{/each}}
+</table>
 
-<button {{action 'clickPrev'}} id="previous">prev</button>
-<button {{action 'clickNext'}} id="next">next</button>
+<button {{action "previousPage"}}> Previous </button>
+<button {{action "nextPage"}}> Next </button>
+
+{{outlet}}

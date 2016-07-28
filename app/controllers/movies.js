@@ -1,18 +1,31 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queryParams: ['page', 'size'],
-  page: 1,
-  size: 5,
-  isExpanded: false,
+  // actions: {
+  //   searchThing: function() {
+  //       let data = this.store.find("movie", '1');
+  //       return data;
+  //   }
+    // this.store.find("movie", '1');
 
-  actions: {
-    expand: function() {
-      this.set('isExpanded', true);
-    },
+    // function() {
+    //     let data = this.store.find("movie", '1');
+    //     return data;
+    // }
+  // }
+  // queryParams: ['page', 'size'],
+  // page: 1,
+  // size: 5,
+  // isExpanded: false,
+  //
+  // actions: {
+  //   expand: function() {
+  //     this.set('isExpanded', true);
+  //   },
+  //
+  //   contract: function() {
+  //     this.set('isExpanded', false);
+  //   }
+  // }
 
-    contract: function() {
-      this.set('isExpanded', false);
-    }
-  }
 });

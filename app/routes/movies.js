@@ -1,3 +1,4 @@
+
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -5,22 +6,29 @@ export default Ember.Route.extend({
     // return this.store.findAll('movie')
     // return this.store.find('movie.title', "Jaws")
   // },
-
-  model(params) {
-    return this.store.query('article', { page: {
-        number: params.page,
-        size: params.size
+  model(){
+    return this.store.query('movie', {
+        page: 1,
+        size: 5
       }
-    });
-  },
-
-  queryParams: {
-    page: {
-      refreshModel: true
-    },
-    size: {
-      refreshModel: true
-    }
+    );
   }
+
+  // model(params) {
+  //   return this.store.query('article', { page: {
+  //       number: params.page,
+  //       size: params.size
+  //     }
+  //   });
+  // },
+  //
+  // queryParams: {
+  //   page: {
+  //     refreshModel: true
+  //   },
+  //   size: {
+  //     refreshModel: true
+  //   }
+  // }
 
 });

@@ -1,15 +1,12 @@
 <h1>Kiosk </h1>
 
-<!-- <p>{{'testMovie'}}</p> -->
+<div class="controls">
+  <button class="prev" {{action "getPrev" on="click"}} id="prev">Previous</button>
+  <button class="next" {{action "getNext" on="click"}} id="next">Next</button>
+</div>
 
-
-<!-- <form {{action "getMovies" on="submit"}}> -->
-  <!-- <label for="new-name">Get some movies!</label> -->
-  <!-- {{input id="new-name" value=newName}} -->
-  <!-- <button type="submit">Submit</button> -->
-<!-- </form> -->
-
-<div id='movies'></div>
+<div id='movies'>
 {{movie-list movie=model}}
+</div>
 
 {{outlet}}

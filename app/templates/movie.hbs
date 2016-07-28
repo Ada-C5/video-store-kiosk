@@ -2,6 +2,7 @@
 
 {{#each model as |movie|}}
   <fieldset>
+    <button class="queue">Add to Queue</button>
     <img class="posters" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
     <h3>{{movie.title}}</h3>
     <p class="overview">{{movie.overview}}</p>

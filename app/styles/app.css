@@ -1,15 +1,26 @@
 body {
   text-align: center;
-  background-color: #034f84;
+  background-color: #262626;
   margin: 0 auto;
   width: 65%;
-  color: black;
+  color: white;
 }
 
 .posters {
   width: 20%;
   float: left;
   padding: 3% 2%;
+}
+
+.queue {
+  float: right;
+  margin: 1%;
+  padding: 1%;
+  width: 15%;
+  background: #ccc;
+  border-color: #ccc;
+  border-radius: 5px;
+  border-style: outset;
 }
 
 .overview {
@@ -21,15 +32,26 @@ body {
   margin: 1%;
   padding: 1%;
   width: 15%;
-  background: #f7786b;
-  border-color: #f7786b;
+  background: #ccc;
+  border-color: #ccc;
   border-radius: 5px;
   border-style: outset;
 }
 
 fieldset {
+  border-width: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+/*.aside {
+  float: left;
+  border-style: outset;
+  border-style: groove;
   border-color: #f7786b;
   border-width: 20px;
   margin: 10px;
   background-color: #92a8d1;
-}
+  padding: 1%;
+  margin: 1%;
+}*/

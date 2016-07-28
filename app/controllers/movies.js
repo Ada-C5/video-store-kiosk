@@ -7,4 +7,10 @@ export default Ember.Controller.extend({
   // page: 1,
   // size: 5
 
+  App.ClickableView = Ember.View.extend({
+  click: function(evt) {
+    this.get('controller').send('turnItUp', 11);
+  }
+});
+
 });

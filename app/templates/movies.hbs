@@ -4,13 +4,12 @@
   {{#each model as |movies|}}
     <td>
       {{movies.title}}
-      <br>
       <img src="http://localhost:3000/images/posters/{{movies.poster_filename}}">
     </td>
   {{/each}}
 </table>
 
-<button {{action "previousPage"}}> Previous </button>
-<button {{action "nextPage"}}> Next </button>
+<button {{action "clickPrev"}}> Previous </button>
+<button {{action "clickNext"}}> Next </button>
 
 {{outlet}}

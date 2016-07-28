@@ -5,7 +5,12 @@ export default Ember.Route.extend({
   model: function() {
     var query = { page: this.controllerFor("movies").get("page") }
     return this.store.query('movies', query)
-  }
+  },
 
+  queryParams: {
+    page: {
+      refreshModel: true
+    }
+  }
 
 });

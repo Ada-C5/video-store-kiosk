@@ -3,7 +3,10 @@ import DS from 'ember-data';
 export default DS.Adapter.extend({
   findAll: function(store, type, sinceToken) {
     var url = 'http://localhost:3000';
-    var query = { since: sinceToken };
+    // mental note to turn page into a variable
+    // and associate it with a click handler on the buttons
+    // var pageNumber = getPageNumber();
+    var query = { since: sinceToken, page: 1 };
     return new Ember.RSVP.Promise(function(resolve, reject) {
       Ember.$.getJSON(url, query).then(function(data) {
         Ember.run(null, resolve, data);

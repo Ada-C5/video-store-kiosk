@@ -13,11 +13,6 @@ App = Ember.Application.extend({
   Resolver
 });
 
-// routing to map to route movie.js -
-App.Router.map(function() {
-	this.route('movies', { path: '/' });
-});
-
 loadInitializers(App, config.modulePrefix);
 
 export default App;

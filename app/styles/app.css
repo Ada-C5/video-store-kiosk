@@ -1,0 +1,43 @@
+html {
+   font-size: 16px;
+   font-family: 'Helvetica', 'Arial', sans-serif;
+ }
+
+ * {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 1rem auto;
+ }
+
+ div {
+   display: inline-block;
+ }
+
+ div.container {
+   display: inline-block;
+ }
+
+.ember-view {
+  display: inline-block;
+}
+
+
+ div.movie {
+   background: red;
+   width: 24%;
+ }
+
+  .selected {
+    background: white;
+  }
+
+ .poster {
+   display: inline;
+   height:
+   width: 10%;
+ }
+
+ .movie-detail {
+   display: inline-block;
+   width: 80%;
+ }

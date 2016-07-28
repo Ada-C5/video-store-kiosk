@@ -1,0 +1,19 @@
+<h2>Showing the Movies</h2>
+<!-- {{outlet}} -->
+<div class='container'>
+  {{#each model as |movie|}}
+    <div {{action "toggleSelected"}}class="movie">
+      <p> {{movie.title}} </p>
+      <img class="poster" alt="" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+      {{#if selected}}
+        <div class="movie-detail" >
+          <p> {{movie.release_date}} </p>
+          <p> {{movie.overview}} </p>
+          <p> {{movie.inventory}} </p>
+        </div>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

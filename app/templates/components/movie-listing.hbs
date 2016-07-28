@@ -7,8 +7,9 @@
 
   {{#if isExpanded}}
     <div class="body">
-      <p>{{movie.title}}</p>
-      <p>{{movie.overview}}</p>
+      <h2>{{movie.title}}</h2>
+      <p class="overview">{{movie.overview}}</p>
+      <p>In stock: {{movie.inventory}}</p>
     </div>
   {{/if}}
 </div>

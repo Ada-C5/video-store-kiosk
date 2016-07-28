@@ -1,8 +1,11 @@
 
-<div>
+<div class='container'>
   {{#each movie as |movie|}}
-    <div>
-      {{movie.title}}{{movie.poster_filename}}<br>
+    <div class='movie'>
+      <!-- {{movie.title}}<br> -->
+      <!-- Overview: {{movie.overview}}<br>
+      Inventory: {{movie.inventory}}<br>
+      Release Date: {{movie.release_date}}<br> -->
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></div>
   {{/each}}
 </div>

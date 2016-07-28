@@ -8,6 +8,6 @@ const Router = Ember.Router.extend({
 
 export default Router.map(function() {
   this.resource('movies', { resetNamespace: true }, function() {
-    this.resource('resource', { resetNamespace: true, path: '/:movie_id' });
+    this.resource('movie', { resetNamespace: true, path: '/:movie_id' });
   });
 });

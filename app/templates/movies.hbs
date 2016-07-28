@@ -1,7 +1,9 @@
 <h2>Movies Go Here!!!</h2>
 
   {{#each model as |movie|}}
-      {{movie.title}}
+    {{#link-to "movie" movie}}
+       {{movie.title}}
+    {{/link-to}}
       <br>
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
       <br><br>

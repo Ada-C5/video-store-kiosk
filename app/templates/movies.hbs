@@ -1,9 +1,13 @@
 
-<button {{action "prevPage"}}>Previous</button>
-<button{{action "nextPage"}}>Next</button>
-<ul>
-  {{#each model as |movie|}}
-    <li>{{movie.title}}</li>
-    <li><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></li>
-  {{/each}}
-</ul>
+<button class="prev" {{action "prevPage"}}>Previous</button>
+<button class="next" {{action "nextPage"}}>Next</button>
+<table class="table">
+  <tbody>
+    <tr>
+      {{#each model as |movie|}}
+        <td><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-responsive"><br>
+        <div class="wordwrap">{{movie.title}}</div></td>
+      {{/each}}
+    </tr>
+  </tbody>
+</table>

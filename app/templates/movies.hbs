@@ -1,6 +1,6 @@
 <ul>
-  {{#each movies as |movie|}}
+  {{#each model as |movie|}}
     <li>{{movie.title}}</li>
+    <li><img {{bind-attr src=movie.poster_filename}}></li>
   {{/each}}
 </ul>
-{{!-- {{movies}} --}}

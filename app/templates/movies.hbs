@@ -14,7 +14,14 @@
       <ul>
         {{#each model as |movie|}}
           <li>
-            <button {{action 'expand'}} type="submit"><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="Movie"></button>
+            <button {{action 'expand'}} type="submit">
+              <p class="hiddentext">
+                {{movie.title}}
+                {{movie.overview}}
+              </p>
+              <!-- <p class="h" -->
+              <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="Movie">
+            </button>
           </li>
         {{/each}}
       </ul>

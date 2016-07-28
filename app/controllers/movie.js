@@ -6,11 +6,15 @@ export default Ember.Controller.extend({
 
   actions: {
     nextPage() {
-      this.set("page", (this.page+1));
+      if (this.page < 10) {
+        this.set("page", (this.page+1));
+      }
     },
 
     previousPage() {
-      this.set("page", (this.page-1));
+      if (this.page > 1) {
+        this.set("page", (this.page-1));
+      }
     }
   }
 });

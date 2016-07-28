@@ -1,0 +1,43 @@
+html {
+  font-size: 20px;
+}
+
+h1 {
+  font-family: 'Mrs Sheppards', cursive;
+  text-align: center;
+  font-size: 5rem;
+  color: limegreen;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.movie-list {
+  margin: 0 auto;
+  text-align: center;
+  /*width: 1500px;*/
+}
+
+img {
+  height: 12rem;
+  width: 12rem;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px #888888;
+}
+
+.poster {
+  display: inline-block;
+  height: 12rem;
+  width: 12rem;
+  margin: 1.25rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.title {
+  margin: 0;
+}

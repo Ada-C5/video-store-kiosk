@@ -3,11 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
   actions: {
     clickNext() {
-      this.click(console.log('next'));
+      console.log('next');
+      nextPage();
     },
     clickPrev() {
-      this.click(console.log('prev'));
+      (console.log('prev'));
+      prevPage();
     }
   }
 });
-

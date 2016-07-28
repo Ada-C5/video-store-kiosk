@@ -1,10 +1,14 @@
 <h2>Movies Go Here!!!</h2>
 
-<ul>
+<table>
   {{#each model as |movie|}}
-    <li>{{movie.title}}</li>
+    <td>
+      {{movie.title}}
+      <br>
+      <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+    </td>
   {{/each}}
-</ul>
+</table>
 
 <button {{action "previousPage"}}> Previous </button>
 <button {{action "nextPage"}}> Next </button>

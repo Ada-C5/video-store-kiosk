@@ -1,6 +1,6 @@
 <ul>
   {{#each model as |movie|}}
     <li>{{movie.title}}</li>
-    <li><img {{bind-attr src=movie.poster_filename}}></li>
+    <li><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></li>
   {{/each}}
 </ul>

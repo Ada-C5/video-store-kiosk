@@ -1,27 +1,17 @@
 {{outlet}}
 
+
+<button {{action 'prevPage'}}>←</button>
+<button {{action 'nextPage'}}>→</button>
+
 <ul>
   {{#each model as |movie|}}
     <li>
-      <h2>{{movie.title}}</h2>
-      <p>{{movie.overview}}</p>
-      <p>Inventory: {{movie.inventory}}</p>
+      <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
     </li>
   {{/each}}
 </ul>
 
-<aside>
+{{!-- <aside>
   <h2>Queue</h2>
-</aside>
-
-
-{{!-- {{#each movie in model}}
-   {{#link-to 'movie' movie class="thumb"}}
-      <img src="{{movie.poster_filename}}" class="movie-image"       
-          alt="" title="" />
-   {{/link-to}}
-
-   {{#link-to 'movie' movie}}
-       <h2 class="name">{{movie.title}}</h2>
-   {{/link-to}}
-{{/each}} --}}
+</aside> --}}

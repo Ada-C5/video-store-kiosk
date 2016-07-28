@@ -1,16 +1,11 @@
-{{outlet}}
+<div class='buttons'>
+  <button {{action 'prevPage'}}>←</button>
+  <button {{action 'nextPage'}}>→</button>
+</div>
 
-
-<button {{action 'prevPage'}}>←</button>
-<button {{action 'nextPage'}}>→</button>
-
-<ul>
-  {{#each model as |movie|}}
-    <li>
-      <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
-    </li>
-  {{/each}}
-</ul>
+{{#each model as |movieUnit|}}
+  {{movie-listing movie=movieUnit}}
+{{/each}}
 
 {{!-- <aside>
   <h2>Queue</h2>

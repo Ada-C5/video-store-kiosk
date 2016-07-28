@@ -26,6 +26,18 @@ li {
 }*/
 
 img {
+  width: 100%;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.show-body {
+  margin: 0 auto;
+}
+
+.movie-container {
   width: 18%;
   float:left;
   margin: 0.5rem;

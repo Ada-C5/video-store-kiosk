@@ -1,0 +1,14 @@
+{{yield}}
+
+<div class="movie-container">
+  <div class='poster' {{action "toggleBody"}}>
+    <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+  </div>
+
+  {{#if isExpanded}}
+    <div class="body">
+      <p>{{movie.title}}</p>
+      <p>{{movie.overview}}</p>
+    </div>
+  {{/if}}
+</div>

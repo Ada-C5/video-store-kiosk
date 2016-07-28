@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  // this.route('movies');
+  // this.route('movie', { resetNamespace: true }, function() {
+  //   this.route('movie', { resetNamespace: true, path: '/:movie_id' });
+  // });
   this.route('movie');
 });
 

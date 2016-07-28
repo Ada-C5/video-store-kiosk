@@ -11,3 +11,7 @@ body {
   background: #333;
   color: #efefef;
 }
+
+img {
+  width: 200px
+}

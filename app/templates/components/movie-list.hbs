@@ -1,0 +1,8 @@
+
+<div>
+  {{#each movie as |movie|}}
+    <div>
+      {{movie.title}}{{movie.poster_filename}}<br>
+      <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></div>
+  {{/each}}
+</div>

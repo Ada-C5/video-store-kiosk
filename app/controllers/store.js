@@ -1,24 +1,24 @@
-import Ember from 'ember';
-
-export default Ember.Controller.extend({
-  model() {
-    return "damn it i'm in the model"
-  },
-  movies: "moovies. flicks. lots of 'em.",
-  actions: {
-    movieTest: function() {
-      $.ajax('http://localhost:3000/', {
-        type: "GET",
-        data: {
-          page: 1,
-        }
-      })
-    },
-    getMoreMovies: function() {
-        // this.$("#test").fadeIn("slow");
-    }
-  }
-});
+// import Ember from 'ember';
+//
+// export default Ember.Controller.extend({
+//   model() {
+//     return "damn it i'm in the model"
+//   },
+//   movies: "moovies. flicks. lots of 'em.",
+//   actions: {
+//     movieTest: function() {
+//       $.ajax('http://localhost:3000/', {
+//         type: "GET",
+//         data: {
+//           page: 1,
+//         }
+//       })
+//     },
+//     getMoreMovies: function() {
+//         // this.$("#test").fadeIn("slow");
+//     }
+//   }
+// });
 
 
 // function getPage(pageNumber) {

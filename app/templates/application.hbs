@@ -2,4 +2,14 @@
 
 <p>{{'testMovie'}}</p>
 
+
+<form {{action "getMovies" on="submit"}}>
+  <label for="new-name">Get some movies!</label>
+  <!-- {{input id="new-name" value=newName}} -->
+  <button type="submit">Submit</button>
+</form>
+
+<div id='movies'></div>
+{{movie-list movie=model}}
+
 {{outlet}}

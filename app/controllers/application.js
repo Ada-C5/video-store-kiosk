@@ -6,9 +6,25 @@ export default Ember.Controller.extend({
     return "this is where all the movies go"
   },
   actions: {
-    getPage(){
-      return "so many movies"
+    getMovies(){
+      console.log('we are in the method "get movies"')
+      $.ajax('http://localhost:3000/', {
+        type: "GET"
+      }).done(function(data, statusCode, xhrObject) {
+        $('#movies').html('')
+        console.log('in the done part')
+        for (let movie of data) {
+          console.log(movie.title)
+          // $('#movies').append(makeMovieItem(movie))
+        }
+      })
     }
+  },
+
+  makeMovieItem(movie) {
+    let item = $('<div></div>').addClass('movie')
+    let title = data.title
+    return item.html(title)
   }
 });
 

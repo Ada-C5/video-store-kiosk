@@ -1,0 +1,96 @@
+html, body, #ember408 {
+  height:100%;
+  background-color: rgb(231, 231, 231);
+
+}
+
+.wholecontainer {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.moviescontainer{
+  display: flex;
+  padding-top: 1.5%;
+  /*height:50%;*/
+  /*height: auto;*/
+  background-color: rgb(231, 231, 231);
+}
+
+.queuecontainer{
+  height:20%;
+  background: rgb(40, 40, 40);
+}
+
+.left{
+  float:left;
+  width: 5%;
+}
+
+.middle{
+  /*height: 70%;*/
+  float: left;
+}
+
+.right{
+  float:right;
+  width: 5%;
+}
+
+ul{
+  /*margin-right: 2.3%;*/
+  padding: 0;
+  height: auto;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  style: none;
+  display: initial;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  min-width: 90px;
+  padding: 0.3% 0.5%;
+  margin: 0;
+  background-color:transparent;
+  border:none;
+  width: 17.5%;
+  height: auto;
+}
+
+h1{
+  padding: 0;
+  margin: 0;
+}
+
+.prev{
+  /*width: 20px;*/
+  vertical-align: middle;
+  /*color:green;*/
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 2.3%;*/
+  height: 100%;
+  font-size: 3em;
+  /*background-color: white;*/
+  padding-top: 20px;
+
+}
+
+.next{
+  width: auto;
+  /*vertical-align: middle;*/
+  /*color:green;*/
+  position: relative;
+  float:right;
+  height: 100%;
+  font-size: 3em;
+  /*background-color: white;*/
+}
+/*button:focus {outline:0;}*/

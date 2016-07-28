@@ -1,12 +1,26 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-    model(){
-    // return ["Alien", "Jaws", "Speed", "Finding Nemo", "Star Wars", "Finding Dory"]
+    // model(){
+    // return this.store.findAll('movie')
+    // return this.store.find('movie.title', "Jaws")
+  // },
 
-    return this.store.findAll('movie')
-    // return this.store.find('movie', "Jaws")
+  model(params) {
+    return this.store.query('article', { page: {
+        number: params.page,
+        size: params.size
+      }
+    });
+  },
+
+  queryParams: {
+    page: {
+      refreshModel: true
+    },
+    size: {
+      refreshModel: true
+    }
   }
+
 });
-
-

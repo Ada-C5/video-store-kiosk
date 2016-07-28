@@ -1,6 +1,29 @@
-<ul>
-  {{#each movies as |movie|}}
-    <li>{{movie.title}}</li>
-  {{/each}}
-</ul>
-{{!-- {{movies}} --}}
+<div class="wholecontainer">
+  <h1>MOVIES</h1>
+
+  <div class="moviescontainer">
+    <div class="left">
+      <button {{action 'expand'}} type="submit" class="prev">&lt;</button>
+    </div>
+
+    <div class="middle">
+      <ul>
+        {{#each model as |movie|}}
+          <li>
+            <button {{action 'expand'}} type="submit"><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="Movie"></button>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="right">
+      <button {{action 'expand'}} type="submit" class="next">&gt;</button>
+    </div>
+  </div>
+
+  <div class="queuecontainer">
+    hi
+  </div>
+
+</div>
+ <!-- style="width:304px;height:228px;"> -->

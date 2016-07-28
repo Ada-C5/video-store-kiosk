@@ -1,13 +1,16 @@
 <h2>List of Movies</h2>
 
-  {{#each model as |movie|}}
-
+{{#each model as |movie|}}
   <fieldset>
+    <img class="posters" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
     <h3>{{movie.title}}</h3>
-    <p>{{movie.overview}}</p>
+    <p class="overview">{{movie.overview}}</p>
     <p>{{movie.release_date}}</p>
     <p>{{movie.inventory}}</p>
-    <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
-    <!-- <p>{{movie.poster_filename}}</p> -->
   </fieldset>
-  {{/each}}
+{{/each}}
+
+<div class="controls">
+  <button class="prev" id="prev">Previous</button>
+  <button class="next" id="next">Next</button>
+</div>

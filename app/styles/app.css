@@ -4,3 +4,14 @@ body {
   margin: 0 auto;
   width: 65%;
 }
+
+.posters {
+  width: 20%;
+  float: left;
+  padding: 3% 2%;
+}
+
+.overview {
+  padding: 0 2%;
+  line-height: 25px;
+}

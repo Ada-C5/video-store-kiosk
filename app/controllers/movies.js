@@ -1,28 +1,45 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  page: 1,
+  page: 0,
+  moreInfo: true,
+  addToQueue: true,
+
 
   ajax: Ember.inject.service(),
   actions: {
     nextTen() {
-    let nextPage = this.page + 1
-    this.set('page', nextPage)
+    let nexTen = this.page + 1
+     this.set('page', nexTen)
     },
 
     previousTen() {
-      return this.get('ajax').request('http://localhost:3000/?page=1&size=10', {
-        method: 'GET',
-        data: {
+      let prevTen = this.page - 1
+      this.set('page', prevTen )
 
-        }
-      }).then(function(results){this.set('model', results)}.bind(this))
-    }
+    },
 
 
+    select(){
+      return this.set('moreInfo',false)
+
+    },
+
+    // deSelect(){
+    //
+    // },
+    //
+    // inQueue{
+    //
+    // },
+    //
+    // deQueue{
+    //
+    // }
 
 
   }
+
 });
 
 

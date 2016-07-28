@@ -6,8 +6,18 @@
 <ul>
   {{#each model as |movie|}}
     <li>{{ movie.title}}</li>
+
+    <li>
+      <form {{action "select" pageNumber on="submit"}}>
+        <button type="submit">More info</button>
+      </form>
+
+    </li>
+
   {{/each}}
 </ul>
+
+
 
 
 

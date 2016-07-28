@@ -1,5 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  page: 5
+  page: 1,
+  actions: {
+    nextPage() {
+      this.set("page", (this.page+1));
+    }
+  }
 });

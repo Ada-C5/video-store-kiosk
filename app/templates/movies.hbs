@@ -11,7 +11,10 @@
 
 
 
-<form {{action "offSet" pageNumber on="submit"}}>
-{{input value=newColor}}
-  <button type="submit">Submit</button>
+<form {{action "nextTen" pageNumber on="submit"}}>
+  <button type="submit">Next Page</button>
+</form>
+
+<form {{action "previousTen" pageNumber on="submit"}}>
+  <button type="submit">Previous Page</button>
 </form>

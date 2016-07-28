@@ -1,22 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  ajax: Ember.inject.service(),
   model() {
-
-
-
-
-    return $.ajax('http://localhost:3000/', {
-    type: 'GET',
-    data:{
-
-    }
-  })
-
-
-
-
-
-
+    return this.get('ajax').request('http://localhost:3000/');
   }
 });

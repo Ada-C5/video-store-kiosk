@@ -1,8 +1,8 @@
 import Ember from 'ember';
-// import DS from 'ember-data'
 
 export default Ember.Controller.extend({
   page: 1,
+  title: "",
 
   actions: {
     nextPage() {
@@ -15,6 +15,10 @@ export default Ember.Controller.extend({
       if (this.page > 1) {
         this.set("page", (this.page-1));
       }
+    },
+
+    showMovie(movieTitle) {
+      this.set("title", movieTitle)
     }
   }
 });

@@ -10,6 +10,10 @@ export default Ember.Route.extend({
   queryParams: {
     page: {
       refreshModel: true
+    },
+
+    title: {
+      refreshModel: true
     }
   }
 

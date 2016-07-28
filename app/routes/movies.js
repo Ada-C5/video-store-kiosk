@@ -2,11 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	// hooks to model and returns all from API call
-  model: function () { 
+  model: function() { 
     return this.store.findAll('movies');
-    // return ['Office Space', 'Fight Club', 'Jurassic Park', 'The Matrix', 'Psycho', 'Jaws'];
   }
-  // setupController: function(controller, model) {
-  //   controller.set('model', model);
-  // }
+
+
+  // pagination: 
+   model: function(params) {
+    return this.store.query('movies', { page: {
+        number: params.page,
+        size: params.size
+      }
+    });
+  },
+
+  queryParams: {
+    page: {
+      refreshModel: true
+    },
+    size: {
+      refreshModel: true
+    }
+  }
 });

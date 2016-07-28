@@ -2,6 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function() {
-    return this.store.findAll('movie');
+    var query = { page: this.controllerFor("movie").get("page") }
+    return this.store.query('movie', query)
+  },
+  queryParams: {
+    page: {
+      refreshModel: true
+    }
   }
 });

@@ -7,9 +7,9 @@ export default DS.Model.extend({
   inventory: DS.attr('number'),
   poster_filename: DS.attr('string'),
 
-  suspend() {
-    const adapter = this.store.adapterFor(this.constructor.modelName);
-    return adapter.suspend(this);
-  }
-  
+  // suspend() {
+  //   const adapter = this.store.adapterFor(this.constructor.modelName);
+  //   return adapter.suspend(this);
+  // }
+
 });

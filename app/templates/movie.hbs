@@ -1,9 +1,13 @@
-<h2>Movie List</h2>
+<h2>Movies</h2>
 
 <ul>
 {{#each model as |movie|}}
   <li>{{movie.title}}</li>
+  <img src='http://localhost:3000/images/posters/{{movie.poster_filename}}'>
 {{/each}}
 </ul>
+
+<button id="previous" {{action "previousPage"}}>Previous</button>
+<button id="next" {{action "nextPage"}}>Next</button>
 
 {{outlet}}

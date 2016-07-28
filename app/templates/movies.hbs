@@ -3,11 +3,11 @@
 
 <!-- {{model}} -->
 
-
+{{ model.meta.pagination.last.number }}
+{{name}}
   <div class="moviescontainer">
     <div class="left">
-      {{name}}
-      <button {{action 'next' name}} type="submit" class="prev">&lt;</button>
+      <button {{action 'prev'}} type="submit" class="prev">&lt;</button>
     </div>
 
     <div class="middle">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="right">
-      <button {{action 'expand'}} type="submit" class="next">&gt;</button>
+      <button {{action 'next'}} type="submit" class="next">&gt;</button>
     </div>
   </div>
 

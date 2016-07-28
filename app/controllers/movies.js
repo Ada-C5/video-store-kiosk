@@ -13,19 +13,32 @@ export default Ember.Controller.extend({
     //     return data;
     // }
   // }
-  // queryParams: ['page', 'size'],
-  // page: 1,
-  // size: 5,
+  queryParams: ['page', 'size'],
+  page: 1,
+  size: 10,
   // isExpanded: false,
   //
-  // actions: {
-  //   expand: function() {
-  //     this.set('isExpanded', true);
-  //   },
-  //
-  //   contract: function() {
-  //     this.set('isExpanded', false);
-  //   }
-  // }
+
+  actions: {
+    next(params){
+      console.log(params)
+      return this.store.query('movie', {
+        page: params,
+        size: 10
+      }
+    );
+  },
+    // next: function() {
+    //
+    // },
+
+    expand: function() {
+      this.set('isExpanded', true);
+    },
+
+    contract: function() {
+      this.set('isExpanded', false);
+    }
+  }
 
 });

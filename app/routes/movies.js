@@ -6,13 +6,13 @@ export default Ember.Route.extend({
     // return this.store.findAll('movie')
     // return this.store.find('movie.title', "Jaws")
   // },
-  model(){
+  model(params){
     return this.store.query('movie', {
-        page: 1,
-        size: 5
+        page: params.page,
+        size: 10
       }
     );
-  }
+  },
 
   // model(params) {
   //   return this.store.query('article', { page: {
@@ -22,13 +22,13 @@ export default Ember.Route.extend({
   //   });
   // },
   //
-  // queryParams: {
-  //   page: {
-  //     refreshModel: true
-  //   },
-  //   size: {
-  //     refreshModel: true
-  //   }
-  // }
+  queryParams: {
+    page: {
+      refreshModel: true
+    },
+    size: {
+      refreshModel: true
+    }
+  }
 
 });

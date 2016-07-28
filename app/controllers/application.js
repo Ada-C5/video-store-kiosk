@@ -1,12 +1,14 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  model(){
-  },
+  // model(){
+  // },
+  page: 3,
   actions: {
     getPrev() {
+        $.getJSON('http://localhost:3000/?page=2', function(data) {
+        })
       console.log('wtf')
-      return $.getJSON('http://localhost:3000/?page=2')
     },
     getNext() {
       var yes = $('#container').data('page', 9)
@@ -15,20 +17,13 @@ export default Ember.Controller.extend({
     getPage(page){
       return $.getJSON('http://localhost:3000/?page=4')
     },
-    select() {
-      console.log('trying to select')
-      // $(this).addClass("selected")
-    }
-    // makeMusicItem(item){
-    //   let yep = $('<div></div>').addClass('movie')
-    //   // let title = '<em>' + data.title + '</em>'
-    //   return yep.html("ha ha ha ")
-    // }
   }
 });
 
+
+
+
 // function getPage(pageNumber) {
-//   $.ajax('http://localhost:3000/songs', {
 //     type: "GET",
 //     data: {
 //       page: pageNumber,

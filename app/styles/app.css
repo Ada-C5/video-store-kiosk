@@ -21,7 +21,11 @@ img {
   width: 200px;
   margin: 10px;
   padding: 10px
+}
+.image { transition: all .2s ease-in-out; }
 
+.image:hover {
+  transform: scale(1.2);
 }
 
 #container {
@@ -31,5 +35,25 @@ img {
 }
 
 .selected {
-  background-color: white;
+  background-color: orange;
+}
+
+.info {
+  background: yellow;
+  opacity: .2;
+}
+
+.pic {
+  z-index: 1;
+}
+
+.overview {
+  position: absolute;
+  width: 200px;
+  display: none
+}
+
+.show {
+  position: absolute;
+  width: 200px;
 }

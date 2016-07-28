@@ -1,8 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return $.getJSON('http://localhost:3000')
+  model(params) {
+    console.log("params", params)
+    return $.getJSON('http://localhost:3000/?page={{params.page}}')
   }
 });
 

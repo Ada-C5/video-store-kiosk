@@ -2,17 +2,19 @@
 <div id='container' data-page="1">
   {{#each movie as |movie|}}
     <div class='movie'>
-      <input class="image" onclick={{action "select"}} type="image"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
-      <!-- <button onclick={{action "select"}}>Add to Queue</button> -->
-      <!-- <button class="sel"{{action "select" this on='click'}}></button> -->
-      <!-- <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></div> -->
+      <div style='hidden' id="deets" class="overview">
+        {{movie.title}}<br>
+        {{movie.overview}}<br>
+      </div>
+      <div class="pic"><input class="image" onclick={{action "select"}} ondblclick={{action "info"}} type="image"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" /></div>
     </div>
   {{/each}}
 </div>
 
 
-
-
+<!-- <button onclick={{action "select"}}>Add to Queue</button> -->
+<!-- <button class="sel"{{action "select" this on='click'}}></button> -->
+<!-- <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></div> -->
 
 <!-- {{movie.title}}<br> -->
 <!-- Overview: {{movie.overview}}<br>

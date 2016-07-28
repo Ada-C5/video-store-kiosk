@@ -5,8 +5,13 @@
   <tbody>
     <tr>
       {{#each model as |movie|}}
-        <td><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-responsive"><br>
-        <div class="wordwrap">{{movie.title}}</div></td>
+        <td>
+        <div class="cell-data">
+          <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-responsive"><br>
+          <div class="wordwrap">{{movie.title}}</div><br>
+         </div> 
+          <div class="queue"><button class="btn btn-default">Add to Queue</button></div>
+        </td>
       {{/each}}
     </tr>
   </tbody>

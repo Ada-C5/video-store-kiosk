@@ -1,12 +1,33 @@
-div.polaroid {
-    width: 80%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+html {
+	background: black;
 }
 
-img {width: 100%}
+h2 {
+	color: red;
+	text-align: center;
+	font-size: 4rem;
+}
 
-div.container {
+img {
+	width: 100%;
+    display: flex;   
+    flex-wrap: wrap;
+}
+
+.maintable {
+/*	background-color: #2f4f4f;*/
     text-align: center;
-    padding: 10px 20px;
+    width: 80%;
+    display: block;
+    margin: auto;
+
+}
+
+button {
+	color: white;
+	background-color: red;
+	border-radius: 10px;
+	border: none;
+	padding: 15px 32px;
+	font-size: 2rem;
 }

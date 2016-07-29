@@ -1,13 +1,12 @@
 {{outlet}}
 
-<table>
+<table class = maintable>
   {{#each model as |movie|}}
     <td>
       {{movie.title}}
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
     </td>
   {{/each}}
-</table>
-
 <button {{action "clickPrev"}}> Previous </button>
 <button {{action "clickNext"}}> Next </button>
+</table>

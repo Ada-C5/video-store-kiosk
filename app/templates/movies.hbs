@@ -6,20 +6,11 @@
       {{#each model as |movie|}}
         <td>
         <div class="cell-data">
-          <br>
-        {{!--   <div class="wordwrap">{{#link-to "movie" movie.title action="show"}}{{movie.title}}{{/link-to}}</div>
- --}}
-          <button id="myBtn"><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></button>
-            <div id="myModal" class="modal">
-              <div class="modal-content">
-              <span class="close">x</span>
-              <p>Some text in the Modal..</p>
-            </div>
-
-</div><br>
+          <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"><br>
+          <div class="wordwrap">{{#link-to "movie" movie.title}}{{movie.title}}{{/link-to}}</div><br>
          </div> 
-{{!--           <div class="queue"><button class="btn btn-default">Add to Queue</button></div>
- --}}        </td>
+          <div class="queue-button"><button class="btn btn-default queue">Add to Queue</button></div>
+        </td>
       {{/each}}
     </tr>
   </tbody>

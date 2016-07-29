@@ -1,19 +1,22 @@
-body {
+html {
   text-align: center;
   background-color: #262626;
   margin: 0 auto;
-  width: 65%;
+  width: 85%;
   color: white;
+}
+
+.card {
+  float: left;
+  border-style: groove;
 }
 
 .posters {
   width: 20%;
-  float: left;
-  padding: 3% 2%;
+  padding: 1% 2%;
 }
 
-.queue {
-  float: right;
+/*.queue {
   margin: 1%;
   padding: 1%;
   width: 15%;
@@ -21,12 +24,12 @@ body {
   border-color: #ccc;
   border-radius: 5px;
   border-style: outset;
-}
+}*/
 
-.overview {
+/*.overview {
   padding: 0 2%;
   line-height: 25px;
-}
+}*/
 
 .next, .prev {
   margin: 1%;
@@ -38,11 +41,6 @@ body {
   border-style: outset;
 }
 
-fieldset {
-  border-width: 20px;
-  margin: 10px;
-  border-radius: 5px;
-}
 
 /*.aside {
   float: left;

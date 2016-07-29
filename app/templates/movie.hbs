@@ -1,14 +1,14 @@
 <h2>List of Movies</h2>
 
 {{#each model as |movie|}}
-  <fieldset>
-    <button class="queue">Add to Queue</button>
+  <div class="card">
     <img class="posters" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
     <h3>{{movie.title}}</h3>
-    <p class="overview">{{movie.overview}}</p>
-    <p>{{movie.release_date}}</p>
-    <p>Inventory: {{movie.inventory}}</p>
-  </fieldset>
+    <button class="queue">Add to Queue</button>
+    <!-- <p class="overview">{{movie.overview}}</p> -->
+    <!-- <p>{{movie.release_date}}</p>
+    <p>Inventory: {{movie.inventory}}</p> -->
+  </div>
 {{/each}}
 
 <div class="controls">

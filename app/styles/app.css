@@ -17,8 +17,8 @@ h1 {
 }
 
 img {
-  height: 18rem;
-  width: 16rem;
+  height: 16rem;
+  width: 14rem;
 }
 
 table {
@@ -51,7 +51,7 @@ td {
   margin-top: 100%;
 }  
 
-button {
+.queue, .prev, .next {
   background-color: #78bec5;
   border: none;
   cursor: pointer;
@@ -66,7 +66,7 @@ button {
   width: 8em;
 }
 
-button:hover {
+.queue:hover, .next:hover, .prev:hover {
   background-color: rgba(255, 102, 153, 0.8);
   border-radius: 15px;
   border: none;

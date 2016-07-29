@@ -7,9 +7,7 @@ export default Ember.Controller.extend({
   actions: {
     clickNext() {
       if (this.atTheEnd === false) {  
-        this.pageNumber += 1
-        console.log(this.pageNumber)
-        console.log('this:' + this) 
+        this.set("pageNumber", (this.pageNumber+1));
       }
     },
     clickPrev() { 
@@ -17,12 +15,7 @@ export default Ember.Controller.extend({
         return; 
       }
       this.atTheEnd = false,
-      this.pageNumber -= 1
-      console.log(this.pageNumber)
+      this.set("pageNumber", (this.pageNumber-1));
     },
-    getMovies() {
-      // Adapter Magic Goes Here
-      Adapter.query();
-    }
   }
 });

@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     return this.store.query('movies', query)
   },
   queryParams: {
-    page: {
+    pageNumber: {
       refreshModel: true
     }
   }

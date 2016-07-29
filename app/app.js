@@ -10,6 +10,11 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
+  ready: function() {
+    console.log("READY!")
+    // start off the synopses as deselected
+    // $('.description').attr('display', 'none') 
+  },
   Resolver
 });
 

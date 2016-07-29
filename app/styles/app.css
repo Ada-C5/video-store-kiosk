@@ -6,13 +6,20 @@ body {
 }
 
 h1 {
-  text-align: center; 
   font-size: 3rem;
+  text-align: center; 
+}
+
+.delorean-doge {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1955;
 }
 
 h2 {
-  text-align: center;
   font-size: 2.5rem;
+  text-align: center;
 }
 
 .controls {
@@ -21,25 +28,44 @@ h2 {
 
 button {
   background-color: #222222;
-  color: #f85658;
   border: none;
-  margin: 10px;
+  color: #f85658;
   font-size: 2rem;
+  margin: 10px;
+  transition: all .2s ease-in-out; 
+}
+
+button:hover {
+  box-shadow: 0 0 0.25rem 0.25rem #f85658;
+  cursor: pointer;
+  transform: scale(1.1);
+  
 }
 
 .container {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
 .movie {
-    margin: 10px;
+  margin: 1.5rem;
 }
 
 .movie img {
-  width: 300px;
+  /*border-radius: 5px;*/
   height: 500px; 
-  border-radius: 5px;
+  width: 300px;
+  padding: .3rem;
+  margin: 2rem;
+  transition: all .2s ease-in-out; 
+}
+
+.movie img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: rgb(248,86,88);
+  box-shadow: 0 0 0.25rem 0.25rem #f85658;
 }

@@ -1,7 +1,7 @@
-<h2>Movies Go Here!!!</h2>
+<h2>I am all the movies.</h2>
 
   {{#each model as |movie|}}
-    {{#link-to "movie" movie}}
+    {{#link-to "movie" movie.title}}
        {{movie.title}}
     {{/link-to}}
       <br>

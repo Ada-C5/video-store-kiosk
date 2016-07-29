@@ -3,9 +3,12 @@
 
 <table class = maintable>
   {{#each model as |movie|}}
-    <td class='moviedetails'>
+    <td class='movie'>
+    <span>
       {{movie.title}}
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+      <div class='moviedetails'>{{movie.title}}, {{movie.overview}}</div>
+      </span>
     </td>
   {{/each}}
 <button {{action "clickPrev"}}> Previous </button>

@@ -1,29 +1,31 @@
 body {
   background-color: #222222; 
   color: #FFFFFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
 }
 
 h1 {
   text-align: center; 
+  font-size: 3rem;
 }
 
 h2 {
   text-align: center;
+  font-size: 2.5rem;
 }
 
 .controls {
-  text-align: center; 
+  text-align: center;
 }
 
 button {
-  color: #FFFFFF;
-  background-color: #f85658;
+  background-color: #222222;
+  color: #f85658;
   border: none;
   margin: 10px;
-  font-size: 24px;
-  border-radius: 5px;
+  font-size: 2rem;
 }
-
 
 .container {
     display: -webkit-flex;

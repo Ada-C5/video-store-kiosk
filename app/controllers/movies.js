@@ -1,9 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+
   page: 0,
-  moreInfo: true,
   addToQueue: true,
+  //moreInfo: true,
+
+  //Ember.compute('model.moreInfo')//this is the
 
 
   ajax: Ember.inject.service(),
@@ -16,26 +19,15 @@ export default Ember.Controller.extend({
     previousTen() {
       let prevTen = this.page - 1
       this.set('page', prevTen )
+    },
+
+    moreInfo(){
+      this.toggleProperty('lessInfo')
 
     },
 
 
-    select(){
-      return this.set('moreInfo',false)
 
-    },
-
-    // deSelect(){
-    //
-    // },
-    //
-    // inQueue{
-    //
-    // },
-    //
-    // deQueue{
-    //
-    // }
 
 
   }

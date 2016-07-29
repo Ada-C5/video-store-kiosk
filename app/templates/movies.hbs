@@ -7,12 +7,20 @@
   {{#each model as |movie|}}
     <li>{{ movie.title}}</li>
 
-    <li>
-      <form {{action "select" pageNumber on="submit"}}>
-        <button type="submit">More info</button>
-      </form>
+    {{#if lessInfo}}
 
+    <button {{action "moreInfo"}}>Hide</button>
+    <li class='info'>
+      {{movie.overview}}
     </li>
+
+      {{else}}
+
+      <button {{action 'moreInfo'}}>More Info</button>
+      {{/if}}
+
+
+
 
   {{/each}}
 </ul>

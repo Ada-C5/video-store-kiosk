@@ -17,8 +17,12 @@ h1 {
 }
 
 img {
-  height: 16rem;
-  width: 12rem;
+  height: 18rem;
+  width: 16rem;
+}
+
+table {
+  margin-left: 5%;
 }
 
 td {
@@ -34,7 +38,8 @@ td {
    white-space: -moz-pre-wrap;  
    white-space: -o-pre-wrap;  
    word-wrap: break-word;  
-   padding-left: 10%;      
+   padding-left: 10%; 
+   margin-top: -12%;     
 }
 
 .cell-data {
@@ -43,7 +48,7 @@ td {
   
 .queue {
   height: 100px;
-  margin-top: 90%;
+  margin-top: 100%;
 }  
 
 button {

@@ -1,15 +1,21 @@
 {{yield}}
 
 <div class="movie-container">
-  <div class='poster' {{action "toggleBody"}}>
+  <div class='poster' {{action "openDetails"}}>
     <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
   </div>
+</div>
 
-  {{#if isExpanded}}
-    <div class="body">
+{{#if isExpanded}}
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close" {{action "closeDetails"}}>x</span>
       <h2>{{movie.title}}</h2>
       <p class="overview">{{movie.overview}}</p>
       <p>In stock: {{movie.inventory}}</p>
+      <button {{action "addToQueue"}}>Add to Queue</button>
     </div>
-  {{/if}}
-</div>
+
+  </div>
+{{/if}}

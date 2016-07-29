@@ -7,9 +7,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('application', function() {
-    this.route('queue');
-  });
 });
 
 export default Router;

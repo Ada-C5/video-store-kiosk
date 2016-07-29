@@ -4,15 +4,19 @@
 
 {{#each model as |movie|}}
   <div class="movie">
-   {{#link-to 'movie' graduate}}
+   {{#link-to 'movie' movie}}
    <img class="poster" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
    {{/link-to}}
 
-   {{#link-to 'graduate' graduate}}
+   {{#link-to 'movie' movie}}
+       <h2 class="name">{{movie.title}}</h2>
+   {{/link-to}}
+   {{#link-to 'movie' movie}}
        <h2 class="name">{{movie.title}}</h2>
    {{/link-to}}
        <div class="hidden">{{movie.releaseDate}}{{movie.overview}}</div>
    </div>
 {{/each}}
 
-{{outlet}}
+<button {{action "clickPrev"}}> Previous </button>
+<button {{action "clickNext"}}> Next </button>

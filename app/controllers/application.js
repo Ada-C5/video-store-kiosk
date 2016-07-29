@@ -1,22 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  // model(){
-  // },
-  page: 3,
+  page: 1,
   actions: {
     getPrev() {
-        $.getJSON('http://localhost:3000/?page=2', function(data) {
-        })
-      console.log('wtf')
+        if (this.page > 1) {
+          this.set('page', (this.page - 1))
+        }
     },
     getNext() {
-      var yes = $('#container').data('page', 9)
-      console.log('test', yes.data('page'))
-    },
-    getPage(page){
-      return $.getJSON('http://localhost:3000/?page=4')
-    },
+      if (this.page < 10) {
+        this.set('page', (this.page + 1))
+      }
+    }
   }
 });
 

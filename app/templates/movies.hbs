@@ -1,12 +1,22 @@
 <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button>
 <div id="container">
-      {{#each model as |movie|}}
-        <div class="poster">
-          <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"><br>
-          <div class="queue-button"><button class="btn btn-default queue">Add to Queue</button></div>
-         </div> 
-      {{/each}}
+  {{#each model as |movie|}}
+    <div class="poster">
+      <div class="box">
+        <a class="button" href="#popup1" {{action "setMovie" movie.title movie.overview movie.poster_filename}}><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></a></div><br>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h2>{{setTitle}}</h2>
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              {{setOverview}}
+            </div>
+          </div>
+         </div>          
+    <div class="queue-button"><button class="btn btn-default queue">Add to Queue</button></div>
+  </div> 
+  {{/each}}
 </div>
 
 <button class="prev" {{action "prevPage"}}>Previous</button>

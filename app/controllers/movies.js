@@ -15,6 +15,13 @@ export default Ember.Controller.extend({
       if (this.page - 1 >= 1) {
         this.set("page", (this.page - 1));
       }
+    },
+
+    setMovie(title, overview, image) {
+      this.set("setTitle", title)
+      this.set("setOverview", overview)
+      this.set('setImage', image)
+      console.log(this.setTitle)
     }
   }
 

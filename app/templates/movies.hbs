@@ -1,18 +1,22 @@
-	{{outlet}}
+
 
 
 <table class = maintable>
   {{#each model as |movie|}}
     <td class='movie'>
+    {{#draggable-item content=movie.id}}
     <span>
       {{movie.title}}
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
-      <div class='moviedetails'>{{movie.title}}, {{movie.overview}}</div>
+      <div class='moviedetails'>
+      	<aside>{{movie.title}}, {{movie.overview}}</aside>
+      	</div>
       </span>
+      {{/draggable-item}}
     </td>
   {{/each}}
 <button {{action "clickPrev"}}> Previous </button>
 <button {{action "clickNext"}}> Next </button>
 </table>
 
-<div class="queue">{{outlet "queue"}}</div>
+<div class="queue">{{outlet}}</div>

@@ -21,23 +21,3 @@ export default Ember.Route.extend({
     }
   }
 });
-
-
-
-
-  // PAGINATION::::::the shit
-  // model: function(params) {
-  // 	// send page num as where to start return API data
-  //   return this.store.findNext('movies'
-  //   	// , { page: {
-  //    //    number: params.page      }
-  //   // }
-  //   );
-  // },
-
-  // queryParams: {
-  //   page: {
-  //     refreshModel: true
-  //   }
-  // }
-// });

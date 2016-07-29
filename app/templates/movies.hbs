@@ -1,5 +1,5 @@
 <div class="wholecontainer">
-  <h1>MOVIES</h1>
+  <h1></h1>
 
 <!-- {{model}} -->
 
@@ -9,19 +9,27 @@
     <div class="left">
       <button {{action 'prev'}} type="submit" class="prev">&lt;</button>
     </div>
-
     <div class="middle">
       <ul>
         {{#each model as |movie|}}
           <li>
-            <button {{action 'expand'}} type="submit">
-              <p class="hiddentext">
-                {{movie.title}}
-                {{movie.overview}}
-              </p>
-              <!-- <p class="h" -->
-              <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="Movie">
-            </button>
+            <div class="poster">
+              <button id="myBtn" {{action 'select' movie.title movie.overview movie.poster_filename}}>
+                <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="image" alt="Movie">
+              </button>
+            </div>
+
+            <div id="myModal" class="modal">
+
+              <div class="modal-content">
+                <button class="close" {{action 'close'}}>x</button>
+                  <h2>{{displayTitle}}</h2>
+                  <img class="displayImg" src="http://localhost:3000/images/posters/{{displayImg}}" alt="Movie">
+                  <p>{{displayOverview}} </p>
+                  <button id="queue" {{action 'queue' movie.poster_filename}}>              + Add to Queue</button>
+              </div>
+
+            </div>
           </li>
         {{/each}}
       </ul>
@@ -33,7 +41,9 @@
   </div>
 
   <div class="queuecontainer">
-    hi
+    {{#each queue as |movie|}}
+      <img class="" src="http://localhost:3000/images/posters/{{movie}}" alt="Movie" />
+    {{/each}}
   </div>
 
 </div>

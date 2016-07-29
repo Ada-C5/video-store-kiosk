@@ -11,31 +11,47 @@ html, body, #ember408 {
 }
 
 .hiddentext{
-
+  z-index: -1;
+  font-size: 5px;
+  background-color: gray;
   color:white;
-  width: 11.1%;
+  /*width: 11.1%;*/
   position: absolute;
-  /*width: 100%;*/
+  width: 85%;
+  /*margin-left: 1%;*/
+  /*margin-right: 4%;*/
   /*top: 10%;*/
   display: block;
+  opacity: 0.6;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+  font-style: bold;
+  font-size: 2.5em;
+  text-align: initial;
+  margin-bottom: 10px;
 }
 
 .moviescontainer{
   display: flex;
-  /*padding-top: 0.5%;*/
-  /*height:50%;*/
-  /*height: auto;*/
+  padding-top: 2.5%;
+  padding-bottom:3.5%;
   background-color: rgb(231, 231, 231);
 }
 
 
 
 .queuecontainer{
-  height:30%;
+  height:18%;
   float: clear;
   background: rgb(40, 40, 40);
 }
 
+#ember433{
+  height: 100%;
+}
 .left{
   width: 15%;
 }
@@ -53,7 +69,9 @@ html, body, #ember408 {
 ul{
   padding: 0;
   height: auto;
+   position:relative;
 }
+
 ul li {
   margin: 0;
   padding: 0;
@@ -61,18 +79,44 @@ ul li {
   display: initial;
 }
 
-img {
+.image {
   width: 100%;
 }
 
 
-
-
-button:hover {
-  transform: scale(1.6);
+.poster:hover {
+  transform: scale(1.3);
+  z-index: -1;
+  background-color: black;
+  opacity: 1;
 }
 
-button {
+p{
+  text-align: justify;
+  font-size: 1.1em;
+  margin-top: 3%;
+  /*margin-right: 9%;*/
+}
+
+#queue{
+  position: absolute;
+  left: 54%;
+  padding: 1.4%;
+  font-size: 0.8em;
+  top: 60%;
+  color:white;
+  background-color: rgb(65, 196, 157);
+  /*margin-top: 20%;*/
+}
+
+.displayImg{
+  float: left;
+  width: 26%;
+  margin-top: 2%;
+  margin-right: 4%;
+}
+.poster {
+  display: inline-block;
   transition: all .2s ease-in-out;
   min-width: 90px;
   padding: 0.5% 1%;
@@ -81,6 +125,23 @@ button {
   border:none;
   width: 17.5%;
   height: auto;
+}
+
+
+.overview {
+  position: absolute;
+  width: 200px;
+  display: none
+}
+
+.show {
+  position: absolute;
+  width: 200px;
+}
+
+.info {
+  background: yellow;
+  opacity: .2;
 }
 
 h1{
@@ -113,3 +174,46 @@ h1{
   /*background-color: white;*/
 }
 /*button:focus {outline:0;}*/
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    /*margin: 5%;*/
+    /*z-index: 1; /* Sit on top */*/
+    z-index:1001;
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+
+    background-color: #e7e6e6;
+    margin: 4.5% auto; /* 15% from the top and centered */
+    padding: 40px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    height: 55%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

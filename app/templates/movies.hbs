@@ -1,8 +1,9 @@
-{{outlet}}
+	{{outlet}}
+
 
 <table class = maintable>
   {{#each model as |movie|}}
-    <td>
+    <td class='moviedetails'>
       {{movie.title}}
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
     </td>
@@ -10,3 +11,5 @@
 <button {{action "clickPrev"}}> Previous </button>
 <button {{action "clickNext"}}> Next </button>
 </table>
+
+<div class="queue">{{outlet "queue"}}</div>

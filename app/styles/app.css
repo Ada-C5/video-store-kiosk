@@ -1,5 +1,5 @@
 html {
-	background: black;
+	background: gray;
 }
 
 h2 {
@@ -12,10 +12,10 @@ img {
 	width: 100%;
     display: flex;   
     flex-wrap: wrap;
+    border-radius: 2px;
 }
 
 .maintable {
-/*	background-color: #2f4f4f;*/
     text-align: center;
     width: 80%;
     display: block;
@@ -30,4 +30,14 @@ button {
 	border: none;
 	padding: 15px 32px;
 	font-size: 2rem;
+}
+
+.moviedetails {
+	transition: all .2s ease-in-out;
+	border-radius: 2px;
+}
+
+.moviedetails:hover { 
+    background-color: yellow;
+    transform: scale(1.1);
 }

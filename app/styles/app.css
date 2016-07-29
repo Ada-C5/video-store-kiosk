@@ -20,8 +20,9 @@ img {
 .image {
   width: 200px;
   margin: 10px;
-  padding: 10px
+  padding: 10px;
 }
+
 .image { transition: all .2s ease-in-out; }
 
 .image:hover {
@@ -39,7 +40,7 @@ img {
 }
 
 .info {
-  background: yellow;
+  /*background: yellow;*/
   opacity: .2;
 }
 

@@ -1,16 +1,36 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  // pageNumber: 1, 
+  page: 1,
+  // atTheEnd: false,
 
-	// paging through movies
-  // queryParams: ['page', 'size'],
-  // page: 1,
-  // size: 5
+  actions: {
+    clickNext() {
+    	console.log("NEXT!!!")
+      // if (this.atTheEnd === false) {  
 
-  App.ClickableView = Ember.View.extend({
-  click: function(evt) {
-    this.get('controller').send('turnItUp', 11);
-  }
+      // };
+      this.page += 1;
+      // this.send('saveModel');
+    },
+
+  clickPrev() { 
+      // if (this.offSet === 10) {
+      //   return; 
+      // };
+      // this.atTheEnd = false,
+      this.page -= 1;
+      // this.send('saveModel');
+      // return this.store.findAll('movies', this.page);
+
+  },
+  //   getMovies() {
+
+  //     Adapter.query();
+  //   }
+  // }
 });
-
-});
+// Ember.set()
+      // this.set('model.name', newName);
+      // this.send('saveModel');

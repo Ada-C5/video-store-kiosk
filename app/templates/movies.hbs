@@ -1,14 +1,13 @@
 {{outlet}}
 
-<ul>
+<table>
   {{#each model as |movie|}}
-    <li>{{movie.title}}</li>
+    <td>
+      {{movie.title}}
+      <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+    </td>
   {{/each}}
-</ul>
-<div class='controls'>
-{{#view "clickable"}}
-	<button class='next' id='next'>Next</button>
-This is a clickable area!
-{{/view}}
-	<button class='prev' id='prev'>Previous</button>
-</div>
+</table>
+
+<button {{action "clickPrev"}}> Previous </button>
+<button {{action "clickNext"}}> Next </button>

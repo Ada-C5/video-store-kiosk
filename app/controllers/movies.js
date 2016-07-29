@@ -1,36 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  // pageNumber: 1, 
+  queryParams: 'page',
   page: 1,
-  // atTheEnd: false,
 
   actions: {
     clickNext() {
-    	console.log("NEXT!!!")
-      // if (this.atTheEnd === false) {  
-
-      // };
-      this.page += 1;
-      // this.send('saveModel');
+      this.set('page', this.get('page') + 1);
     },
 
-  clickPrev() { 
-      // if (this.offSet === 10) {
-      //   return; 
-      // };
-      // this.atTheEnd = false,
-      this.page -= 1;
-      // this.send('saveModel');
-      // return this.store.findAll('movies', this.page);
-
-  },
-  //   getMovies() {
-
-  //     Adapter.query();
-  //   }
-  // }
+  	clickPrev() {
+      this.set('page', this.get('page') - 1);
+  	},
+  }
 });
-// Ember.set()
-      // this.set('model.name', newName);
-      // this.send('saveModel');

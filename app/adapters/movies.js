@@ -2,14 +2,10 @@
 import DS from 'ember-data';
 
 export default DS.Adapter.extend({
-  findAll: function(store, type, page) {
-    // var url = 'http://localhost:3000/?page=' + page + '&size=5';
+  query: function(store, type, query) {
     var url = 'http://localhost:3000/';
-    // console.log("QQQQQ" + q.limit)
-    // var query = {};
-    var page = {page: page};
     return new Ember.RSVP.Promise(function(resolve, reject) {
-      Ember.$.getJSON(url, page).then(function(data) {
+      Ember.$.getJSON(url, query).then(function(data) {
         Ember.run(null, resolve, data);
       }, function(jqXHR) {
         jqXHR.then = null; // tame jQuery's ill mannered promises

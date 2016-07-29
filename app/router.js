@@ -8,6 +8,6 @@ const Router = Ember.Router.extend({
 
 export default Router.map(function() {
   this.resource('movies', function() {
-    this.resource('movie', { path: 'movies/:movie_title', outlet: "toolbar"})
+    this.resource('movie', { path: '/:movie_title' })
   })
 });

@@ -9,4 +9,5 @@ const Router = Ember.Router.extend({
 export default Router.map(function() {
   this.resource('movies')
   this.resource('movie', { path: 'movies/:movie_title' });
-  });
+  // this.route('movie');
+});

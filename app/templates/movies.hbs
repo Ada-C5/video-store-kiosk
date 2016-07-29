@@ -1,20 +1,13 @@
 <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button>
-<table>
-  <tbody>
-    <tr>
+<div id="container">
       {{#each model as |movie|}}
-        <td>
-        <div class="cell-data">
+        <div class="poster">
           <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"><br>
-          <div class="wordwrap">{{#link-to "movie" movie.title}}{{movie.title}}{{/link-to}}</div><br>
-         </div> 
           <div class="queue-button"><button class="btn btn-default queue">Add to Queue</button></div>
-        </td>
+         </div> 
       {{/each}}
-    </tr>
-  </tbody>
-</table>
+</div>
 
 <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button>

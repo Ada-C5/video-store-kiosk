@@ -17,27 +17,21 @@ h1 {
 }
 
 img {
-  height: 14rem;
-  padding: 5%;
-  width: 10rem;
-}
-
-table {
-  margin-left: 2%;
+  width: 200px;
+  padding: 10px;
 }
 
 a {
   text-decoration: none;
 }
 
-td {
-  display: inline-block;
-  padding: 10px 30px 10px 30px;
-  text-align: center;
-  font-size: 23px;
+#container {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
 }
 
-.wordwrap { 
+/*.wordwrap { 
    width: 150px;
    white-space: pre-wrap;  
    white-space: -moz-pre-wrap;  
@@ -45,17 +39,22 @@ td {
    word-wrap: break-word;  
    padding-left: 10%; 
    margin-top: -12%;     
-}
+}*/
 
-.cell-data {
+/*.poster {
   height: 200px;
   margin: 15%;
+}*/
+
+.poster:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.1);
 }
 
 .queue-button {
   height: 100px;
-  padding-top: 80%;
-   margin-left: 32%;
+/*  padding-top: 80%;
+*/  margin-left: 10%;
 }
 
 .queue, .prev, .next {
@@ -80,7 +79,7 @@ td {
   transition: all 0.2s linear;
 }
 
-.queue {
+/*.queue {
   background-color: #78bec5;
   border: none;
   cursor: pointer;
@@ -93,4 +92,4 @@ td {
   border-radius: 15px;
   height: 3em;
   width: 8em;
-}
+}*/

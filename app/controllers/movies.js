@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
 
   page: 0,
   addToQueue: true,
-  //moreInfo: true,
+  moreInfo: true,
 
   //Ember.compute('model.moreInfo')//this is the
 
@@ -21,15 +21,11 @@ export default Ember.Controller.extend({
       this.set('page', prevTen )
     },
 
-    moreInfo(){
-      this.toggleProperty('lessInfo')
-
-    },
-
-
-
-
-
+    moreInfo(movieId){
+    let idm = this.model.find(function(model){return model.id == movieId})
+    console.log(id)
+      id.set('selected', true)
+    }
   }
 
 });

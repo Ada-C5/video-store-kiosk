@@ -7,16 +7,16 @@
   {{#each model as |movie|}}
     <li>{{ movie.title}}</li>
 
-    {{#if lessInfo}}
+    {{#if movie.selected}}
 
-    <button {{action "moreInfo"}}>Hide</button>
+    <button {{action 'moreInfo'}}>Hide</button>
     <li class='info'>
       {{movie.overview}}
     </li>
 
       {{else}}
 
-      <button {{action 'moreInfo'}}>More Info</button>
+      <button {{action 'moreInfo' movie.id}}>More Info</button>
       {{/if}}
 
 

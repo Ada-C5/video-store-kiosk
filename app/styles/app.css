@@ -1,4 +1,43 @@
-img {
-  height: 300px;
-  width: 200px;
+body {
+  background-color: #222222; 
+  color: #FFFFFF;
+}
+
+h1 {
+  text-align: center; 
+}
+
+h2 {
+  text-align: center;
+}
+
+.controls {
+  text-align: center; 
+}
+
+button {
+  color: #FFFFFF;
+  background-color: #f85658;
+  border: none;
+  margin: 10px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+
+.container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.movie {
+    margin: 10px;
+}
+
+.movie img {
+  width: 300px;
+  height: 500px; 
+  border-radius: 5px;
 }

@@ -1,15 +1,26 @@
-<h2>I am all the movies.</h2>
+<h2>Available Movies</h2>
 
+<div class="buttons">
+  <button {{action "previousPage"}} class="btn btn-primary">
+    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+  </button>
+
+  <button {{action "nextPage"}} class="btn btn-primary">
+    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="row">
   {{#each model as |movie|}}
-    {{#link-to "movie" movie.title}}
-       {{movie.title}}
-    {{/link-to}}
-      <br>
-      <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
-      <br><br>
+    <div class="col-md-3">
+      {{#link-to "movie" movie.title}}
+        {{movie.title}}
+        <br>
+        <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail">
+      {{/link-to}}
+        <br><br>
+    </div>
   {{/each}}
-
-<button {{action "previousPage"}}> Previous </button>
-<button {{action "nextPage"}}> Next </button>
+</div>
 
 {{outlet}}

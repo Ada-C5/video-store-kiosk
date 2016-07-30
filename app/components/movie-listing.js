@@ -6,12 +6,9 @@ export default Ember.Component.extend({
     toggleDetails() {
       this.toggleProperty('isExpanded');
     },
-    closeDetails() {
-      var modal = document.getElementById('myModal');
+    addToQueue(movie) {
+      this.sendAction('addToQueue', movie);
       this.toggleProperty('isExpanded');
-    },
-    addToQueue() {
-      
     }
   }
 });

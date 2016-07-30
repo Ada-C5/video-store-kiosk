@@ -4,9 +4,12 @@
 </div>
 
 {{#each model as |movieUnit|}}
-  {{movie-listing movie=movieUnit}}
+  {{movie-listing movie=movieUnit addToQueue=(action 'addMovie')}}
 {{/each}}
 
-{{!-- <aside>
+<aside>
   <h2>Queue</h2>
-</aside> --}}
+  {{#each queue as |movie|}}
+    <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+  {{/each}}
+</aside>

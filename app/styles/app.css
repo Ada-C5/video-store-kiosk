@@ -83,3 +83,7 @@ img {
     text-decoration: none;
     cursor: pointer;
 }
+
+.thumb {
+  width: 5%;
+}

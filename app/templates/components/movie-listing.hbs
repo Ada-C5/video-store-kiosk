@@ -1,16 +1,14 @@
 {{yield}}
 
-<div class="movie-container">
-  <div class='poster' {{action "openDetails"}}>
-    <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
-  </div>
+<div class='movie-container' {{action "toggleDetails"}}>
+  <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
 </div>
 
 {{#if isExpanded}}
   <div id="myModal" class="modal">
 
     <div class="modal-content">
-      <span class="close" {{action "closeDetails"}}>x</span>
+      <span class="close" {{action "toggleDetails"}}>x</span>
       <h2>{{movie.title}}</h2>
       <p class="overview">{{movie.overview}}</p>
       <p>In stock: {{movie.inventory}}</p>

@@ -15,6 +15,13 @@ img {
     border-radius: 2px;
 }
 
+/*.queueMovie {
+		width: 10%;
+    display: flex;   
+    flex-wrap: wrap;
+    border-radius: 2px;
+}*/
+
 .maintable {
     text-align: center;
     width: 80%;
@@ -42,9 +49,9 @@ button {
     transform: scale(1.1);
 }
 
-aside {
+/*aside {
 	max-width: 140px;
-}
+}*/
 
 div.moviedetails {
     display: none;
@@ -56,9 +63,9 @@ span:hover div.moviedetails {
 }
 
 .queue {
-/*	max-width: 30%;*/
+/*	max-width: 30%;
 	height: 200px;
-/*	float: right;*/
+	float: right;*/
 	background-color: gray;
 }
 

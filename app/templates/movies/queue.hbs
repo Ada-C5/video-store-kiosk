@@ -1,8 +1,8 @@
-<container class='queue'>
+<container class='maintable '>
 {{#draggable-dropzone dropped="addMovie"}}
 <h2>Queue!</h2>
 {{#each selectedMovies as |movie|}}
-    <td class='movie'>
+    <td class='queueMovie'>
       {{movie.title}}
       <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
     </td>

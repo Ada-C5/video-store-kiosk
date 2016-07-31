@@ -18,6 +18,13 @@ html {
    display: block;
    text-align: center;
  }
+.next {
+
+  }
+
+.prev {
+  
+  }
 
 .ember-view {
   display: inline-block;

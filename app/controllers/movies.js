@@ -36,6 +36,10 @@ export default Ember.Controller.extend({
       // close.style.display = "none"
     },
 
+    clearqueue() {
+      this.set('queue', [])
+    },
+
     prev() {
       if (this.page !== 1) {
         this.set('page', this.page-1)

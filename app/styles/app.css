@@ -154,6 +154,11 @@ p{
     cursor: pointer;
 }
 
+.queueclear {
+  float:right;
+  margin-right: 1%;
+  margin-top: 1%;
+}
 
 .poster {
   display: inline-block;

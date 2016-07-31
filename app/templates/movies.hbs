@@ -42,9 +42,11 @@
   <div class="queuecontainer">
     {{#each queue as |movie|}}
     <!-- {{@index}}: {{this}} -->
-      <button {{action 'closequeue' movie @index}} id="queueclose" class="queueclose" {{action 'close'}}>x</button>
+      <button {{action 'closequeue' movie @index}} id="queueclose" class="queueclose" >x</button>
       <img class="queueImg" src="http://localhost:3000/images/posters/{{movie}}" alt="Movie" />
     {{/each}}
+
+      <button {{action 'clearqueue'}} class="queueclear" {{action 'close'}}>clear</button>
   </div>
 
 </div>

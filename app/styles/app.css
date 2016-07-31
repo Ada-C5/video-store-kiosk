@@ -4,17 +4,19 @@
 }
 
 h1 {
-  text-align: center;
+  padding-left: 10%;
+  color: #861657;
+  font-size: 45px;
 }
 
 .next {
   margin-bottom: 2%;
-  margin-left: 25%;
+  margin-left: 20%;
 }
 
 .prev {
   margin-bottom: 2%;
-  margin-left: 25%; 
+  margin-left: 20%; 
 }
 
 img {
@@ -23,14 +25,17 @@ img {
   padding: 10px;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
-#container {
+button:focus { outline: 0; }
+
+#movie-container {
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
+}
+
+#queue-container {
 }
 
 .box:hover {
@@ -47,9 +52,8 @@ a {
   right: 0;
   background: rgba(0, 0, 0, 0.7);
   transition: opacity 500ms;
-  display:none;
-/*  opacity: 0;
-*/  z-index: 1001;
+  display: none;
+  z-index: 1001;
 }
 
 .overlay:target {
@@ -69,27 +73,27 @@ a {
 
 .popup h2 {
   margin-top: 0;
-  color: #333;
+  color: #861657;
+  font-size: 40px;
 }
 
 .popup .close {
   position: absolute;
-  top: 20px;
-  right: 30px;
+  top: 0;
+  right: 15px;
   transition: all 200ms;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
   text-decoration: none;
   color: #333;
 }
 
-.popup .close:hover {
-  color: #06D85F;
-}
+.popup .close:hover { color: #861657; }
 
 .popup .content {
   max-height: 30%;
   overflow: auto;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 700px){
@@ -103,17 +107,15 @@ a {
 
 .queue-button {
   height: 100px;
-/*  padding-top: 80%;
-*/  margin-left: 10%;
+  margin-left: 10%;
 }
 
-.queue, .prev, .next {
+.prev, .next {
   background-color: #78bec5;
   border: none;
-  cursor: pointer;
   background-color: Transparent;
   font-weight: bolder;
-  border: 2px solid #78bec5;
+  border: 2px solid #861657;
   margin-top: 2%;
   font-size: 20px;
   cursor: pointer;
@@ -122,24 +124,24 @@ a {
   width: 8em;
 }
 
-.queue:hover, .next:hover, .prev:hover {
-  background-color: rgba(255, 102, 153, 0.8);
-  border-radius: 15px;
-  border: none;
-  transition: all 0.2s linear;
-}
-
-/*.queue {
+.queue {
   background-color: #78bec5;
   border: none;
-  cursor: pointer;
   background-color: Transparent;
-  font-weight: bolder;
-  border: 2px solid #78bec5;
+  border: 2px solid #861657;
   margin-top: 2%;
-  font-size: 15px;
+  margin-left: 15%;
+  font-size: 18px;
   cursor: pointer;
   border-radius: 15px;
   height: 3em;
-  width: 8em;
-}*/
+  width: 7em;
+}
+
+
+.queue:hover, .next:hover, .prev:hover {
+  background-color: rgba(147, 225, 216, 0.8);
+  border-radius: 15px;
+  border: none;
+  transition: all 0.3s linear;
+}

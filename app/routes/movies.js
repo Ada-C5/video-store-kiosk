@@ -1,7 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-   model: function() {
+ 
+   model: function () {
    var query = { page: this.controllerFor('movies').get('page') };
    return this.store.query('movie', query);
   },
@@ -10,5 +11,9 @@ export default Ember.Route.extend({
     page: {
       refreshModel: true
     }
-  }
+  },
+
+  
 });
+
+

@@ -1,14 +1,33 @@
 <h2>List of Movies</h2>
 
 {{#each model as |movie|}}
-  <section class="movie-card">
-    <img class="movie-poster" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
-    <p class="movie-title">{{movie.title}}</p>
-    <button class="btn btn-success">Add to Queue</button>
-    <!-- <p>{{movie.overview}}</p> -->
-    <!-- <p>{{movie.release_date}}</p>
-    <p>Inventory: {{movie.inventory}}</p> -->
-  </section>
+<section class="movie-card">
+  <img class="movie-poster" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+  <p class="movie-title">{{movie.title}}</p>
+  <button class="btn btn-success btn-xs">Add to Queue</button>
+
+  <div class="modal fade">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">{{movie.title}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{movie.overview}}</p>
+          <p>{{movie.release_date}}</p>
+          <p>Inventory: {{movie.inventory}}</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-success btn-xs">Add to Queue</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+</section>
 {{/each}}
 
 <section>

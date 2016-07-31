@@ -20,13 +20,12 @@
             </div>
 
             <div id="myModal" class="modal">
-
               <div class="modal-content">
                 <button class="close" {{action 'close'}}>x</button>
                   <h2>{{displayTitle}}</h2>
                   <img class="displayImg" src="http://localhost:3000/images/posters/{{displayImg}}" alt="Movie">
                   <p>{{displayOverview}} </p>
-                  <button id="queue" {{action 'queue' movie.poster_filename}}>              + Add to Queue</button>
+                  <button id="queue" {{action 'queues' displayImg}}>              + Add to Queue</button>
               </div>
 
             </div>
@@ -42,7 +41,9 @@
 
   <div class="queuecontainer">
     {{#each queue as |movie|}}
-      <img class="" src="http://localhost:3000/images/posters/{{movie}}" alt="Movie" />
+    <!-- {{@index}}: {{this}} -->
+      <button {{action 'closequeue' movie @index}} id="queueclose" class="queueclose" {{action 'close'}}>x</button>
+      <img class="queueImg" src="http://localhost:3000/images/posters/{{movie}}" alt="Movie" />
     {{/each}}
   </div>
 

@@ -9,21 +9,21 @@ html, body, #ember408 {
   height: 100%;
   width: 100%;
 }
-
+/*
 .hiddentext{
   z-index: -1;
   font-size: 5px;
   background-color: gray;
   color:white;
   /*width: 11.1%;*/
-  position: absolute;
-  width: 85%;
+  /*position: absolute;*/
+  /*width: 85%;*/
   /*margin-left: 1%;*/
   /*margin-right: 4%;*/
   /*top: 10%;*/
-  display: block;
-  opacity: 0.6;
-}
+  /*display: block;*/
+  /*opacity: 0.6;*/
+/*}*/*/
 
 h2{
   margin: 0;
@@ -44,8 +44,10 @@ h2{
 
 
 .queuecontainer{
+  color: white;
   height:18%;
-  float: clear;
+  z-index: -5;
+  /*float: left;*/
   background: rgb(40, 40, 40);
 }
 
@@ -109,12 +111,50 @@ p{
   /*margin-top: 20%;*/
 }
 
+.queuefont{
+  float:left;
+}
+
 .displayImg{
   float: left;
   width: 26%;
   margin-top: 2%;
   margin-right: 4%;
 }
+
+.queueImg{
+  float: left;
+  margin-top: 1.4%;
+  margin-left: 1%;
+  width: 4.5%;
+}
+
+#queueclose {
+    z-index: 0;
+    color: #cdcdcd;
+    background-color: rgb(130, 128, 128);
+    position: relative;
+    /*left: 5%;*/
+    float: left;
+    left: 1.7%;
+    top: 5%;
+    /*margin-left: 50px;*/
+    display: inline-block;
+    margin: auto;
+    border-radius: 50%;
+    /*float: right;*/
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+#queueclose:hover,
+#queueclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 .poster {
   display: inline-block;
   transition: all .2s ease-in-out;
@@ -194,7 +234,7 @@ h1{
 
 /* Modal Content/Box */
 .modal-content {
-
+    z-index:1002;
     background-color: #e7e6e6;
     margin: 4.5% auto; /* 15% from the top and centered */
     padding: 40px;

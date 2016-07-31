@@ -6,11 +6,11 @@ export default Ember.Controller.extend({
   page: 1,
   size: 10,
   queue: [],
+  // displayTitle: "",
   actions: {
     select(title, overview, img){
       var modal = document.getElementById('myModal');
       // var modal = document.getElementsByClassName('modal-content')
-      console.log("title", modal)
       this.set('displayTitle', title)
       this.set('displayOverview', overview)
       this.set('displayImg', img)
@@ -20,9 +20,22 @@ export default Ember.Controller.extend({
       var modal = document.getElementById('myModal');
       modal.style.display = "none"
     },
-    queue(movie){
 
+    queues(movie){
+      var queueArray = this.get('queue')
+      queueArray.pushObject(movie)
+      this.set('queue', queueArray)
     },
+
+    closequeue(movie, index) {
+      var queueArray = this.get('queue')
+      console.log("movie", movie)
+      queueArray.removeObject(movie)
+      // var close = document.getElementByClassName('queueclose')[0];
+      // console.log(close)
+      // close.style.display = "none"
+    },
+
     prev() {
       if (this.page !== 1) {
         this.set('page', this.page-1)

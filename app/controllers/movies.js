@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
       } else {
         prevPage = this.page - 1
       }
-      this.set("page", (pageBack));
+      this.set("page", (prevPage));
     },
 
     toggleSelected() {

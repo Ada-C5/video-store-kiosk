@@ -1,17 +1,17 @@
 <h2>List of Movies</h2>
 
 {{#each model as |movie|}}
-  <div class="card">
-    <img class="posters" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
-    <h3>{{movie.title}}</h3>
-    <button class="queue">Add to Queue</button>
-    <!-- <p class="overview">{{movie.overview}}</p> -->
+  <section class="movie-card">
+    <img class="movie-poster" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+    <p class="movie-title">{{movie.title}}</p>
+    <button class="btn btn-success">Add to Queue</button>
+    <!-- <p>{{movie.overview}}</p> -->
     <!-- <p>{{movie.release_date}}</p>
     <p>Inventory: {{movie.inventory}}</p> -->
-  </div>
+  </section>
 {{/each}}
 
-<div class="controls">
-  <button class="prev" id="prev" {{action "prevPage"}}>Previous</button>
-  <button class="next" id="next" {{action "nextPage"}}>Next</button>
-</div>
+<section>
+  <button class="btn btn-primary" {{action "prevPage"}}>Previous</button>
+  <button class="btn btn-primary" {{action "nextPage"}}>Next</button>
+</section>

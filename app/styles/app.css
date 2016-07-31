@@ -1,55 +1,15 @@
-/*html {
-  text-align: center;
-  background-color: #262626;
-  margin: 0 auto;
-  width: 85%;
-  color: white;
-}*/
-
-/*.card {
-  float: left;
-  border-style: groove;
+.movie-card {
+  width: 150px;
+  display: inline-block;
 }
 
-.posters {
-  width: 20%;
-  padding: 1% 2%;
-}*/
+.movie-poster {
+  width: 150px;
+}
 
-/*.queue {
-  margin: 1%;
-  padding: 1%;
-  width: 15%;
-  background: #ccc;
-  border-color: #ccc;
-  border-radius: 5px;
-  border-style: outset;
-}*/
-
-/*.overview {
-  padding: 0 2%;
-  line-height: 25px;
-}*/
-
-/*.next, .prev {
-  margin: 1%;
-  padding: 1%;
-  width: 15%;
-  background: #ccc;
-  border-color: #ccc;
-  border-radius: 5px;
-  border-style: outset;
-}*/
-
-
-/*.aside {
-  float: left;
-  border-style: outset;
-  border-style: groove;
-  border-color: #f7786b;
-  border-width: 20px;
-  margin: 10px;
-  background-color: #92a8d1;
-  padding: 1%;
-  margin: 1%;
-}*/
+.movie-title {
+  text-overflow: ellipsis;
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+}

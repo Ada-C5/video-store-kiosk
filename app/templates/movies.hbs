@@ -4,17 +4,17 @@
   {{#each model as |movie|}}
     <div class="poster">
       <div class="box">
-        <a class="button" href="#popup1" {{action "setMovie" movie.title movie.overview movie.poster_filename}}><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></a></div><br>
+        <a class="button" href="#popup1" {{action "selectMovie" movie.title movie.overview}}><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></a></div><br>
         <div id="popup1" class="overlay">
           <div class="popup">
-            <h2>{{setTitle}}</h2>
-            <a class="close" href="#">&times;</a>
+            <h2>{{displayTitle}}</h2>
+            <a class="close" href="#" {{action "closeMovie"}}>&times;</a>
             <div class="content">
-              {{setOverview}}
+              {{displayOverview}}
             </div>
           </div>
          </div>          
-    <div class="queue-button"><button class="btn btn-default queue">Add to Queue</button></div>
+    <div class="queue-button"><button class="queue">Add to Queue</button></div>
   </div> 
   {{/each}}
 </div>

@@ -5,24 +5,30 @@ export default Ember.Controller.extend({
   page: 1,
 
   actions: {
-    nextPage() {
+    nextPage () {
       if (this.page + 1 <= 10) {
         this.set("page", (this.page + 1));
       }
     },
 
-    prevPage() {
+    prevPage () {
       if (this.page - 1 >= 1) {
         this.set("page", (this.page - 1));
       }
     },
 
-    setMovie(title, overview, image) {
-      this.set("setTitle", title)
-      this.set("setOverview", overview)
-      this.set('setImage', image)
-      console.log(this.setTitle)
+    selectMovie (title, overview){
+      var popup = document.getElementById('popup1');
+      this.set('displayTitle', title)
+      this.set('displayOverview', overview)
+      popup.style.display = "block"
+    },
+    
+    closeMovie () {
+      var popup = document.getElementById('popup1');
+      popup.style.display = "none"
     }
   }
+
 
 });

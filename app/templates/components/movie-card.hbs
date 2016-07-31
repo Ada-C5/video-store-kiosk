@@ -1,18 +1,5 @@
-<h2>List of Movies</h2>
-
-{{#each model as |movie|}}
-
 <section class="movie-card">
   <img class="movie-poster" {{action "openModal" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
   <p class="movie-title">{{movie.title}}</p>
   <button class="btn btn-success btn-xs">Add to Queue</button>
-</section>
-
-{{/each}}
-
-{{outlet "modal"}}
-
-<section>
-  <button class="btn btn-primary" {{action "prevPage"}}>Previous</button>
-  <button class="btn btn-primary" {{action "nextPage"}}>Next</button>
 </section>

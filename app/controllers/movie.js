@@ -15,6 +15,9 @@ export default Ember.Controller.extend({
       if (this.page - 1 >= 1) {
         this.set('page', (this.page - 1));
       }
+    },
+    openModal: function(movie) {
+      console.log("you are trying to open modal");
     }
   }
 });

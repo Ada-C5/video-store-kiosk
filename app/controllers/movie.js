@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     unselect() {
-      console.log("Clear Outlet!")
-      console.log($('.selectedmovie').empty());
+      // hide the selectedmovie div
+      ($('.selectedmovie').hide());
     },
     queue() {
       console.log("Add to Queue, Clear Outlet!")

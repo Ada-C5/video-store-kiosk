@@ -6,7 +6,7 @@
       <div class="poster">
         {{#link-to "show" movie.title}}
           <p class="title">{{movie.title}}</p>
-          <p class="description">{{movie.overview}}</p>
+          <p class="description">({{movie.release_date}}) - {{movie.overview}}</p>
           <img
           src='http://localhost:3000/images/posters/{{movie.poster_filename}}'>
         {{/link-to}}

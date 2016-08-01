@@ -2,27 +2,23 @@
 
 <h1>List of movies should be here, {{model.inventory}}</h1>
 
-
 <ul>
-  {{#each model as |movie|}}
+
+{{#each model as |movie|}}
     <li>{{ movie.title}}</li>
 
     {{#if movie.selected}}
-
-    <button {{action 'moreInfo'}}>Hide</button>
-    <li class='info'>
-      {{movie.overview}}
-    </li>
+      <button {{action 'moreInfo' movie}}>Show</button>
+      <li class='info'>
+        {{movie.id}}
+      </li>
 
       {{else}}
+      <button {{action 'moreInfo' movie}}>Hide</button>
 
-      <button {{action 'moreInfo' movie.id}}>More Info</button>
+
       {{/if}}
-
-
-
-
-  {{/each}}
+    {{/each}}
 </ul>
 
 

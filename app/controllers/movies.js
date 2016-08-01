@@ -5,6 +5,8 @@ export default Ember.Controller.extend({
   page: 0,
   addToQueue: true,
   moreInfo: true,
+  selected: true,
+
 
   //Ember.compute('model.moreInfo')//this is the
 
@@ -21,10 +23,22 @@ export default Ember.Controller.extend({
       this.set('page', prevTen )
     },
 
-    moreInfo(movieId){
-    let idm = this.model.find(function(model){return model.id == movieId})
-    console.log(id)
-      id.set('selected', true)
+    moreInfo(movie){
+      this.set('selected',true)
+      console.log(movie)
+
+      //let movie = this.model.find(function(model){return model.id == movieId})
+      //this.toggleProperty('selected', true)
+      //console.log(id)
+      //this.toggleProperty('selected');
+      //console.log(this.id.overview)
+      //this.selected
+    //let id = this.model.find(function(model){return model.id == movieId})
+    //console.log(this.toggleProperty('selected'))
+
+    //console.log(id)
+    //this.set('selected',)
+    //id.overview.set('selected', true)
     }
   }
 

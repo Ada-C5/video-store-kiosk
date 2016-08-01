@@ -3,13 +3,10 @@
 <div class="movie-list">
 <table>
     {{#each model as |movie|}}
-      <div class="poster" onmouseover={{action 'showDescription' movie.id}}
-      onmouseout={{action 'noDescription' movie.id}}>
+      <div class="poster">
         {{#link-to "show" movie.title}}
           <p class="title">{{movie.title}}</p>
-          {{#if movie.selected}}
-            <p class="description">{{movie.overview}}</p>
-          {{/if}}
+          <p class="description">{{movie.overview}}</p>
           <img
           src='http://localhost:3000/images/posters/{{movie.poster_filename}}'>
         {{/link-to}}

@@ -39,10 +39,14 @@ h2 {
   box-shadow: 5px 5px 5px #888888;
 }
 
-.poster img:hover {
+.poster:hover img {
   height: 14rem;
   width: 14rem;
   transition: all 0.25s;
+}
+
+.poster:hover .description {
+  display: inline-block;
 }
 
 .title {
@@ -55,11 +59,25 @@ h2 {
 }
 
 .description {
-  /*display: none;*/
-  float: left;
+  display: none;
   position: absolute;
 }
 
-.description:hover {
-  /*display: block;*/
+/*.selected {
+  color: red;
+  position: absolute;
 }
+
+.selected:hover {
+  color: white;
+}*/
+
+/*.description {
+  /*display: none;*/
+  /*float: left;
+  position: absolute;
+}*/
+
+/*.description:hover {
+  /*display: block;*/
+/*}*/

@@ -19,16 +19,16 @@ export default Ember.Controller.extend({
 
     showMovie(movieTitle) {
       this.set("title", movieTitle)
-    },
-
-    showDescription(movieId) {
-      var mod = this.get('model').find(function (model) {return model.id === movieId })
-      mod.set('selected', true)
-    },
-
-    noDescription(movieId) {
-      var mod = this.get('model').find(function (model) {return model.id === movieId })
-      mod.set('selected', false)
     }
+
+    // showDescription(movieId) {
+    //   var mod = this.get('model').find(function (model) {return model.id === movieId })
+    //   mod.set('selected', true)
+    // },
+    //
+    // noDescription(movieId) {
+    //   var mod = this.get('model').find(function (model) {return model.id === movieId })
+    //   mod.set('selected', false)
+    // }
   }
 });

@@ -4,13 +4,7 @@ export default Ember.Controller.extend({
   selected: true,
   actions: {
     unselect: function() {
-      // hide the selectedmovie div
-      // ($('.selectedmovie').hide());
-      console.log("I'm in the movie controller")
-      // this below needs to be passed a new Model
-      // this.transitionToRoute('movie', newModel);
-      this.send("sessionChanged");
-      this.set("selected", false)
+      this.transitionToRoute('movies');
     },
     queue() {
       console.log("Add to Queue, Clear Outlet!")

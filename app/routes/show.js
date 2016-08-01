@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 
-  model: function(params) {
-    var title = params.title
-    return this.store.findRecord('movie', title)
-  }
+  // model: function(params) {
+  //   var title = params.title
+  //   return this.store.findRecord('movie', title)
+  // }
 
 
   // queryParams: {

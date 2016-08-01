@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   page: 1,
   title: "",
+  queue: [],
 
   actions: {
     nextPage() {
@@ -17,8 +18,11 @@ export default Ember.Controller.extend({
       }
     },
 
-    showMovie(movieTitle) {
-      this.set("title", movieTitle)
+    addToQueue(movieTitle) {
+      // take movie and push into queue array
+      // console.log(this.get('queue'))
+      this.set("queue", this.get("queue").addObject(movieTitle))
+      console.log(this.get("queue"))
     }
 
     // showDescription(movieId) {

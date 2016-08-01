@@ -1,9 +1,30 @@
-<h2>List of Movies</h2>
+<div class="stuffs">
+<br>
+  <div class= "buttons">
 
-<ul>
-  {{#each model as |movie|}}
-    <li>{{movie}}</li>
-  {{/each}}
-</ul>
+    <button class="buttonLeft" {{action "previousPage"}}>◀︎</button>
+    <button class="buttonRight" {{action "nextPage"}}>▶︎</button>
 
-<!-- {{outlet}} -->
+
+  </div>
+
+
+
+    <table class="table">
+      <tbody>
+      {{#each model as |movies|}}
+        <td>
+          {{movie-listing movie=movies}}
+
+        </td>
+
+        {{/each}}
+      </tbody>
+    </table>
+
+
+
+
+
+    {{outlet}}
+</div>

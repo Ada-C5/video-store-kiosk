@@ -14,7 +14,7 @@
       <tbody>
       {{#each model as |movies|}}
         <td>
-          {{movie-listing movie=movies}}
+          {{movie-listing movie=movies addToQueue=(action 'addMovie')}}
 
         </td>
 
@@ -22,6 +22,21 @@
       </tbody>
     </table>
 
+
+  <div class="queue-section">
+    <h2 class="queue">Queue</h2>
+    <a {{action 'clearQueue'}}><h3 class="clear-all">Clear</h3></a>
+    <div class="queued-movies">
+      {{#each queue as |movie|}}
+        <div class="movie-queue">
+          <p class="queue-title">{{movie.title}} <a class="remove-queue" {{action 'removeMovie' movie}}><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a></p>
+          <div class='queue-poster'>
+            <img class="thumb" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 
 
 

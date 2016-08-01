@@ -5,6 +5,11 @@ export default Ember.Component.extend({
   actions: {
     toggleDetails() {
       this.toggleProperty('isExpanded');
+    },
+    addToQueue(movie) {
+      this.sendAction('addToQueue', movie);
+      this.toggleProperty('isExpanded');
     }
+
   }
 });

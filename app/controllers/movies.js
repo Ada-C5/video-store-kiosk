@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   page: 1,
-  queque: [],
+  queue: [],
 
   actions: {
     nextPage() {
@@ -15,13 +15,20 @@ export default Ember.Controller.extend({
         this.set("page", (this.page-1));
       }
     },
-    // info(){
-    //   console.log('info please')
-    //   let element = Ember.$(event.target)
-    //   element.toggleClass('movieInfo')
-    //   let overview = $(element.parent().parent()).find('#deets')
-    //   overview.toggleClass('show overview')
-    //   // overview.toggleClass('overview')
-    // }
+    addMovie(movie) {
+     var queueArray = this.get('queue');
+     queueArray.pushObject(movie);
+     this.set('queue', queueArray.uniq());
+   },
+   removeMovie(movie) {
+     var queueArray = this.get('queue');
+     queueArray.removeObject(movie);
+     this.set('queue', queueArray);
+   },
+   clearQueue() {
+     var queueArray = this.get('queue');
+     queueArray.clear();
+     this.queueEmpty;
+   }
   }
 });

@@ -17,8 +17,8 @@ h1, h2, h3, h4, h4, h5, h6 {
   color: #ffffff;
   /*text-shadow: 3px 3px 3px #4CAF50;*/
   /*text-shadow: 6px 6px 5px black;*/
-text-shadow: -2px 2px 2px #4CAF50,
-              -5px 5px 5px black,
+text-shadow: -2px 2px 2px black,
+              -2px 2px 5px #4CAF50,
               -10px 10px 10px black;
   margin-left: 45px;
   text-align: center;
@@ -72,9 +72,16 @@ td {
 
 }
 
-p{
-  text-shadow: 1px 1px 5px #4CAF50;
+.info{
+  text-shadow: -2px 2px 2px black,
+                -2px 2px 5px #4CAF50,
+                -10px 10px 10px black;
+}
 
+p{
+  text-shadow: -2px 2px 2px black,
+                -2px 2px 5px #4CAF50,
+                -10px 10px 10px black;
 }
 
 .buttonLeft {
@@ -165,41 +172,7 @@ img:hover {
   border-color: white;
   border-style: solid;
 }
-/*
-.infotext {
-  display: flex;
-  padding-top: 50px;
-  text-align: center;
-  text-shadow: 2px 2px 5px #47bd51;
-  padding-left: 30px;
-  padding-right: 30px;
-}*/
 
-/*.back {
-  font-size: 24px;
-  color: white
-  background: #47bd51;
-  background-color: #47bd51;
-  width: 90px;
-  height:40px;
-  padding-left: 5px;
-  padding-top: 20px;
-  border-width: medium;
-  border-color: #47bd51;
-  margin-left: 10px;
-  margin-top: 10px;
-  box-shadow: 3px 3px 5px white;
-  text-shadow: 2px 2px 3px black;
-}*/
-
-.title {
-  font-size: 32px;
-  padding-top: 25px;
-  text-align: center;
-  text-shadow: 2px 2px 3px #47bd51;
-  /*padding-left: 30px;*/
-  /*padding-right: 30px;*/
-}
 
 /* The Modal (background) */
 .modal {
@@ -250,4 +223,76 @@ img:hover {
 
 .add-to-queue:hover {
     color: #4CAF50;
+}
+
+.thumb {
+  width: 100%;
+  height: 100%;
+}
+
+.queue-section {
+  clear: both;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.movie-queue {
+  display: inline-block;
+  width: 10%;
+}
+
+.queue-poster {
+  box-shadow: 5px 5px 5px black;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.remove-queue {
+  color: #4CAF50;
+  font-size: 1.5rem;
+  text-shadow: 1px 1px 1px black;
+  float: right;
+}
+
+.queue-title {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.add-overlay {
+  color: #33cc33;
+  float: right;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+
+h2.queue {
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+
+h3.clear-all {
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-color: #4CAF50;
+  border-radius: 75%;
+  width: 85px;
+  height: 40px;
+  margin-left: 685px;
+  padding-top: 10px;
+  padding-left: 2px;
+  background-color: #4CAF50;
+  box-shadow: 6px 6px 7px black;
+}
+
+.no-movies {
+  height: 15%;
 }

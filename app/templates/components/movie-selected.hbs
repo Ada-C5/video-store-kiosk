@@ -1,3 +1,23 @@
-{{#bootstrap-modal isVisible=isVisible title="Your Custom Bootstrap Modal"}}
-    {{input type="text" class="form-control"}}
-{{/bootstrap-modal}}
+{{yield}}
+
+<div class='movie' {{action "toggleDetails"}}>
+  <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster">
+</div>
+
+{{#if isExpanded}}
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <div class="modal-header">
+      <span class="close" {{action "toggleDetails"}}>x</span>
+        <h3>{{movie.title}}</h3>
+      </div>
+      <p class="overview">{{movie.overview}}</p>
+      <div class="modal-footer">
+        <h3>In Stock: {{movie.inventory}}</h3>
+      </div>
+        <button {{action "addToQueue" movie}}>Add to Queue</button>
+    </div>
+
+  </div>
+{{/if}}

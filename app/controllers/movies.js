@@ -2,28 +2,28 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   pageNumber: 1, 
-  showMyModal: false,
-  // atTheEnd: false,
-
+  queue: [],
   actions: {
     clickNext() {
-      // if (this.atTheEnd === false)
-      if (this.pageNumber <= 10) {  
-        this.set("pageNumber", (this.pageNumber+1));
+      if (this.pageNumber < 10) {  
+        this.set("pageNumber", (this.pageNumber + 1));
       }
     },
     clickPrev() { 
       if (this.pageNumber === 1) {
         return; 
       }
-      this.atTheEnd = false,
-      this.set("pageNumber", (this.pageNumber-1));
+      this.set("pageNumber", (this.pageNumber - 1));
     },
-    showInfo() {
-      console.log('hi')
+    addMovie(movie) {
+      var queueArray = this.get('queue');
+      queueArray.pushObject(movie);
+      this.set('queue', queueArray.uniq());
     },
-    toggleShow() {
-        this.set('showMyModal', !this.get('showMyModal'));
+    removeMovie(movie) {
+      var queueArray = this.get('queue');
+      queueArray.removeObject(movie);
+      this.set('queue', queueArray);
     }
   }
 });

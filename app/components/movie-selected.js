@@ -1,20 +1,14 @@
 import Ember from 'ember';
- 
+
 export default Ember.Component.extend({
+  isExpanded: false,
   actions: {
-    doSave(d, meta) {
-      //d.reject(); 
-      d.resolve();
+    toggleDetails() {
+      this.toggleProperty('isExpanded');
     },
-    doAfterClose() {
-      // 
-    },
-    doClose(d) {
-      if(confirm('Please confirm...')) {
-        d.resolve();
-      } else {
-        d.reject();
-      }
+    addToQueue(movie) {
+      this.sendAction('addToQueue', movie);
+      this.toggleProperty('isExpanded');
     }
   }
 });

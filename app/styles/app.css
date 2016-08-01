@@ -60,7 +60,6 @@ button:focus {
 }
 
 .movie img {
-  /*border-radius: 5px;*/
   height: 500px; 
   width: 300px;
   padding: .3rem;
@@ -73,4 +72,94 @@ button:focus {
   cursor: pointer;
   background-color: rgb(248,86,88);
   box-shadow: 0 0 0.25rem 0.25rem #f85658;
+}
+
+
+.overview {
+  font-size: 1.2rem;
+}
+
+.modal { 
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #222222; 
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+.thumb {
+  width: 100%;
+}
+
+.movie-queue {
+  /*float: left;*/
+  display: inline-block;
+  width: 8%;
+}
+
+.remove-queue {
+/*  background-color: red;
+  color: white;
+  border-radius: 50%;*/
+  border: none;
+}
+
+.queue-title {
+  font-weight: bold;
 }

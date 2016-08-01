@@ -5,10 +5,10 @@
 </div>
 <div class='container'>
   {{#each model as |movies|}}
-    <div class='movie'{{action "showInfo" on="click"}}>
+    <div class='movie'>
       {{movies.title}}
       <br>
-      <img src="http://localhost:3000/images/posters/{{movies.poster_filename}}" alt="movie poster">
+      {{movie-selected movie=movies addToQueue=(action 'addMovie')}}
     </div>
   {{/each}}
 </div>
@@ -17,15 +17,13 @@
   <button {{action 'clickNext'}}> Next </button>
 </div>
 
-{{!-- <div class="destination">
-  <div class="row">
-      <div class="col-md-12">
-          <button type="submit" type="button" class="btn btn-large btn-primary" {{action "toggleShow"}}>Show</button>
-   
-          {{#ember-wormhole to="destination"}}
-            {{movie-selected isVisible=showMyModal}}
-          {{/ember-wormhole}}
-   
-      </div>
-  </div>
-</div> --}}
+<aside>
+  <h2>Queue</h2>
+  {{#each queue as |movie|}}
+    <div class="movie-queue">
+      <p class="queue-title">{{movie.title}}</p>
+      <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+      <br><button class="remove-queue" {{action 'removeMovie' movie}}>❌</button>
+    </div>
+  {{/each}}
+</aside>

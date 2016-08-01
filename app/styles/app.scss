@@ -1,29 +1,29 @@
+$purple: rgb(134, 22, 87);
+$teal: rgb(120, 190, 197);
 
-* {
-  font-family: 'Atma', cursive;
-}
+* { font-family: 'Atma', cursive; }
 
 h1 {
   padding-top: 2%;
   text-align: center;
-  color: #861657;
+  color: $purple;
   font-size: 45px;
 }
 
 .next {
   margin-bottom: 2%;
-  margin-left: 20%;
+  margin-left: 25%;
 }
 
 .prev {
   margin-bottom: 2%;
-  margin-left: 20%; 
+  margin-left: 25%; 
 }
 
 img {
   height: 300px;
   width: 200px;
-  padding: 10px;
+  padding: 5px;
 }
 
 a { text-decoration: none; }
@@ -34,9 +34,7 @@ button:focus { outline: 0; }
   display: flex;
   justify-content:center;
   flex-wrap: wrap;
-}
-
-#queue-container {
+  margin-left: 8%;
 }
 
 .box:hover {
@@ -52,29 +50,42 @@ button:focus { outline: 0; }
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.7);
-  transition: opacity 500ms;
   display: none;
   z-index: 1001;
 }
 
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
+.overlay:target { visibility: visible; opacity: 1; }
+
+@-webkit-keyframes pop-in {
+  0% { opacity: 0; -webkit-transform: scale(0.3); }
+  100% { opacity: 1; -webkit-transform: scale(1); }
+}
+
+@-moz-keyframes pop-in {
+  0% { opacity: 0; -moz-transform: scale(0.3); }
+  100% { opacity: 1; -moz-transform: scale(1); }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.3); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 .popup {
+  -webkit-animation:pop-in 0.5s;
+  -moz-animation:pop-in 0.5s;
+  -ms-animation:pop-in 0.5s;
   margin: 70px auto;
   padding: 20px;
   background: #fff;
   border-radius: 5px;
   width: 50%;
   position: relative;
-  transition: all 5s ease-in-out;
 }
 
 .popup h2 {
   margin-top: 0;
-  color: #861657;
+  color: $purple;
   font-size: 40px;
 }
 
@@ -89,7 +100,7 @@ button:focus { outline: 0; }
   color: #333;
 }
 
-.popup .close:hover { color: #861657; }
+.popup .close:hover { color: $purple; }
 
 .popup .content {
   max-height: 30%;
@@ -98,25 +109,18 @@ button:focus { outline: 0; }
 }
 
 @media screen and (max-width: 700px){
-  .box{
-    width: 70%;
-  }
-  .popup{
-    width: 80%;
-  }
+  .box{ width: 70%; }
+  .popup{ width: 80%; }
 }
 
-.queue-button {
-  height: 100px;
-  margin-left: 10%;
-}
+.queue-button { height: 100px; margin-left: 10%; }
 
 .prev, .next {
-  background-color: #78bec5;
+  background-color: $teal;
   border: none;
   background-color: Transparent;
   font-weight: bolder;
-  border: 2px solid #861657;
+  border: 2px solid $purple;
   margin-top: 2%;
   font-size: 20px;
   cursor: pointer;
@@ -126,10 +130,10 @@ button:focus { outline: 0; }
 }
 
 .queue {
-  background-color: #78bec5;
+  background-color: $teal;
   border: none;
   background-color: Transparent;
-  border: 2px solid #861657;
+  border: 2px solid $purple;
   margin-top: 2%;
   margin-left: 15%;
   font-size: 18px;
@@ -153,9 +157,9 @@ button:focus { outline: 0; }
   margin-left: 3%;
 }
 
-.queue-menu .panel-heading {
-  text-align: center;
-  background-color: Transparent !important;
+.queue-menu .panel-heading { 
+  text-align: center; 
+  background-color: Transparent !important; 
 }
 
 .queue-menu .panel-heading:hover {
@@ -164,12 +168,46 @@ button:focus { outline: 0; }
   transition: all 0.3s linear;
 }
 
-.queue-menu .panel-heading a {
-  font-size: 30px;
-  text-decoration: none;
-}
+.queue-menu .panel-heading a { font-size: 30px; text-decoration: none; }
 
-.nothing-added {
-  text-align: center;
-  font-size: 20px;
-} 
+.nothing-added { text-align: center; font-size: 20px; } 
+
+.show-image {
+  display: inline-flex;
+  margin-left: 6%;
+
+  .remove-queue {
+    vertical-align: middle; 
+    text-align: center; 
+    position: relative;
+    transition: all 0.3s linear;
+  }
+
+  .remove-btn { display: none; }
+
+  .remove-queue:hover { 
+    opacity: 0.7;
+
+    span {
+      display: block; 
+      position: absolute;
+      vertical-align: middle;
+      text-align: center; 
+      top:45%;
+      width: 100%;
+    }
+  }
+
+  .remove-btn button {
+    padding: 10px 20px;
+    width: 150px;
+    font-size: 15px;
+    font-weight: normal;
+    border: none;
+    border-radius: 25px;
+    background-color: $purple;
+    color: white;   
+  }
+
+  .remove-queue:hover span button:hover { background-color: $purple; }
+}

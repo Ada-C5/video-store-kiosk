@@ -6,6 +6,8 @@ export default Ember.Controller.extend({
 
   queue: [],
 
+  queueParams: ["queuePage", "queuePerPage"],
+
   activate () {
     window.scrollTo(0,0);
   },
@@ -54,8 +56,6 @@ export default Ember.Controller.extend({
         if (currentQueue.length === 0) { $('.nothing-added').text('nothing added yet!') }
       } 
     }
-
   }
-
 
 });

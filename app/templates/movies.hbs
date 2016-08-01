@@ -1,13 +1,20 @@
 <div class="queue-menu">
+<div class="row">
 {{#bs-accordion}}
   {{#bs-accordion-item value="1" title="your queue"}}
-    <p class="nothing-added">nothing added yet!</p>
+{{!--     <button class="queue-prev"><span> &lt; </span></button>
+ --}}    <p class="nothing-added">nothing added yet!</p>
     {{#each queue as |movie|}}
-      <img src="http://localhost:3000/images/posters/{{movie}}">
-      <br><button class="remove-queue" {{action "removeMovie" movie}}>remove from queue</button>
-    {{/each}}     
-  {{/bs-accordion-item}}
+      <div class="show-image">
+        <a href="#" class="remove-queue">
+        <img src="http://localhost:3000/images/posters/{{movie}}" class="queue-img"> <span class="remove-btn"><button {{action "removeMovie" movie}}>remove from queue</button></span></a>
+      </div>
+      <button class="queue-clear" {{action "clearQueue"}}>clear queue</button>
+    {{/each}} 
+{{!--     <button class="queue-next"> &gt; </button>
+ --}}  {{/bs-accordion-item}}
 {{/bs-accordion}} 
+</div>
 </div>
 
 
@@ -25,7 +32,7 @@
             </div>
           </div>
          </div>          
-    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}} onclick="toggle_visibility('added')">add to queue</button>
+    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}}>add to queue</button>
     </div>
   </div> 
   {{/each}}

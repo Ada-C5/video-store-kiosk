@@ -5,3 +5,9 @@ export default DS.Model.extend({
   overview: DS.attr('string'),
   poster_filename: DS.attr('string')
 });
+
+
+// jeremys
+// selected: DS.attr('boolean', {default: false})
+// title: DS.attr() i'm assuming this defaults to string
+// inventory: DS.attr('number')

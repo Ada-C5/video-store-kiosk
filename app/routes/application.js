@@ -11,3 +11,15 @@ export default Ember.Route.extend({
    }
  }
 });
+
+//
+// jeremy's
+// export default Ember.Route.extend({
+//   model(params) {
+//     return this.store.query('movie', {page: 1})
+//     .then(function(movies){
+//       return {page:1, movies: movies}
+//     })
+//   }
+// })
+// whatever this returns, template and controller will have access to , called model

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  queue: ['taco', 'face'],
   page: 1,
   actions: {
     getPrev() {
@@ -15,6 +16,11 @@ export default Ember.Controller.extend({
     }
   }
 });
+
+// jeremy's
+// nextPage: Ember.computed('model.page', function() {
+//   return this.get('model.page' + 1)
+// })
 
 
 

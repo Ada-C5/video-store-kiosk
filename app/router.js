@@ -7,6 +7,16 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('queue');
 });
 
 export default Router;
+
+// 
+// jeremys
+// Router.map(function(){
+//   this.route('movies')
+//   this.route('page', {path '/:page'}, funciton(){
+//     this.route('queue')
+//   })
+// })

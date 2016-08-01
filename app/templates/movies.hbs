@@ -1,11 +1,15 @@
 {{!-- <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button> --}}
-
-<div class="container-fluid queue-menu">
-  <div class="row-offcanvas row-offcanvas-right">
-    {{side-bar}}
-  </div>
+<div class="queue-menu">
+{{#bs-accordion}}
+  {{#bs-accordion-item value="1" title="your queue"}}
+    {{#each queue as |movie|}}
+      <img src="http://localhost:3000/images/posters/{{movie}}">
+    {{/each}}     
+  {{/bs-accordion-item}}
+{{/bs-accordion}} 
 </div>
+
 
 <div id="movie-container" class="col-md-10">
   {{#each model as |movie|}}
@@ -21,14 +25,11 @@
             </div>
           </div>
          </div>          
-    <div class="queue-button"><button class="queue">Add to Queue</button></div>
+    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}} onclick="toggle_visibility('added')">Add to Queue</button>
+    </div>
   </div> 
   {{/each}}
 </div>
-
-
-  
-
 
 <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button>

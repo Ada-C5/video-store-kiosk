@@ -4,6 +4,8 @@ export default Ember.Controller.extend({
 
   page: 1,
 
+  queue: [],
+
   activate () {
     window.scrollTo(0,0);
   },
@@ -34,6 +36,15 @@ export default Ember.Controller.extend({
       var popup = document.getElementById('popup1');
       popup.style.display = "none"
     }, 
+
+    addMovie (imageFilename) {
+      var currentQueue = this.get('queue')
+      if (!currentQueue.includes(imageFilename)) {
+        currentQueue.pushObject(imageFilename)
+        this.set('queue', currentQueue)
+       } 
+    }
+
   }
 
 

@@ -44,6 +44,7 @@
   },
   "dependencies": {
     "ember-cli-lightbox": "0.0.3",
+    "ember-moment": "^7.0.0-beta.3",
     "lightbox2": "^2.8.2"
   }
 }

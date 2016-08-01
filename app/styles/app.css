@@ -20,6 +20,14 @@ h3 {
   color: #222222;
 }
 
+aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-left: 2px solid white;
+  overflow: scroll;
+}
+
 button {
   background-color: #222222;
   border: none;
@@ -100,28 +108,10 @@ button:focus {
   animation-name: animatetop;
   animation-duration: 0.6s
 }
-
-@keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
-}
-
-@-webkit-keyframes animatetop {
-    from {top: -300px; opacity: 0} 
-    to {top: 0; opacity: 1}
-}
-
 .close {
   color: #f85658;
   float: right;
   font-size: 2.5rem;
-}
-
-.close:hover,
-.close:focus {
-  color: #222222;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 button.close:hover,
@@ -169,10 +159,12 @@ button.close:focus {
   cursor: pointer;
 }
 
-aside {
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-left: 2px solid white;
-  overflow: scroll;
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes animatetop {
+  from {top: -300px; opacity: 0} 
+  to {top: 0; opacity: 1}
 }

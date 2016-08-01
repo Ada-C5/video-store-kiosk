@@ -8,6 +8,13 @@ const Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('movies');
+  // this.route('page', {path: '/:page'}, function(){
+    // this.route('queue')
+  // })
+  this.route('movie-selected');
 });
 
 export default Router;
+
+// dynamic routing with pages 
+

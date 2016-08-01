@@ -10,21 +10,12 @@ h1 {
   text-align: center; 
 }
 
-.delorean-doge {
-  left: 0;
-  position: absolute;
-  top: 0;
-  z-index: -1955;
-}
 
 h2 {
   font-size: 2.5rem;
   text-align: center;
 }
 
-.controls {
-  text-align: center;
-}
 
 button {
   background-color: #222222;
@@ -42,6 +33,20 @@ button:hover {
   
 }
 
+button:focus {
+  outline:0;
+}
+
+.delorean-doge {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1955;
+}
+
+.controls {
+  text-align: center;
+}
 .container {
   display: -webkit-flex;
   display: flex;

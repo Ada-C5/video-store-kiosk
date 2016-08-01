@@ -4,15 +4,28 @@
   <button {{action 'clickNext'}}> Next </button>
 </div>
 <div class='container'>
-    {{#each model as |movies|}}
-  <div class='movie'>
-        {{movies.title}}
-        <br>
-        <img src="http://localhost:3000/images/posters/{{movies.poster_filename}}">
+  {{#each model as |movies|}}
+    <div class='movie'{{action "showInfo" on="click"}}>
+      {{movies.title}}
+      <br>
+      <img src="http://localhost:3000/images/posters/{{movies.poster_filename}}" alt="movie poster">
     </div>
-    {{/each}}
+  {{/each}}
 </div>
 <div class='controls'>
   <button {{action 'clickPrev'}}> Previous </button>
   <button {{action 'clickNext'}}> Next </button>
 </div>
+
+{{!-- <div class="destination">
+  <div class="row">
+      <div class="col-md-12">
+          <button type="submit" type="button" class="btn btn-large btn-primary" {{action "toggleShow"}}>Show</button>
+   
+          {{#ember-wormhole to="destination"}}
+            {{movie-selected isVisible=showMyModal}}
+          {{/ember-wormhole}}
+   
+      </div>
+  </div>
+</div> --}}

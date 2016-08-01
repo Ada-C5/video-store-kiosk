@@ -33,9 +33,7 @@ export default Ember.Controller.extend({
     closeMovie () {
       var popup = document.getElementById('popup1');
       popup.style.display = "none"
-    },
-
-    
+    }, 
   }
 
 

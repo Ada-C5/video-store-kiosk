@@ -1,7 +1,11 @@
 {{!-- <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button> --}}
 
-
+<div class="container-fluid queue-menu">
+  <div class="row-offcanvas row-offcanvas-right">
+    {{side-bar}}
+  </div>
+</div>
 
 <div id="movie-container" class="col-md-10">
   {{#each model as |movie|}}
@@ -21,6 +25,10 @@
   </div> 
   {{/each}}
 </div>
+
+
+  
+
 
 <button class="prev" {{action "prevPage"}}>Previous</button>
 <button class="next" {{action "nextPage"}}>Next</button>

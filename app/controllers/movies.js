@@ -25,6 +25,11 @@ export default Ember.Controller.extend({
       var queueArray = this.get('queue');
       queueArray.removeObject(movie);
       this.set('queue', queueArray);
+    },
+    clearQueue() {
+      var queueArray = this.get('queue');
+      queueArray.clear();
+      this.queueEmpty;
     }
   }
 });

@@ -1,6 +1,7 @@
 {{yield}}
 
 <div class='movie-container' {{action "toggleDetails"}}>
+  <a class="add-overlay" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
   <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
 </div>
 
@@ -8,11 +9,13 @@
   <div id="myModal" class="modal">
 
     <div class="modal-content">
-      <span class="close" {{action "toggleDetails"}}>x</span>
-      <h2>{{movie.title}}</h2>
+      <span class="close" {{action "toggleDetails"}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+      <h2>
+      {{movie.title}}
+      <a class="add-to-queue" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+      </h2>
       <p class="overview">{{movie.overview}}</p>
       <p>In stock: {{movie.inventory}}</p>
-      <button {{action "addToQueue" movie}}>Add to Queue</button>
     </div>
 
   </div>

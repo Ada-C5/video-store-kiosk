@@ -1,19 +1,24 @@
 <div class='buttons'>
-  <button {{action 'prevPage'}}>←</button>
-  <button {{action 'nextPage'}}>→</button>
+  <button class="btn btn-default" {{action 'prevPage'}}><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>
+  <button class="btn btn-default" {{action 'nextPage'}}><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
 </div>
 
 {{#each model as |movieUnit|}}
   {{movie-listing movie=movieUnit addToQueue=(action 'addMovie')}}
 {{/each}}
 
-<aside>
-  <h2>Queue</h2>
-  {{#each queue as |movie|}}
-    <div class="movie-queue">
-      <p class="queue-title">{{movie.title}}</p>
-      <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
-      <br><button class="remove-queue" {{action 'removeMovie' movie}}>❌</button>
-    </div>
-  {{/each}}
-</aside>
+<div class="queue-section">
+  <h2 class="queue">Queue</h2>
+  <a {{action 'clearQueue'}}><h3 class="clear-all">(Clear All)</h3></a>
+  <div class="queued-movies">
+    {{#each queue as |movie|}}
+      <div class="movie-queue">
+        <p class="queue-title">{{movie.title}}</p>
+        <div class='queue-poster'>
+          <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+        </div>
+        <br><a class="remove-queue" {{action 'removeMovie' movie}}><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a>
+      </div>
+    {{/each}}
+  </div>
+</div>

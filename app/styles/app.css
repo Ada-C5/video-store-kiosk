@@ -1,3 +1,5 @@
+/*** GLOBAL ***/
+
 html {
   font-size: 20px;
 }
@@ -10,9 +12,7 @@ h1 {
   margin: 0;
 }
 
-/*.button {
-  clear: both;
-}*/
+/*** QUEUE STYLES ***/
 
 .queue {
   float: left;
@@ -21,6 +21,11 @@ h1 {
   border-radius: 2%;
 }
 
+.remove {
+  font-size: 0.75rem;
+}
+
+/*** MOVIE LIST STYLES ***/
 .movie-list {
   float: right;
   text-align: center;
@@ -72,7 +77,6 @@ h1 {
 .poster:hover .description {
   display: inline-block;
 }
-
 
 .title {
   margin: 0;

@@ -6,11 +6,13 @@ export default Ember.Controller.extend({
   actions: {
     nextPage() {
       if (this.page + 1 <= 10) {
+        this.transitionToRoute('movies');
         this.set("page", (this.page+1));
       }
     },
     previousPage() {
       if (this.page - 1 >= 1) {
+        this.transitionToRoute('movies');
         this.set("page", (this.page-1));
       }
     }

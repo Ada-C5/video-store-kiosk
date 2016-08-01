@@ -17,17 +17,26 @@ export default Ember.Controller.extend({
         this.set('page', (this.page - 1));
       }
     },
-    openModal: function(movie) {
-      console.log("you are trying to open modal");
-    },
     addQueue: function(movie) {
       var queueArray = this.get('queue');
       queueArray.pushObject(movie);
       this.set('queue', queueArray);
-      console.log(queueArray);
+      console.log("queue array ",queueArray);
     },
     resetQueue: function() {
       this.set('queue', [])
+    },
+    removeQueue: function(movie) {
+      var remove = this.get('queue');
+      var index = remove.indexOf(movie);
+      if (index > -1) {
+        remove.splice(index, 1);
+        this.set('queue', remove);
+        console.log("removing stuff ", remove);
+      }
     }
+    // openModal: function(movie) {
+    //   console.log("you are trying to open modal");
+    // }
   }
 });

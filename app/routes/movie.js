@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     // console.log(this.store.query('movie', query))
     return this.store.query('movie', query)
     .then((movies)=> {
-      var queue = { queue: this.controllerFor('movie').get('queue') }
+      var queue = this.controllerFor('movie').get('queue')
       // console.log(movies)
       console.log(queue)
       return { q: queue, m: movies }

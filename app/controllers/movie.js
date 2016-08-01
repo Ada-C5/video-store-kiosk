@@ -25,6 +25,9 @@ export default Ember.Controller.extend({
       queueArray.pushObject(movie);
       this.set('queue', queueArray);
       console.log(queueArray);
+    },
+    resetQueue: function() {
+      this.set('queue', [])
     }
   }
 });

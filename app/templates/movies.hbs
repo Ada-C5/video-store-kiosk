@@ -2,24 +2,22 @@
 
 <h1>List of movies should be here, {{model.inventory}}</h1>
 
-<ul>
+
+{{#link-to 'queue'}}
+click
+{{/link-to}}
 
 {{#each model as |movie|}}
     <li>{{ movie.title}}</li>
 
-    {{#if movie.selected}}
-      <button {{action 'moreInfo' movie}}>Show</button>
+    {{#link-to "movie" movie.title}}
+
       <li class='info'>
-        {{movie.id}}
       </li>
+{{/link-to}}
+{{/each}}
 
-      {{else}}
-      <button {{action 'moreInfo' movie}}>Hide</button>
-
-
-      {{/if}}
-    {{/each}}
-</ul>
+<img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
 
 
 

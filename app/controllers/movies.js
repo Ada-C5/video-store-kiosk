@@ -40,6 +40,7 @@ export default Ember.Controller.extend({
     addMovie (imageFilename) {
       var currentQueue = this.get('queue')
       if (!currentQueue.includes(imageFilename)) {
+        $('.nothing-added').text('')
         currentQueue.pushObject(imageFilename)
         this.set('queue', currentQueue)
        } 

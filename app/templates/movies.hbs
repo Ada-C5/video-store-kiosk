@@ -3,6 +3,7 @@
 <div class="queue-menu">
 {{#bs-accordion}}
   {{#bs-accordion-item value="1" title="your queue"}}
+    <p class="nothing-added">nothing added yet!</p>
     {{#each queue as |movie|}}
       <img src="http://localhost:3000/images/posters/{{movie}}">
     {{/each}}     
@@ -25,7 +26,7 @@
             </div>
           </div>
          </div>          
-    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}} onclick="toggle_visibility('added')">Add to Queue</button>
+    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}} onclick="toggle_visibility('added')">add to queue</button>
     </div>
   </div> 
   {{/each}}

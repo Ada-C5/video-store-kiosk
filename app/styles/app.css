@@ -10,16 +10,30 @@ h1 {
   margin: 0;
 }
 
-h2 {
+/*.button {
+  clear: both;
+}*/
+
+.queue {
+  float: left;
+  width: 29%;
+  background-color: pink;
+  border-radius: 2%;
+}
+
+.movie-list {
+  float: right;
+  text-align: center;
+  width: 70%;
+  background-color: #b3ffb3;
+  border-radius: 2%;
+}
+
+.movie-list h2 {
   text-align: center;
   margin: 0;
 }
 
-.movie-list {
-  margin: 0 auto;
-  text-align: center;
-  /*width: 1500px;*/
-}
 
 .poster {
   display: inline-block;

@@ -1,6 +1,13 @@
-<h2>Movies</h2>
+
+
+<div class="queue">
+  <h2>Your Queue</h2>
+</div>
 
 <div class="movie-list">
+  <h2>Movies</h2>
+  <button id="previous" {{action "previousPage"}}>Previous</button>
+  <button id="next" {{action "nextPage"}}>Next</button>
 <table>
     {{#each model as |movie|}}
       <div class="poster">
@@ -14,6 +21,3 @@
     {{/each}}
 </table>
 </div>
-
-<button id="previous" {{action "previousPage"}}>Previous</button>
-<button id="next" {{action "nextPage"}}>Next</button>

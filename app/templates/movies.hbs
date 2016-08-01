@@ -15,7 +15,6 @@
 </div>
 </div>
 
-
 <div id="movie-container" class="col-md-10">
   {{#each model as |movie|}}
     <div class="poster">
@@ -26,7 +25,8 @@
             <h2>{{displayTitle}}</h2>
             <a class="close" href="#" {{action "closeMovie"}}>&times;</a>
             <div class="content">
-              {{displayOverview}}
+              {{displayOverview}}<br>
+              <button class="queue overview" {{action "addMovie" movie.poster_filename}}>add to queue</button>
             </div>
           </div>
          </div>          

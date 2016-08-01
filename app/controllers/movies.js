@@ -53,6 +53,7 @@ export default Ember.Controller.extend({
       if (currentQueue.contains(imageFilename)) {
         currentQueue.removeObject(imageFilename)
         this.set('queue', currentQueue)
+        $(this).find('span').text("add to queue")
         if (currentQueue.length === 0) { $('.nothing-added').text('nothing added yet!') }
       } 
     },
@@ -61,6 +62,7 @@ export default Ember.Controller.extend({
       var currentQueue = this.get('queue')
       currentQueue.clear()
       this.set('queue', currentQueue)
+      $('.nothing-added').text('nothing added yet!') 
     }
   }
 

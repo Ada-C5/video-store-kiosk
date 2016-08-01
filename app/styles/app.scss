@@ -43,19 +43,6 @@ button:focus { outline: 0; }
   z-index: -1;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;
-  z-index: 1001;
-}
-
-.overlay:target { visibility: visible; opacity: 1; }
-
 @-webkit-keyframes pop-in {
   0% { opacity: 0; -webkit-transform: scale(0.3); }
   100% { opacity: 1; -webkit-transform: scale(1); }
@@ -70,6 +57,20 @@ button:focus { outline: 0; }
   0% { opacity: 0; transform: scale(0.3); }
   100% { opacity: 1; transform: scale(1); }
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 1001;
+}
+
+.overlay:target { visibility: visible; opacity: 1; }
+
 
 .popup {
   -webkit-animation:pop-in 0.5s;
@@ -156,12 +157,17 @@ button:focus { outline: 0; }
   width: 6em;
 }
 
-
 .queue:hover, .next:hover, .prev:hover, .queue-clear:hover {
   background-color: rgba(147, 225, 216, 0.8);
   border-radius: 15px;
   border: none;
   transition: all 0.3s linear;
+}
+
+.overview {
+/*  float: left;
+*/  margin-top: 10%;
+  margin-left: 0;
 }
 
 .queue-menu {
@@ -223,4 +229,8 @@ button:focus { outline: 0; }
   }
 
   .remove-queue:hover span button:hover { background-color: $purple; }
+}
+
+#added {
+  display: none;
 }

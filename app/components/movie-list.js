@@ -11,6 +11,6 @@ export default Ember.Component.extend({
       element.toggleClass('info')
       let overview = this.$(element.parent().parent()).find('#deets')
       overview.toggleClass('show overview')
-    }
+    },
   }
 });

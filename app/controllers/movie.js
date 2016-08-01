@@ -23,6 +23,12 @@ export default Ember.Controller.extend({
       // console.log(this.get('queue'))
       this.set("queue", this.get("queue").addObject(movieTitle))
       console.log(this.get("queue"))
+
+      // generate li element from queue items?
+      var listItem = document.createElement("LI")
+      var listText = document.createTextNode(movieTitle)
+      listItem.appendChild(listText)
+      document.getElementById("queue-list").appendChild(listItem)
     }
 
     // showDescription(movieId) {

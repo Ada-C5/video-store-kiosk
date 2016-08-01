@@ -2,7 +2,8 @@
 
 <div class="queue">
   <h2>Your Queue</h2>
-  <ul>
+  <ul id="queue-list">
+    <!-- <li>{{model.q}}</li> -->
   {{#each model.q as |queueMovie|}}
     <li>{{queueMovie}}</li>
   {{/each}}

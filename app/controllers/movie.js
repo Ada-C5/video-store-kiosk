@@ -21,7 +21,6 @@ export default Ember.Controller.extend({
       var queueArray = this.get('queue');
       queueArray.pushObject(movie);
       this.set('queue', queueArray);
-      console.log("queue array ",queueArray);
     },
     resetQueue: function() {
       this.set('queue', []);
@@ -30,9 +29,8 @@ export default Ember.Controller.extend({
       var remove = this.get('queue');
       var index = remove.indexOf(movie);
       if (index > -1) {
-        remove.splice(index, 1);
+        remove.removeObject(movie)
         this.set('queue', remove);
-        console.log("removing stuff ", remove);
       }
     },
     openModal: function(movie) {

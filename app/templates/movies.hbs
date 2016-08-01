@@ -10,6 +10,10 @@
 <aside>
   <h2>Queue</h2>
   {{#each queue as |movie|}}
-    <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+    <div class="movie-queue">
+      <p class="queue-title">{{movie.title}}</p>
+      <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+      <br><button class="remove-queue" {{action 'removeMovie' movie}}>❌</button>
+    </div>
   {{/each}}
 </aside>

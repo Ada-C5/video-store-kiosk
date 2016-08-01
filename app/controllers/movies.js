@@ -19,8 +19,18 @@ export default Ember.Controller.extend({
     addMovie(movie) {
       var queueArray = this.get('queue');
       queueArray.pushObject(movie);
+      this.set('queue', queueArray.uniq());
+    },
+    removeMovie(movie) {
+      var queueArray = this.get('queue');
+      queueArray.removeObject(movie);
       this.set('queue', queueArray);
-      console.log(movie);
     }
   }
 });
+
+
+// JEREMY'S CODE:
+//nextPage: Ember.computed('model.page', function() {
+//   return this.get('model.page') + 1
+// })

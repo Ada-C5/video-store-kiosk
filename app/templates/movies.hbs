@@ -17,13 +17,11 @@
 </div>
 
 {{outlet}}
-
+<br>
 <div class="row">
   {{#each model as |movie|}}
     <div class="col-md-3">
       {{#link-to "movie" movie.title}}
-        {{movie.title}}
-        <br>
         <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail">
       {{/link-to}}
         <br><br>

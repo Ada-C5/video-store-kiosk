@@ -19,3 +19,8 @@ h1, h2 {
   background-color: lightblue;
   text-align: center;
 }
+
+.queue {
+  background-color: lightgreen;
+  text-align: center;
+}

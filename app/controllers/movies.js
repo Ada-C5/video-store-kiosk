@@ -55,6 +55,12 @@ export default Ember.Controller.extend({
         this.set('queue', currentQueue)
         if (currentQueue.length === 0) { $('.nothing-added').text('nothing added yet!') }
       } 
+    },
+
+    clearQueue () {
+      var currentQueue = this.get('queue')
+      currentQueue.clear()
+      this.set('queue', currentQueue)
     }
   }
 

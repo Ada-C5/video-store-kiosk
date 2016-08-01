@@ -2,17 +2,15 @@
 <div class="row">
 {{#bs-accordion}}
   {{#bs-accordion-item value="1" title="your queue"}}
-{{!--     <button class="queue-prev"><span> &lt; </span></button>
- --}}    <p class="nothing-added">nothing added yet!</p>
+    <p class="nothing-added">nothing added yet!</p>
     {{#each queue as |movie|}}
       <div class="show-image">
         <a href="#" class="remove-queue">
         <img src="http://localhost:3000/images/posters/{{movie}}" class="queue-img"> <span class="remove-btn"><button {{action "removeMovie" movie}}>remove from queue</button></span></a>
       </div>
-      <button class="queue-clear" {{action "clearQueue"}}>clear queue</button>
     {{/each}} 
-{{!--     <button class="queue-next"> &gt; </button>
- --}}  {{/bs-accordion-item}}
+    <button class="queue-clear" {{action "clearQueue"}}>clear queue</button>
+  {{/bs-accordion-item}}
 {{/bs-accordion}} 
 </div>
 </div>

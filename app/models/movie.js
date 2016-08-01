@@ -6,4 +6,5 @@ export default DS.Model.extend({
   overview: DS.attr('string'),
   inventory: DS.attr('number'),
   poster_filename: DS.attr('string'),
+  selected: DS.attr('boolean', { defaultValue: false})
 });

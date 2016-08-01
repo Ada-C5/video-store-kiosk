@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
   queryParams: ['page', 'size'],
   page: 1,
   size: 10,
+  queue: [],
 
   actions: {
     nextPage() {
@@ -18,6 +19,12 @@ export default Ember.Controller.extend({
     },
     openModal: function(movie) {
       console.log("you are trying to open modal");
+    },
+    addQueue: function(movie) {
+      var queueArray = this.get('queue');
+      queueArray.pushObject(movie);
+      this.set('queue', queueArray);
+      console.log(queueArray);
     }
   }
 });

@@ -1,6 +1,6 @@
 <h2>List of Movies</h2>
 <section class="col-md-9">
-  {{#each model as |movie|}}
+  {{#each model.movies as |movie|}}
 
   <section class="movie-card">
     <img class="movie-poster" {{action "openModal" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>

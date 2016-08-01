@@ -15,7 +15,7 @@ export default Ember.Route.extend({
       movies: this.store.query('movie', query),
       queue: this.queue
     })
-  }
+  },
   actions: {
     openModal: function(movie) {
       this.render('components/movie-modal', {

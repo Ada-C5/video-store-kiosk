@@ -34,9 +34,9 @@ export default Ember.Controller.extend({
         this.set('queue', remove);
         console.log("removing stuff ", remove);
       }
+    },
+    openModal: function(movie) {
+      console.log("you are trying to open modal");
     }
-    // openModal: function(movie) {
-    //   console.log("you are trying to open modal");
-    // }
   }
 });

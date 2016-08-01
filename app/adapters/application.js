@@ -7,7 +7,7 @@ export default DS.Adapter.extend({
       Ember.$.getJSON(baseUrl, page).then(function(data) {
         Ember.run(null, resolve, data)
       }, function(jqXHR) {
-        jqXHR.then = null; // tame jQuery's ill mannered promises
+        jqXHR.then = null;
         Ember.run(null, reject, jqXHR);
       });
     });

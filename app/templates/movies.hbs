@@ -6,8 +6,7 @@
 <div class='container'>
   {{#each model as |movies|}}
     <div class='movie'>
-      {{movies.title}}
-      <br>
+      {{!-- {{movies.title}} --}}
       {{movie-selected movie=movies addToQueue=(action 'addMovie')}}
     </div>
   {{/each}}
@@ -21,9 +20,14 @@
   <h2>Queue</h2>
   {{#each queue as |movie|}}
     <div class="movie-queue">
-      <p class="queue-title">{{movie.title}}</p>
-      <img class="thumb" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
-      <br><button class="remove-queue" {{action 'removeMovie' movie}}>❌</button>
+      <img class="thumb" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+      <div class="after" {{action 'removeMovie' movie on='click'}}> 
+        <br>
+        Remove <br>
+        From <br>
+        Queue 
+      </div>
+      <br>
     </div>
   {{/each}}
 </aside>

@@ -27,6 +27,3 @@ export default Ember.Controller.extend({
     }
   }
 });
-
-
-// an action is a hook with the user to interact with this data 

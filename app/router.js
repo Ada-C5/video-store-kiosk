@@ -9,5 +9,6 @@ const Router = Ember.Router.extend({
 export default Router.map(function() {
   this.resource('movies', function() {
     this.resource('movie', { path: '/:movie_title' })
+    this.resource('queue')
   })
 });

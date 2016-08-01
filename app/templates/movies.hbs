@@ -6,6 +6,14 @@
   <button {{action "nextPage"}} class="btn btn-primary">
     <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
   </button>
+
+  <br><br>
+  {{#link-to "queue"}}
+    <button class="btn btn-info">
+      Queue
+      <!-- <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span> -->
+    </button>
+  {{/link-to}}
 </div>
 
 {{outlet}}

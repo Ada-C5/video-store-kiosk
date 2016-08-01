@@ -39,11 +39,20 @@ export default Ember.Controller.extend({
 
     addMovie (imageFilename) {
       var currentQueue = this.get('queue')
-      if (!currentQueue.includes(imageFilename)) {
+      if (!currentQueue.contains(imageFilename)) {
         $('.nothing-added').text('')
         currentQueue.pushObject(imageFilename)
         this.set('queue', currentQueue)
-       } 
+      } 
+    },
+
+    removeMovie (imageFilename) {
+      var currentQueue = this.get('queue')
+      if (currentQueue.contains(imageFilename)) {
+        currentQueue.removeObject(imageFilename)
+        this.set('queue', currentQueue)
+        if (currentQueue.length === 0) { $('.nothing-added').text('nothing added yet!') }
+      } 
     }
 
   }

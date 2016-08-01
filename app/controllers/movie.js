@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
       console.log("queue array ",queueArray);
     },
     resetQueue: function() {
-      this.set('queue', [])
+      this.set('queue', []);
     },
     removeQueue: function(movie) {
       var remove = this.get('queue');
@@ -36,6 +36,7 @@ export default Ember.Controller.extend({
       }
     },
     openModal: function(movie) {
+      console.log(movie);
       console.log("you are trying to open modal");
     }
   }

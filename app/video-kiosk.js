@@ -1,5 +1,5 @@
 //put ajax(ember handled ajax for me) and js stuff in here!
-import Ember from 'ember';
+// import Ember from 'ember';
 
 // var $ = Ember.$;
 

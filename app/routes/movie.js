@@ -14,7 +14,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       movies: this.store.query('movie', query),
       queue: this.queue
-    })
+    });
   },
   actions: {
     openModal: function(movie) {

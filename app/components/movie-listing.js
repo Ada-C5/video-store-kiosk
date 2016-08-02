@@ -19,10 +19,5 @@ export default Ember.Component.extend({
       this.sendAction('addToQueue', movie);
       this.toggleProperty('isExpanded');
     }
-
-    // deleteFromQueue(movie) {
-    //   this.sendAction('deleteFromQueue', movie);
-    //   this.toggleProperty('isExpanded');
-    // }
   }
 });

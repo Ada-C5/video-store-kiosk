@@ -10,6 +10,7 @@
 <aside>
   <h1>Your Queue</h1>
   <button class="clearQueue" {{action "clearQueue"}}>Clear your Queue</button>
+
   {{#each queue as |queueMovie|}}
     <img class="queueImage" src="http://localhost:3000/images/posters/{{queueMovie.poster_filename}}">
     <button class="deleteFromQueue" {{action "deleteFromQueue" queueMovie}}>Delete</button>

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  displayQueue: false,
   queue: [],
   page: 1,
   actions: {
@@ -18,16 +19,21 @@ export default Ember.Controller.extend({
       let current = this.get('queue')
       current.pushObject(movie)
       this.set('queue', current.uniq())
+      this.set('displayQueue', true)
     },
     deleteFromQueue(movie) {
       let current = this.get('queue')
       current.removeObject(movie)
       this.set('queue', current.uniq())
-      console.log(current)
+      length = this.get('queue').length
+      if (length === 0) {
+        this.set('displayQueue', false)
+      }
     },
     clearQueue() {
       let current = []
       this.set('queue', current)
     }
+
   }
 });

@@ -5,7 +5,6 @@ export default Ember.Component.extend({
     // select(event) {
       // let element = Ember.$(event.target)
       // element.toggleClass('selected')
-
     // },
     addToQueue(movie) {
       this.sendAction('addToQueue', movie)

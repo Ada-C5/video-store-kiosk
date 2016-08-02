@@ -1,51 +1,48 @@
-html {
-   font-size: 16px;
-   font-family: 'Helvetica', 'Arial', sans-serif;
-   text-align: center;
- }
+html { font: normal normal 16px/1.2 serif; }
 
- * {
-   box-sizing: border-box;
-   padding: 0;
-   margin: 1rem auto;
- }
+/** { margin: 0; padding: 0; }*/
 
- div {
-   display: inline-block;
- }
-
- div.container {
-   display: block;
-   text-align: center;
- }
-.next {
-
-  }
-
-.prev {
-  
-  }
-
-.ember-view {
-  display: inline-block;
+body {
+  background: #abc;
 }
 
+h1 {
+  text-align: center;
+}
 
- div.movie {
-   background: red;
-   width: 17%;
- }
+/*ul {
+  width: 75%;
+  float: left;
+}*/
 
-  .selected {
-    background: white;
-  }
+li {
+  list-style: none;
+}
 
- .poster {
-   display: inline;
-   width: 75%;
- }
+/*aside {
+  width: 20%;
+  float: right;
+  text-align: center;
+}*/
 
- .movie-detail {
-   display: inline-block;
-   width: 80%;
- }
+img {
+  width: 100%;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.show-body {
+  margin: 0 auto;
+}
+
+.movie-container {
+  width: 18%;
+  float:left;
+  margin: 0.5rem;
+}
+
+.queueImage {
+  width: 10%;
+}

@@ -1,0 +1,19 @@
+{{yield}}
+
+<div class="movie-container">
+  <div class='poster' {{action "openMovie"}}>
+    <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+  </div>
+</div>
+
+{{#if isExpanded}}
+  <div id="movieModal" class="modal">
+    <div class="modal-content">
+      <button class="close" {{action "closeMovie"}}>Close</button>
+      <h2>{{movie.title}}</h2>
+      <p class="overview">{{movie.overview}}</p>
+      <p>In stock: {{movie.inventory}}</p>
+      <button {{action "addToQueue" movie}}>Add to Queue</button>
+    </div>
+  </div>
+{{/if}}

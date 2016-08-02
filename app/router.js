@@ -14,6 +14,7 @@ Router.map(function() {
 
 
   })
+  this.route('queue');
 });
 
 export default Router;

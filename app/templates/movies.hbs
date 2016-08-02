@@ -3,15 +3,16 @@
 <h1>List of movies should be here, {{model.inventory}}</h1>
 
 
-{{#link-to 'queue'}}
-click
-{{/link-to}}
 
 {{#each model as |movie|}}
     <li>{{ movie.title}}</li>
+    {{#link-to 'queue'}}
+    queue this movie
+    {{/link-to}}
 
-    {{#link-to "movie" movie.title}}
+    {{#link-to "movie" movie.title}}<br>
 
+    more info
       <li class='info'>
       </li>
 {{/link-to}}
@@ -20,7 +21,9 @@ click
 <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
 
 
-
+<form {{action "enQueue" on="submit" }}>
+  <button type="submit">Select</button>
+</form>
 
 
 <form {{action "nextTen" pageNumber on="submit"}}>

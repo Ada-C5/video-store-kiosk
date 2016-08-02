@@ -11,6 +11,7 @@
 
 
     <table class="table">
+
       <tbody>
       {{#each model as |movies|}}
         <td>
@@ -22,10 +23,9 @@
       </tbody>
     </table>
 
-
+<div class="things">
   <div class="queue-section">
     <h2 class="queue">Queue</h2>
-    <a {{action 'clearQueue'}}><h3 class="clear-all">Clear</h3></a>
     <div class="queued-movies">
       {{#each queue as |movie|}}
         <div class="movie-queue">
@@ -36,8 +36,12 @@
         </div>
       {{/each}}
     </div>
+      <a {{action 'clearQueue'}}><h3 class="clear-all">Clear</h3></a>
+      <br>
   </div>
-
+  <br>
+</div>
+<br>
 
 
 

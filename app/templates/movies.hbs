@@ -4,7 +4,7 @@
 
 
 
-{{#each model as |movie|}}
+{{#each model.m as |movie|}}
     <li>{{ movie.title}}</li>
     {{#link-to 'queue'}}
     queue this movie
@@ -21,9 +21,7 @@
 <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
 
 
-<form {{action "enQueue" on="submit" }}>
-  <button type="submit">Select</button>
-</form>
+
 
 
 <form {{action "nextTen" pageNumber on="submit"}}>

@@ -26,7 +26,7 @@ export default Ember.Controller.extend({
 
 
     enQueue(){
-    
+
 
     }
 

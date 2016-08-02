@@ -13,7 +13,7 @@
 <div id='queue' >
   {{#each queue as |movie|}}
     <div class='movie'>
-      <div><img class="mini-pic"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
+      <div><input class="mini-pic" type="image" onclick={{action "deleteFromQueue" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
       </div>
     </div>
   {{/each}}

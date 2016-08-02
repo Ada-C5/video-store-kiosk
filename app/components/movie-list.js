@@ -9,7 +9,6 @@ export default Ember.Component.extend({
     // },
     addToQueue(movie) {
       this.sendAction('addToQueue', movie)
-      // console.log("title?", movie.title)
     },
     info(){
       let element = Ember.$(event.target)

@@ -18,13 +18,12 @@ export default Ember.Controller.extend({
       let current = this.get('queue')
       current.pushObject(movie)
       this.set('queue', current.uniq())
-      // console.log("current", current)
-      // console.log('queue', this.get('queue'))
+    },
+    deleteFromQueue(movie) {
+      let current = this.get('queue')
+      current.removeObject(movie)
+      this.set('queue', current.uniq())
+      console.log(current)
     }
   }
 });
-
-// jeremy's
-// nextPage: Ember.computed('model.page', function() {
-//   return this.get('model.page' + 1)
-// })

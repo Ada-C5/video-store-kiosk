@@ -5,10 +5,10 @@ export default Ember.Route.extend({
    var query = { page: this.controllerFor('application').get('page') }
    return this.store.query('application', query)
  },
- queryParams: {
-   page: {
-     refreshModel: true
-   }
+queryParams: {
+ page: {
+   refreshModel: true
+ }
  }
 });
 

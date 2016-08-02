@@ -24,6 +24,10 @@ export default Ember.Controller.extend({
       current.removeObject(movie)
       this.set('queue', current.uniq())
       console.log(current)
+    },
+    clearQueue() {
+      let current = []
+      this.set('queue', current)
     }
   }
 });

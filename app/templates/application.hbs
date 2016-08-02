@@ -9,8 +9,12 @@
   {{movie-list movie=model addToQueue="addToQueue"}}
 </div>
 
-<h3>Your queue:</h3>
-<div id='queue' >
+<h3>Your queue</h3>
+<p>Click on a movie to remove it from your queue or click
+  <button class="clear" {{action "clearQueue" on="click"}}>Clear Queue</button>
+
+</p>
+  <div id='queue' >
   {{#each queue as |movie|}}
     <div class='movie'>
       <div><input class="mini-pic" type="image" onclick={{action "deleteFromQueue" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />

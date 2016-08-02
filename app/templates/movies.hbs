@@ -26,11 +26,12 @@
             <a class="close" href="#" {{action "closeMovie"}}>&times;</a>
             <div class="content">
               {{displayOverview}}<br>
-              <button class="queue overview" {{action "addMovie" movie.poster_filename}}>add to queue</button>
+              <button class="queue overview" id="btn-text" onclick={{action "addMovie" movie.poster_filename}}>add to queue</button>
             </div>
           </div>
          </div>          
-    <div class="queue-button"><button class="queue" {{action "addMovie" movie.poster_filename}}>add to queue</button>
+    <div class="queue-button">
+    <button class="queue" id="btn-text" onclick={{action "addMovie" movie.poster_filename}}>add to queue</button>
     </div>
   </div> 
   {{/each}}

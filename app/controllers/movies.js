@@ -6,8 +6,6 @@ export default Ember.Controller.extend({
 
   queue: [],
 
-  queueParams: ["queuePage", "queuePerPage"],
-
   activate () {
     window.scrollTo(0,0);
   },
@@ -39,21 +37,27 @@ export default Ember.Controller.extend({
       popup.style.display = "none"
     }, 
 
-    addMovie (imageFilename) {
+    addMovie (imageFilename, event) {
+      var textChange = $(event.target)
       var currentQueue = this.get('queue')
       if (!currentQueue.contains(imageFilename)) {
+        textChange.animate({ opacity: 0 }, 400, function(){
+          textChange.text("added!").animate({ opacity: 1 });
+          textChange.animate({ opacity: 0 }, 400, function(){
+            textChange.text("add to queue").animate({ opacity: 1 });
+          })    
+        })   
         $('.nothing-added').text('')
         currentQueue.pushObject(imageFilename)
         this.set('queue', currentQueue)
       } 
     },
 
-    removeMovie (imageFilename) {
+    removeMovie (imageFilename, event) {
       var currentQueue = this.get('queue')
       if (currentQueue.contains(imageFilename)) {
         currentQueue.removeObject(imageFilename)
         this.set('queue', currentQueue)
-        $(this).find('span').text("add to queue")
         if (currentQueue.length === 0) { $('.nothing-added').text('nothing added yet!') }
       } 
     },
@@ -61,8 +65,8 @@ export default Ember.Controller.extend({
     clearQueue () {
       var currentQueue = this.get('queue')
       currentQueue.clear()
+      $('.queue').text("add to queue")
       this.set('queue', currentQueue)
-      $('.nothing-added').text('nothing added yet!') 
     }
   }
 

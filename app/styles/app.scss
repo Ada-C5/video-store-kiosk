@@ -231,6 +231,7 @@ button:focus { outline: 0; }
   .remove-queue:hover span button:hover { background-color: $purple; }
 }
 
-#added {
-  display: none;
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

@@ -4,12 +4,12 @@ __Project Goals:__ Create an Ember single-page application that allows the user 
 __Project API:__ I've provided a [Node/Express app to act as the project's backend API](https://github.com/Ada-C5/video-store-kiosk-api). You'll recognize some of it as it's based on the _Video Store API_ project. Use it to provide data to your Ember app. See the project's [README](https://github.com/Ada-C5/video-store-kiosk-api/blob/master/README.md) for installation and startup instructions.
 
 ## Project Requirements
-- Create a new Ember application using the `ember` command line tool
-- All data presented to the user must be sourced from the Node/Express API via AJAX
-- Create this as a Single Page Application; no unnecessary page reloads or redirections
+- Create a new Ember application using the `ember` command line tool ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- All data presented to the user must be sourced from the Node/Express API via AJAX ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Create this as a Single Page Application; no unnecessary page reloads or redirections ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 
 ### Primary View
-- Show a paginated collection of Movies, __10 per page__
+- Show a paginated collection of Movies, __10 per page__ ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 - Allow a user to interact/select a Movie via click, touch, or some other event
   - when selected, a Movie shows more information
   - when deselected, a Movie returns to its default state
@@ -17,15 +17,15 @@ __Project API:__ I've provided a [Node/Express app to act as the project's backe
   - selecting a second movie deselects the first
 - When a Movie is selected, it can be added to the Queue
 - Changing pages deselects all Movies
-- Changing pages does not clear the Queue
+- Changing pages does not clear the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 
 ### Queue View
-- Uses a smaller section of the screen
-- Shows a list of Movies the user has added to the Queue
-- Exists only in the browser's memory; reloading the page will clear the Queue
-- Allows a user to remove a Movie from the Queue
-- Allows a user to rest/clear their Queue
-- When a user pages through Movies, the Queue remains in place and does not change
+- Uses a smaller section of the screen ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Shows a list of Movies the user has added to the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Exists only in the browser's memory; reloading the page will clear the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Allows a user to remove a Movie from the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Allows a user to rest/clear their Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- When a user pages through Movies, the Queue remains in place and does not change ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 
 ### User Experience
 What makes for a good kiosk user experience?

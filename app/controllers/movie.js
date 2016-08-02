@@ -6,8 +6,10 @@ export default Ember.Controller.extend({
     unselect: function() {
       this.transitionToRoute('movies');
     },
-    queue() {
-      console.log("Add to Queue, Clear Outlet!")
+    queue(movie) {
+      console.log(movie)
+      var img_link = "<img src=" + "http://localhost:3000/images/posters/" + movie + " " + "class=" + "queueimg" + ">"
+      $('.navbar-text').append(img_link)
     },
   }
 });

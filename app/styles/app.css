@@ -24,3 +24,12 @@ h1, h2 {
   background-color: lightgreen;
   text-align: center;
 }
+
+.queueimg {
+  width: 10rem;
+  height: 12rem;
+  padding-right: .5rem;
+}
+li {
+    float:left;
+}

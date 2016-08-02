@@ -7,7 +7,17 @@
 
 <div id='movies'>
   <!-- {{movie-list queuedMovies=model}} -->
-  {{movie-list movie=model}}
+  {{movie-list movie=model addToQueue="addToQueue"}}
 </div>
+queue: {{queue}}
 
+
+<div id='queue' >
+  {{#each queue as |movie|}}
+    <div class='movie'>
+      <div class="pic"><input class="image" type="image"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
+      </div>
+    </div>
+  {{/each}}
+</div>
 {{outlet}}

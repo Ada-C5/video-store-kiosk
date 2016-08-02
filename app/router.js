@@ -12,7 +12,7 @@ Router.map(function() {
 
 export default Router;
 
-// 
+//
 // jeremys
 // Router.map(function(){
 //   this.route('movies')

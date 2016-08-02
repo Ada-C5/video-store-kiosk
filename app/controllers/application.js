@@ -14,8 +14,12 @@ export default Ember.Controller.extend({
         this.set('page', (this.page + 1))
       }
     },
-    addToQueue(){
-      console.log('trying to add to queue')
+    addToQueue(movie) {
+      let current = this.get('queue')
+      current.pushObject(movie)
+      this.set('queue', current)
+      // console.log("current", current)
+      // console.log('queue', this.get('queue'))
     }
   }
 });

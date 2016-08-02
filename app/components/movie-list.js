@@ -2,9 +2,14 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   actions: {
-    select(event) {
-      let element = Ember.$(event.target)
-      element.toggleClass('selected')
+    // select(event) {
+      // let element = Ember.$(event.target)
+      // element.toggleClass('selected')
+
+    // },
+    addToQueue(movie) {
+      this.sendAction('addToQueue', movie)
+      // console.log("title?", movie.title)
     },
     info(){
       let element = Ember.$(event.target)

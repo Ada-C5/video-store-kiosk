@@ -3,18 +3,19 @@
   {{#each model.movies as |movie|}}
 
   <section class="movie-card">
-    <img class="movie-poster" {{action "openModal" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+    <img class="movie-poster" {{action "showModal" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
     <p class="movie-title">{{movie.title}}</p>
-    <button class="btn btn-success btn-xs" {{action "addQueue" movie}}>Add to Queue</button>
+    <button class="btn btn-success btn-xs glyphicon glyphicon-ok" {{action "addQueue" movie}}></button>
   </section>
 
   {{/each}}
 
-  {{outlet "modal"}}
+  {{#movie-modal movie=modalMovie}}
+  {{/movie-modal}}
 
   <section>
-    <button class="btn btn-primary" {{action "prevPage"}}>Previous</button>
-    <button class="btn btn-primary" {{action "nextPage"}}>Next</button>
+    <button class="btn btn-primary glyphicon glyphicon-chevron-left" {{action "prevPage"}}></button>
+    <button class="btn btn-primary glyphicon glyphicon-chevron-right" {{action "nextPage"}}></button>
   </section>
 </section>
 
@@ -23,8 +24,8 @@
   {{#each queue as |movie|}}
   <p>
     {{movie.title}}
-    <span {{action "removeQueue" movie}}>X</span>
+    <button {{action "removeQueue" movie}} class="glyphicon glyphicon-fire btn btn-danger btn-xs" aria-hidden="true"></button>
   </p>
   {{/each}}
-  <button class="btn btn-danger btn-xs" {{action "resetQueue"}}>Clear Queue</button>
+  <button class="btn btn-danger btn-xs glyphicon glyphicon-trash" {{action "resetQueue"}}></button>
 </aside>

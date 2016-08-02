@@ -17,11 +17,24 @@ export default Ember.Route.extend({
     });
   },
   actions: {
-    openModal: function(movie) {
-      this.render('components/movie-modal', {
-        into: "application",
-        outlet: "modal",
-        movie: movie
+    // openModal: function(movie) {
+    //   this.render('components/movie-modal', {
+    //     into: "application",
+    //     outlet: "modal",
+    //     movie: movie
+    //   });
+    // },
+    showModal: function(movie, model) {
+      this.render(movie, {
+        into: 'application',
+        outlet: 'modal',
+        model: model
+      });
+    },
+    removeModal: function() {
+      this.disconnectOutlet({
+        outlet: 'modal',
+        parentView: 'application'
       });
     }
   }

@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   page: 1,
   size: 10,
   queue: [],
+  modalMovie: {},
 
   actions: {
     nextPage() {
@@ -29,13 +30,20 @@ export default Ember.Controller.extend({
       var remove = this.get('queue');
       var index = remove.indexOf(movie);
       if (index > -1) {
-        remove.removeObject(movie)
+        remove.removeObject(movie);
         this.set('queue', remove);
       }
     },
-    openModal: function(movie) {
-      console.log(movie);
-      console.log("you are trying to open modal");
+    showModal: function(movie) { //set movie property to the component
+      console.log("trying to open modal");
+      this.set('movieModal', movie);
+      Ember.$("#myModal").modal();
+    },
+    removeModal: function() {
+      this.disconnectOutlet({
+        outlet: 'modal',
+        parentView: 'application'
+      });
     }
   }
 });

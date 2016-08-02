@@ -6,16 +6,14 @@
 </div>
 
 <div id='movies'>
-  <!-- {{movie-list queuedMovies=model}} -->
   {{movie-list movie=model addToQueue="addToQueue"}}
 </div>
-queue: {{queue}}
 
-
+<h3>Your queue:</h3>
 <div id='queue' >
   {{#each queue as |movie|}}
     <div class='movie'>
-      <div class="pic"><input class="image" type="image"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
+      <div><img class="mini-pic"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" alt="movie poster" />
       </div>
     </div>
   {{/each}}

@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  queue: ['taco', 'face'],
+  queue: [],
   page: 1,
   actions: {
     getPrev() {
@@ -17,7 +17,7 @@ export default Ember.Controller.extend({
     addToQueue(movie) {
       let current = this.get('queue')
       current.pushObject(movie)
-      this.set('queue', current)
+      this.set('queue', current.uniq())
       // console.log("current", current)
       // console.log('queue', this.get('queue'))
     }

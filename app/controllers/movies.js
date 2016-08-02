@@ -24,15 +24,19 @@ export default Ember.Controller.extend({
       this.set('page', prevTen )
     },
 
+    lessInfo(){
+      this.transitionToRoute('movies')
+    },
 
-    enQueue(){
 
+    enQueue(title){
+      this.set('model.q', this.get('model.q').addObject(title))
+    },
+
+    deQueue(title){
+      this.set('model.q', this.get('model.q').removeObject(title))
 
     }
-
-
-
-
   }
 
 });

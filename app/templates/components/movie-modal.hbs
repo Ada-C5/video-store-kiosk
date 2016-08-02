@@ -6,12 +6,12 @@
           <h4 class="modal-title">{{movie.title}}</h4>
         </div>
         <div class="modal-body">
-          {{movie.overview}}
+          <p>{{movie.overview}}</p>
+          <br/>
           <p>{{movie.release_date}}</p>
-          <p>Inventory: {{movie.inventory}}</p>
-          <!-- yield (has handlebars)-->
         </div>
         <div class="modal-footer">
+          <p class="inventory">Inventory: {{movie.inventory}}</p>
           <button class="btn btn-success btn-xs glyphicon glyphicon-ok" {{action "addQueue" movie}}></button>
         </div>
       </div>

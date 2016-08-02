@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   page: 1,
   size: 10,
   queue: [],
-  modalMovie: "", // view is not updating
+  modalMovie: "",
 
   actions: {
     nextPage() {

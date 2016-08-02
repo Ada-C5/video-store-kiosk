@@ -215,12 +215,8 @@ img:hover {
   color: black;
 }
 
-.add-to-queue {
-  color: #aaa;
-  text-shadow: 1px 1px 3px black;
-}
 
-.add-to-queue:hover {
+.glyphicon-plus-sign:hover {
     color: #4CAF50;
 }
 
@@ -234,6 +230,7 @@ img:hover {
   text-align: center;
   margin-bottom: 2rem;
 }
+
 
 .things{
   background-color:rgba(0, 0, 0, 0.5);
@@ -302,4 +299,21 @@ h3.clear-all {
 
 .no-movies {
   height: 15%;
+}
+
+.add-to-queue {
+  color: #aaa;
+  text-shadow: 1px 1px 3px black;
+  /*float: right;*/
+  margin-bottom: 25px;
+}
+
+.add>p{
+  float: right;
+  margin-left: 10px;
+}
+
+.add{
+  display: inline-block;
+  float: right;
 }

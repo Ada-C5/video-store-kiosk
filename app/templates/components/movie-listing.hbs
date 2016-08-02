@@ -21,10 +21,14 @@
      <span class="close" {{action "toggleDetails"}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
      <h2>
      {{movie.title}}
-     <a class="add-to-queue" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
      </h2>
      <p>{{movie.overview}}</p>
      <p>In stock: {{movie.inventory}}</p>
+     <div class="add">
+        <a class="add-to-queue" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+        <p>Add to Queue</p>
+     </div>
+     <br>
    </div>
 
  </div>

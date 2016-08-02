@@ -1,12 +1,14 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
+    Your Queue
+    <br>
+    <button {{action "deleteQueue"}} class="btn btn-danger">
+      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+    </button>
+    <br>
     <div class="navbar-header">
-      Your Queue:
       <p class="navbar-text">
       </p>
-        <button {{action "deleteQueue"}} class="btn btn-primary">
-          <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-        </button>
     </div>
   </div>
 </nav>
@@ -20,12 +22,6 @@
     <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
   </button>
 
-  <br><br>
-  <!-- {{#link-to "queue"}}
-    <button class="btn btn-info">
-      Queue
-    </button>
-  {{/link-to}} -->
 </div>
 
 {{outlet}}

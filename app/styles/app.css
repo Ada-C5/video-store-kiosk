@@ -29,5 +29,9 @@ h1, h2 {
   width: 10rem;
   height: 12rem;
   padding-right: .5rem;
-  padding-top: .5rem;
+  /*padding-top: .5rem;*/
+}
+
+.container-fluid {
+  text-align: center;
 }

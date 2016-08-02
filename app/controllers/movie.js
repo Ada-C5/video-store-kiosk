@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
   page: 1,
   size: 10,
   queue: [],
-  modalMovie: {},
+  modalMovie: "", // view is not updating
 
   actions: {
     nextPage() {
@@ -36,8 +36,8 @@ export default Ember.Controller.extend({
     },
     showModal: function(movie) { //set movie property to the component
       console.log("trying to open modal");
-      this.set('movieModal', movie);
-      Ember.$("#myModal").modal();
+      this.set('modalMovie', movie); // this updates the modalMovie
+      Ember.$("#myModal").modal(); // This opens the modal
     },
     removeModal: function() {
       this.disconnectOutlet({

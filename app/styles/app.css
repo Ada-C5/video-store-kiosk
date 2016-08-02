@@ -22,3 +22,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.modal {
+  color: black;
+}

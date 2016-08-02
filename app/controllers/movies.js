@@ -15,6 +15,8 @@ export default Ember.Controller.extend({
       if (this.page + 1 <= 10) {
         this.set("page", (this.page + 1));
         this.activate()
+        $('body').css('display', 'none');
+        $('body').fadeIn(1100);
       }
     },
 
@@ -22,6 +24,8 @@ export default Ember.Controller.extend({
       if (this.page - 1 >= 1) {
         this.set("page", (this.page - 1));
         this.activate()
+        $('body').css('display', 'none');
+        $('body').fadeIn(1100);
       }
     },
 
@@ -40,6 +44,7 @@ export default Ember.Controller.extend({
     addMovie (imageFilename, event) {
       var textChange = $(event.target)
       var currentQueue = this.get('queue')
+
       if (!currentQueue.contains(imageFilename)) {
         textChange.animate({ opacity: 0 }, 400, function(){
           textChange.text("added!").animate({ opacity: 1 });

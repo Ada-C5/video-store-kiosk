@@ -5,9 +5,10 @@ export default Ember.Controller.extend({
   page: 1,
   actions: {
     addToQueue(movie){
-      let  q = this.get('queue')
+      let  q = this.queue
       q.pushObject(movie)
       this.set('queue', q.uniq())
+      console.log(q)
     },
     clearQueue(){
       this.set('queue', [])

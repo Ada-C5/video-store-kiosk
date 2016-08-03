@@ -8,6 +8,9 @@
     <br>
     <div class="navbar-header">
       <p class="navbar-text">
+        {{#each model.q as |movie|}}
+            {{movie}}
+        {{/each}}
       </p>
     </div>
   </div>
@@ -22,13 +25,18 @@
     <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
   </button>
 
+
+  <button {{action "getqueue"}} class="btn btn-primary">
+    TESTING FOR QUEUE ACTION IN ROUTE
+  </button>
+
 </div>
 
 {{outlet}}
 
 <br>
 <div class="row">
-  {{#each model as |movie|}}
+  {{#each model.m as |movie|}}
     <div class="col-md-3">
       {{#link-to "movie" movie.title}}
         <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail">

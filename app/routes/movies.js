@@ -5,6 +5,12 @@ export default Ember.Route.extend({
   model: function() {
     var query = { page: this.controllerFor("movies").get("page") }
     return this.store.query('movies', query)
+    .then((movies)=> {
+      var queue = this.controllerFor('movie').get('queue')
+      // console.log(movies)
+      return { q: queue, m: movies }
+    })
+    .catch(function (error) { console.log("Failed to load movies") })
   },
 
   queryParams: {
@@ -12,23 +18,12 @@ export default Ember.Route.extend({
       refreshModel: true
     }
   },
-
-  actions: {
-   boop: function() {
-     var hello = this.controllerFor('movie').get('test')
-     alert(hello);
-   }
- }
+ //
+ //  actions: {
+ //   getqueue: function() {
+ //     var queue = this.controllerFor('movie').get('queue')
+ //     alert(queue);
+ //   }
+ // }
 
 });
-//
-// var query = { page: this.controllerFor('movie').get('page') }
-// // console.log(this.store.query('movie', query))
-// return this.store.query('movie', query)
-// .then((movies)=> {
-//   var queue = this.controllerFor('movie').get('queue')
-//   // console.log(movies)
-//   console.log(queue)
-//   return { q: queue, m: movies }
-// })
-// .catch(function (error) { console.log("Failed to load movies") })

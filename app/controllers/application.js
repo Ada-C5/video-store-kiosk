@@ -33,6 +33,10 @@ export default Ember.Controller.extend({
     clearQueue() {
       let current = []
       this.set('queue', current)
+      length = this.get('queue').length
+      if (length === 0) {
+        this.set('displayQueue', false)
+      }
     }
 
   }

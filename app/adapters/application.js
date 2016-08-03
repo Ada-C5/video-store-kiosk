@@ -2,9 +2,8 @@ import DS from 'ember-data';
 import Ember from 'ember';
 
 export default DS.Adapter.extend({
-  findAll: function(store, type, sinceToken) {
+  query: function(store, type, query) {
     var url = 'http://localhost:3000/';
-    var query = { since: sinceToken };
     return new Ember.RSVP.Promise(function(resolve, reject) {
       Ember.$.getJSON(url, query).then(function(data) {
         Ember.run(null, resolve, data);

@@ -1,10 +1,23 @@
 {{outlet}}
 
-<ul>
-  {{#each model as |movie|}}
-    <li><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></li>
-  {{/each}}
-</ul>
+{{#each model as |movie|}}
+  <div class= "col-md-4">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <img class="thumbnail" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+        </div>
+        <div class="back">
+          <p class= "title">{{movie.title}}</p>
+          <p class= "overview">{{movie.overview}}</p>
+          <p class= "date">{{movie.release_date}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{{/each}}
 
+<div class="buttons">
 <button {{action "previousPage"}}> Previous </button>
 <button {{action "nextPage"}}> Next </button>
+</div>

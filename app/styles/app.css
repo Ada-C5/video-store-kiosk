@@ -409,6 +409,10 @@ label[for='toggle-all'] {
 	}
 }
 
-.hidden{
-	display:none;
+.info{
+	display: none;
+}
+
+.movie-detail:hover > .info {
+	display: inline-block;
 }

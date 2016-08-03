@@ -1,22 +1,29 @@
-<h2>Movies</h2>
+<h1>Movies</h1>
 
-<button id="clear-completed" {{action "getPrev"}}>Previous</button>
 <button id="clear-completed" {{action "getNext"}}>Next</button>
+<button id="clear-completed" {{action "getPrev"}}>Previous</button>
 
-<div class='container'>
+<div class='movie-detail'>
  {{#each model as |movie|}}
    <div {{action "toggleSelected"}}class="movie">
-     <p> {{movie.title}} </p>
+     <h3> {{movie.title}} </h3>
      <img class="poster" alt="cover image of movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
-     {{#if selected}}
+     <!-- {{#if selected}}
        <div class="movie-detail" >
          <p> {{movie.release_date}} </p>
          <p> {{movie.overview}} </p>
          <p> {{movie.inventory}} </p>
        </div>
-     {{/if}}
+     {{/if}} -->
    </div>
+   <p class="info"> {{movie.overview}} </p>
+   <p class="info"> {{movie.release_date}} </p>
+   <p class="info"> {{movie.inventory}} </p>
+
  {{/each}}
 </div>
+
+<button id="clear-completed" {{action "getNext"}}>Next</button>
+<button id="clear-completed" {{action "getPrev"}}>Previous</button>
 
 {{outlet}}

@@ -133,7 +133,6 @@ button.close:focus {
 }
 
 .movie-queue {
-  height: 250px;
   position: relative;
   width: 150px;
   height: 90%;

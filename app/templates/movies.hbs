@@ -9,7 +9,7 @@
     <div class="navbar-header">
       <p class="navbar-text">
         {{#each model.q as |movie|}}
-            {{movie}}
+            <a href="#" {{action "deleteFromQueue" movie}}>{{movie}}</a>
         {{/each}}
       </p>
     </div>

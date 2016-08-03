@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
       $('.navbar-text').empty()
     },
 
+    deleteFromQueue(movie) {
+      this.set("model.q", this.get("model.q").removeObject(movie))
+    },
+
     nextPage() {
       if (this.page + 1 <= 10) {
         this.transitionToRoute('movies');

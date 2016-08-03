@@ -8,8 +8,6 @@ export default Ember.Route.extend({
     return this.store.query('movie', query)
     .then((movies)=> {
       var queue = this.controllerFor('movie').get('queue')
-      // console.log(movies)
-      console.log(queue)
       return { q: queue, m: movies }
     })
     .catch(function (error) { console.log("Failed to load movies") })

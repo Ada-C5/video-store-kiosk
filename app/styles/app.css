@@ -1,7 +1,17 @@
 /*** GLOBAL ***/
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  h2 {
+    font-size: 1.25rem;
+  }
 }
 
 h1 {
@@ -19,6 +29,7 @@ h1 {
   width: 29%;
   background-color: pink;
   border-radius: 2%;
+  /*margin: 0.25rem;*/
 }
 
 .remove {

@@ -3,10 +3,9 @@
 <div class="queue">
   <h2>Your Queue</h2>
   <ul id="queue-list">
-    <!-- <li>{{model.q}}</li> -->
-  {{#each model.q as |queueMovie|}}
-    <li>{{queueMovie}}</li><span class="remove" {{action "removeFromQueue" queueMovie}}>Remove From Queue</span>
-  {{/each}}
+    {{#each model.q as |queueMovie|}}
+      <li>{{queueMovie}}</li><span class="remove" {{action "removeFromQueue" queueMovie}}>Remove From Queue</span>
+    {{/each}}
   </ul>
 </div>
 

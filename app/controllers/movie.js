@@ -28,15 +28,5 @@ export default Ember.Controller.extend({
       this.set("model.q", this.get("model.q").removeObject(movieTitle))
       console.log(this.get("model.q"))
     }
-
-    // showDescription(movieId) {
-    //   var mod = this.get('model').find(function (model) {return model.id === movieId })
-    //   mod.set('selected', true)
-    // },
-    //
-    // noDescription(movieId) {
-    //   var mod = this.get('model').find(function (model) {return model.id === movieId })
-    //   mod.set('selected', false)
-    // }
   }
 });

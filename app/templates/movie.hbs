@@ -1,0 +1,26 @@
+
+
+<div class="queue">
+  <h2>Your Queue</h2>
+  <ul id="queue-list">
+    {{#each model.q as |queueMovie|}}
+      <li>{{queueMovie}}</li><span class="remove" {{action "removeFromQueue" queueMovie}}>Remove From Queue</span>
+    {{/each}}
+  </ul>
+</div>
+
+<div class="movie-list">
+  <h2>Movies</h2>
+  <button id="previous" {{action "previousPage"}}>Previous</button>
+  <button id="next" {{action "nextPage"}}>Next</button>
+<table>
+    {{#each model.m as |movie|}}
+      <div class="poster" {{action "addToQueue" movie.title}}>
+          <p class="title">{{movie.title}}</p>
+          <p class="description">({{movie.release_date}}) - {{movie.overview}}</p>
+          <img
+          src='http://localhost:3000/images/posters/{{movie.poster_filename}}'>
+      </div>
+    {{/each}}
+</table>
+</div>

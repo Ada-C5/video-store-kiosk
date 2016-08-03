@@ -1,7 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
-    return this.store.findAll('movie');
+  queryParams: {
+    page: {
+      refreshModel: true
+    }
+  },
+
+  model(params) {
+    return this.store.query('movie', {
+      page: params.page,
+      size: 10
+    });
   }
 });

@@ -4,7 +4,7 @@
     <div class='movie'>
       <div style='hidden' id="deets" class="overview">
         {{movie.title}}<br>
-        {{movie.overview}}<br>
+        {{movie.miniOverview}}<br>
       </div>
       <div class="pic"><input class="image" ondblclick={{action "addToQueue" movie}} onclick={{action "info"}} type="image"  src="http://localhost:3000/images/posters/{{movie.poster_filename}}" data-id={{movie.id}} alt="movie poster" />
       </div>

@@ -1,20 +1,28 @@
 body {
 	padding: 0;
+	margin: 0;
 }
 
 head {
-	height: 100px;
 	display: block;
 	margin-left: 30px;
+	padding-bottom: 30px;
+	position: fixed;
+	background-color: white;
+	display: block;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
 }
 
 .movie-detail {
-	margin-left: 200px;
-	height: 100%;
-	width: 100%;
+	float: right;
+	width: 75%;
+	height: 80%;
 	position: relative;
-	overflow: auto;
-	display: inline-block;
+	margin-top: 125px;
+	margin-left: 400px;
+	text-align: center;
 }
 
 button#prev-next:hover {
@@ -29,7 +37,6 @@ button#prev-next:hover {
 	font-size: 100%;
 	border-radius: 4px;
 	text-align: center;
-	display: block;
 }
 
 button#add-queue {
@@ -53,10 +60,13 @@ button#add-queue {
 
 .sidebar {
 	position: fixed;
-	width: 400px;
-	height: 600px;
+	z-index: 10;
+	width: 20%;
+	height: 80%;
 	background-color: white;
 	display: inline-block;
 	margin-left: 30px;
+	margin-top: 125px;
 	overflow: scroll;
+	text-align: center;
 }

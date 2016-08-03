@@ -21,9 +21,9 @@
     <h2> {{movie.title}} </h2>
     <img class="poster" alt="poster of a movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
   </div>
-  <p class="hidden"> {{movie.release_date}} </p>
-  <p class="hidden"> {{movie.overview}} </p>
-  <p class="hidden"> {{movie.inventory}} </p>
+  <p class="hidden"> {{movie.year}} </p><br>
+  <p class="hidden"> {{movie.overview}} </p><br>
+  <p class="hidden"> {{movie.inventory}} </p><br>
   <p class="hidden"><button id="add-queue" {{action "addMovie" movie.title}}>Add to Queue</button></p>
   {{/each}}
 </div>

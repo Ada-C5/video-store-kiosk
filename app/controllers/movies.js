@@ -26,7 +26,6 @@ export default Ember.Controller.extend({
 
     removeFromQueue(title){
       this.get('queueArray').removeObject(title);
-      console.log(title);
     }
 
   }

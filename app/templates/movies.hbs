@@ -20,7 +20,7 @@
      <img class="poster" alt="cover image of movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
    </div>
    <p class="info">Synopsis: {{movie.overview}} </p>
-   <p class="info">Release Date: {{movie.release_date}} </p>
+   <p class="info">Release Date: {{movie.year}} </p>
    <p class="info">Inventory: {{movie.inventory}} </p>
    <p class="info"><button id="clear-completed" {{action "addToQueue" movie.title}}>Add to Queue</button></p>
  {{/each}}

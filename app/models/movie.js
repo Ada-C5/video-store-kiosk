@@ -7,4 +7,7 @@ export default DS.Model.extend({
  overview: DS.attr('string'),
  inventory: DS.attr('string'),
  poster_filename: DS.attr('string'),
+  year: Ember.computed('release_date', function() {
+    return this.get('release_date').slice(0,4)
+  })
 });

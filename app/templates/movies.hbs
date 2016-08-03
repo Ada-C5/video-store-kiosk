@@ -1,11 +1,19 @@
 <body>
+<head>
 <h1>Wouldst Thou Like a Movie</h1>
-<div class="sidebar">
-  <h2>Queue</h2>
-</div>
-
 <button id="prev-next" {{action "nextPage"}}>Next</button>
 <button id="prev-next" {{action "prevPage"}}>Previous</button>
+</head>
+<div class="sidebar">
+  <h2>Queue</h2>
+  <button id="prev-next" {{action "clearQueue"}}>Clear Queue</button>
+  {{#each queueArr as |title| }}
+  <ul>
+    <li>{{title}}<button id="prev-next" {{action "deleteMovie" title}}>Delete</button></li>
+  </ul>
+  {{/each}}
+</div>
+
 
 <div class="movie-detail">
   {{#each model as |movie|}}
@@ -16,7 +24,7 @@
   <p class="hidden"> {{movie.release_date}} </p>
   <p class="hidden"> {{movie.overview}} </p>
   <p class="hidden"> {{movie.inventory}} </p>
-  <p class="hidden"><button id="add-queue">Add to Queue</button></p>
+  <p class="hidden"><button id="add-queue" {{action "addMovie" movie.title}}>Add to Queue</button></p>
   {{/each}}
 </div>
 

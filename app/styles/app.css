@@ -350,7 +350,7 @@ label[for='toggle-all'] {
 }
 
 #clear-completed {
-	float: right;
+	float: center;
 	position: relative;
 	line-height: 20px;
 	text-decoration: none;
@@ -414,6 +414,7 @@ label[for='toggle-all'] {
 .movie-detail {
 	text-align: center;
 	padding-top: 2rem;
+	display:block;
 }
 
 .queue {

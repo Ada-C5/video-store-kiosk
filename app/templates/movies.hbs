@@ -1,6 +1,4 @@
-<div class="queue">
-  <p>This is the queue!</p>
-</div>
+<div class="queue">This is the queue!</div>
 
 <div class="top">
   <h1>Movies</h1>
@@ -17,7 +15,7 @@
    <p class="info">Synopsis: {{movie.overview}} </p>
    <p class="info">Release Date: {{movie.release_date}} </p>
    <p class="info">Inventory: {{movie.inventory}} </p>
-
+   <p class="info"><button id="clear-completed" {{action "addToQueue"}}>Add to Queue</button></p>
  {{/each}}
 </div>
 

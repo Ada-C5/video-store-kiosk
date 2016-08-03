@@ -48,7 +48,6 @@ img {max-width:100%;}
 
 /* flip speed goes here */
 .flipper {
-  transition-delay: 5s;
   transition: 0.8s;
   transform-style: preserve-3d;
 
@@ -58,7 +57,6 @@ img {max-width:100%;}
 /* hide back of pane during swap */
 .front, .back {
   backface-visibility: hidden;
-
   position: absolute;
   top: 0;
   left: 0;
@@ -74,6 +72,14 @@ img {max-width:100%;}
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  padding: 1rem;
+  padding: 2rem;
+  font-size: 1.4rem;
 }
 
+.title {
+  font-size: 18px
+}
+
+#grid {
+  padding-top: 110px;
+}

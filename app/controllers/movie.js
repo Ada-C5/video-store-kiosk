@@ -10,7 +10,9 @@ export default Ember.Controller.extend({
     },
     addtoqueue(movie) {
       var img_link = movie
-      this.get('queue').pushObject(img_link)
+      if (this.get('queue').includes(img_link) === false) {
+        this.get('queue').pushObject(img_link)
+      }
     }
   }
 });

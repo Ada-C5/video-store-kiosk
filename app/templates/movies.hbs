@@ -1,28 +1,34 @@
 {{outlet}}
 
-<h1>List of movies should be here, {{model.inventory}}</h1>
 
 
-<h2>Queue</h2>
 
-{{#each model.q as |queued|}}
-<li> {{queued}}</li>
-<button{{action "deQueue" queued}}> Remove from Queue</button>
-{{/each}}
 
+<div class="queue">
+
+  {{#each model.q as |queued|}}
+  <li> {{queued}}</li>
+  <button{{action "deQueue" queued}}>
+</button>
+  {{/each}}
+
+</div>
 
 
 
 {{#each model.m as |movie|}}
     <li>{{ movie.title}}</li>
-    <button{{action "enQueue" movie.title}}>add to queue</button>
+    <button class="poster"{{action "enQueue" movie.poster_filename}}>
+
+    <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+
+    </button>
     <button {{action "lessInfo"}}>Less Info</button>
     {{#link-to "movie" movie.title}}<br>
 
-    more info
+    <button>more info</button>
       <li class='info'>
       </li>
-      <!-- <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">-->
 {{/link-to}}
 {{/each}}
 

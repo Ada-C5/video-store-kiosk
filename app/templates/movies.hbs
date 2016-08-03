@@ -1,5 +1,10 @@
-<button id="clear-completed" {{action "nextPage"}}>Next</button>
-<button id="clear-completed" {{action "prevPage"}}>Previous</button>
+<body>
+
+<div class="sidebar">
+</div>
+
+<button id="prev-next" {{action "nextPage"}}>Next</button>
+<button id="prev-next" {{action "prevPage"}}>Previous</button>
 
 <div class="movie-detail">
   {{#each model as |movie|}}
@@ -14,3 +19,4 @@
 </div>
 
 {{outlet}}
+</body>

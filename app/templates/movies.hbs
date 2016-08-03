@@ -6,11 +6,8 @@
       <button {{action "deleteQueue"}} class="btn btn-danger">
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
       </button>
-    {{else}}
-      Empty!
     {{/if}}
 
-    <br>
     <div class="navbar-header">
       <p class="navbar-text">
         {{#each model.q as |movie|}}
@@ -38,14 +35,10 @@
 {{outlet}}
 </div>
 
-<br>
-<div class="row">
+<div class="allmovies">
   {{#each model.m as |movie|}}
-    <div class="col-md-3">
       {{#link-to "movie" movie.title}}
         <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail">
       {{/link-to}}
-        <br><br>
-    </div>
   {{/each}}
 </div>

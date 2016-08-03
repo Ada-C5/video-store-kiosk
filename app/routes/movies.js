@@ -7,7 +7,7 @@ export default Ember.Route.extend({
     return this.store.query('movies', query)
     .then((movies)=> {
       var queue = this.controllerFor('movie').get('queue')
-      // console.log(movies)
+      console.log(queue)
       return { q: queue, m: movies }
     })
     .catch(function (error) { console.log("Failed to load movies") })
@@ -18,12 +18,5 @@ export default Ember.Route.extend({
       refreshModel: true
     }
   },
- //
- //  actions: {
- //   getqueue: function() {
- //     var queue = this.controllerFor('movie').get('queue')
- //     alert(queue);
- //   }
- // }
 
 });

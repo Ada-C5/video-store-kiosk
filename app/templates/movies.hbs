@@ -1,3 +1,16 @@
 <p>Title: {{model.title}} ({{model.releaseDate}})</p>
 <p>Description: {{model.overview}}</p>
 <p>Inventory: {{model.inventory}}</p>
+
+
+
+<button {{action "prev"}}> << </button>
+<button {{action "next"}}> >> </button>
+
+{{#each model.movies as |movie|}}
+  <div class="movie">
+   <img class="poster" src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+   <h2 class="name">{{movie.title}}</h2>
+    <div class="hidden">{{movie.releaseDate}}{{movie.overview}}</div>
+  </div>
+{{/each}}

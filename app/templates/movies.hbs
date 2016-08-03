@@ -2,9 +2,14 @@
   <div class="container-fluid">
     Your Queue
     <br>
-    <button {{action "deleteQueue"}} class="btn btn-danger">
-      <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
-    </button>
+    {{#if model.q}}
+      <button {{action "deleteQueue"}} class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+      </button>
+    {{else}}
+      Empty!
+    {{/if}}
+
     <br>
     <div class="navbar-header">
       <p class="navbar-text">

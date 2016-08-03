@@ -20,6 +20,11 @@ export default Ember.Controller.extend({
       this.queueArray.pushObject(title);
       console.log(this.queueArray);
       console.log(this.queueArray.length);
+    },
+
+    clearQueue(){
+      (this.queueArray).set("[]");
+      console.log(this.queueArray.length);
     }
 
   }

@@ -1,4 +1,5 @@
 <div class="queue">
+  <button id="clear-completed" {{action "clearQueue"}}>Clear Queue</button>
   {{#each queueArray as |title|}}
     <ul>
       <li>{{title}}</li>

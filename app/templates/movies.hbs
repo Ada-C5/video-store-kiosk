@@ -2,7 +2,7 @@
   <button id="clear-completed" {{action "clearQueue"}}>Clear Queue</button>
   {{#each queueArray as |title|}}
     <ul>
-      <li>{{title}}</li>
+      <li>{{title}} <button id="clear-completed" {{action "removeFromQueue" title}}>Remove</button></li>
     </ul>
   {{/each}}
 </div>

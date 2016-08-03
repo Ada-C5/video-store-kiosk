@@ -18,13 +18,15 @@ export default Ember.Controller.extend({
 
     addToQueue(title){
       this.queueArray.pushObject(title);
-      console.log(this.queueArray);
-      console.log(this.queueArray.length);
     },
 
     clearQueue(){
       (this.queueArray).set("[]");
-      console.log(this.queueArray.length);
+    },
+
+    removeFromQueue(title){
+      this.get('queueArray').removeObject(title);
+      console.log(title);
     }
 
   }

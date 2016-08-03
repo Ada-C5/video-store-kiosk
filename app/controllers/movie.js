@@ -2,13 +2,16 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   selected: true,
+  queue: [],
+
   actions: {
     unselect: function() {
       this.transitionToRoute('movies');
     },
     queue(movie) {
-      var img_link = "<img src=" + "http://localhost:3000/images/posters/" + movie + " " + "class=" + "queueimg" + ">"
-      $('.navbar-text').append(img_link)
+      var img_link = movie
+      this.get('queue').pushObject(img_link);
+      alert(this.get('queue'))
     }
   }
 });

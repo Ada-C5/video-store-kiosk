@@ -14,7 +14,7 @@ export default Ember.Controller.extend({
         this.set("page", (this.page+1));
       }
     },
-    
+
     previousPage() {
       if (this.page - 1 >= 1) {
         this.transitionToRoute('movies');

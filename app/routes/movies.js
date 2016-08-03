@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 
     let page = params.page
     let pageNumber = page || 1
-    return this.get('ajax').request('http://localhost:3000/?page=' + pageNumber + '&size=10')
+    return this.get('ajax').request('http://localhost:3000/?page=' + pageNumber + '&size=50')
     .then((movies)=>{ var queue = this.controllerFor('movies').get('queue')
         console.log(queue)
       return {q: queue, m: movies}

@@ -12,17 +12,17 @@
   {{/each}}
 </div>
 
-
+<div class="movies">
 
 {{#each model.m as |movie|}}
     <button class="poster"{{action "enQueue" movie.poster_filename}}>
     <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
     </button>
-    <button {{action "lessInfo"}}>Less Info</button>
     {{#link-to "movie" movie.title}}
-    <button>more info</button>
+    <button{{over-view movie=movie}}>more info</button>
     {{/link-to}}
 {{/each}}
+</div>
 
 
 

@@ -4,12 +4,10 @@ export default Ember.Controller.extend({
 
   page: 0,
   queue: [],
+  isExpanded:false,
 
 
 
-
-
-  //Ember.compute('model.moreInfo')//this is the
 
 
   ajax: Ember.inject.service(),
@@ -24,10 +22,6 @@ export default Ember.Controller.extend({
       this.set('page', prevTen )
     },
 
-    lessInfo(){
-      this.transitionToRoute('movies')
-    },
-
 
     enQueue(title){
        this.set('model.q', this.get('model.q').addObject(title))
@@ -37,36 +31,13 @@ export default Ember.Controller.extend({
     deQueue(title){
       this.set('model.q', this.get('model.q').removeObject(title))
 
+    },
+
+    toggleDetails(){
+      this.toggleProperty('isExpanded')
     }
+
+
   }
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Ember from 'ember';
-//
-// export default Ember.Controller.extend({
-//   actions: {
-//     nextTen: function(){
-//
-//
-//     }
-//
-//     previousTen: function(){
-//
-//     }
-//
-//   }
-//
-// });

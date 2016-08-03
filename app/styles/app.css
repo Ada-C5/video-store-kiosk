@@ -16,13 +16,14 @@ h1, h2 {
 }
 
 .selectedmovie {
-  background-color: lightblue;
+  width: 60%;
   text-align: center;
 }
 
-.queue {
-  background-color: lightgreen;
-  text-align: center;
+.movieoutlet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .queueimg {

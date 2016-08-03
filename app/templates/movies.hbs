@@ -1,24 +1,15 @@
-<!-- <header id="header">
-  <h2>Movies</h2>
-</header> -->
-
 <button id="clear-completed" {{action "nextPage"}}>Next</button>
 <button id="clear-completed" {{action "prevPage"}}>Previous</button>
 
-<div class='container'>
+<div class="movie-detail">
   {{#each model as |movie|}}
-    <div {{action "toggleSelected"}}class="movie">
-      <p> {{movie.title}} </p>
-      <img class="poster" alt="poster of a movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
-      {{#if hover}}
-        <p>{{action showDeets movie.overview}}</p>
-        <div class="movie-detail" >
-          <p> {{movie.release_date}} </p>
-          <p> {{movie.overview}} </p>
-          <p> {{movie.inventory}} </p>
-        </div>
-      {{/if}}
-    </div>
+  <div {{action "toggleSelected"}}class="movie">
+    <p> {{movie.title}} </p>
+    <img class="poster" alt="poster of a movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+  </div>
+  <p class="hidden"> {{movie.release_date}} </p>
+  <p class="hidden"> {{movie.overview}} </p>
+  <p class="hidden"> {{movie.inventory}} </p>
   {{/each}}
 </div>
 

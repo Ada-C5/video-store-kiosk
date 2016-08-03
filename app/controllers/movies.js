@@ -5,7 +5,7 @@ export default Ember.Controller.extend({
 
   actions: {
     deleteQueue() {
-      $('.navbar-text').empty()
+      this.set("model.q", this.get("model.q").clear())
     },
 
     deleteFromQueue(movie) {

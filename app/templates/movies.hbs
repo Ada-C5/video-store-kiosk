@@ -9,7 +9,9 @@
     <div class="navbar-header">
       <p class="navbar-text">
         {{#each model.q as |movie|}}
-            <a href="#" {{action "deleteFromQueue" movie}}>{{movie}}</a>
+            <a href="#" {{action "deleteFromQueue" movie}}>
+              <img src="http://localhost:3000/images/posters/{{movie}}" class="queueimg">
+            </a>
         {{/each}}
       </p>
     </div>
@@ -23,11 +25,6 @@
 
   <button {{action "nextPage"}} class="btn btn-primary">
     <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-  </button>
-
-
-  <button {{action "getqueue"}} class="btn btn-primary">
-    TESTING FOR QUEUE ACTION IN ROUTE
   </button>
 
 </div>

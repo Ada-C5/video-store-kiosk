@@ -30,7 +30,8 @@ export default Ember.Controller.extend({
 
 
     enQueue(title){
-      this.set('model.q', this.get('model.q').addObject(title))
+       this.set('model.q', this.get('model.q').addObject(title))
+      console.log(this.get('model.q'))
     },
 
     deQueue(title){

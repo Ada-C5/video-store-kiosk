@@ -5,31 +5,23 @@
 
 
 <div class="queue">
-
   {{#each model.q as |queued|}}
-  <li> {{queued}}</li>
-  <button{{action "deQueue" queued}}>
+  <button class="button"{{action "deQueue" queued}}>
+  <img src="http://localhost:3000/images/posters/{{queued}}">
 </button>
   {{/each}}
-
 </div>
 
 
 
 {{#each model.m as |movie|}}
-    <li>{{ movie.title}}</li>
     <button class="poster"{{action "enQueue" movie.poster_filename}}>
-
     <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
-
     </button>
     <button {{action "lessInfo"}}>Less Info</button>
-    {{#link-to "movie" movie.title}}<br>
-
+    {{#link-to "movie" movie.title}}
     <button>more info</button>
-      <li class='info'>
-      </li>
-{{/link-to}}
+    {{/link-to}}
 {{/each}}
 
 

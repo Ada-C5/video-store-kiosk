@@ -2,7 +2,13 @@ html {
 
 }
 
+.button img{
+  height: 12rem;
+  width: 12rem;
+  border-radius: 10%;
+  box-shadow: 5px 5px 5px #888888;
 
+}
 .poster img {
   height: 12rem;
   width: 12rem;
@@ -24,8 +30,8 @@ html {
 
 
 .view-poster {
-  height: 18rem;
-  width: 18rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .overview{

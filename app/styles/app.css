@@ -1,0 +1,14 @@
+.flexbox-container {
+  display: flex;
+  align-items: inline-block;
+  align-content: space-around;
+}
+
+.poster {
+  width: 100px;
+  height: 130px;
+}
+
+isActive {
+  color: red;
+}

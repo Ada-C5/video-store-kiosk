@@ -15,15 +15,16 @@ export default Ember.Controller.extend({
     next(){
       if (this.page + 1 <= 10) {
         this.set("page", (this.page + 1));
-        // this.activate()
       }},
     prev(){
       if (this.page - 1 >= 1) {
         this.set("page", (this.page + 1));
-        // this.activate()
       }
-    }
-  }
+    },
+    changeClass() {Ember.on('click', function () {
+      this.toggleProperty('isActive');
+      })
+    }}
 });
 
 // showOverview(movieId) {

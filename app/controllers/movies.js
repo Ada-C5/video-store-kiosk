@@ -21,8 +21,13 @@ export default Ember.Controller.extend({
     addMovie: function(movie) {
       this.queueArray.pushObject(movie);
     },
+
     removeMovie: function(movie) {
       this.get('queueArray').removeObject(movie);
+    },
+
+    clearQueue(){
+      (this.queueArray).set("[]");
     }
   }
 });

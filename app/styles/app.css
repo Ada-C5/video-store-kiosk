@@ -49,13 +49,12 @@ button#add-queue {
 	display: block;
 }
 
-.hidden {
-  display: none;
-	width: inherit;
+.movie:hover > .hidden {
+  display: inline-block;
 }
 
-.movie-detail:hover > .hidden {
-  display: inline;
+.hidden {
+  display: none;
 }
 
 .sidebar {

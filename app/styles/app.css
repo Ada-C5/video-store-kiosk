@@ -1,0 +1,169 @@
+body {
+  background-color: #222222; 
+  color: #FFFFFF;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center; 
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #222222;
+}
+
+aside {
+  border-left: 2px solid white;
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+button {
+  background-color: #222222;
+  border: none;
+  color: #f85658;
+  font-size: 2.5rem;
+  margin: 10px;
+  transition: all .2s ease-in-out; 
+}
+
+button:hover {
+  box-shadow: 0 0 0.25rem 0.25rem #f85658;
+  cursor: pointer;
+  transform: scale(1.1);
+  
+}
+
+button:focus {
+  outline:0;
+}
+
+.delorean-doge {
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: -1955;
+}
+
+.controls {
+  text-align: center;
+}
+.container {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.movie img {
+  height: 500px; 
+  width: 300px;
+  padding: .3rem;
+  margin: 2rem;
+  transition: all .2s ease-in-out; 
+}
+
+.movie img:hover {
+  background-color: rgb(248,86,88);
+  box-shadow: 0 0 0.25rem 0.25rem #f85658;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.overview {
+  font-size: 1.25rem;
+}
+
+.modal { 
+  background-color: rgba(0,0,0,0.6);
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%; 
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #222222; 
+  border: 1px solid #888;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.6s;
+  animation-name: animatetop;
+  animation-duration: 0.6s
+}
+.close {
+  color: #f85658;
+  float: right;
+  font-size: 2.5rem;
+}
+
+button.close:hover,
+button.close:focus {
+ color: #f85658;
+ float: right;
+ font-size: 2.5rem;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #3bcfdb;
+  color: #FFFFFF;
+  padding: .25rem 1rem;
+}
+
+.thumb {
+  width: 100%;
+}
+
+.movie-queue {
+  height: 90%;
+  position: relative;
+  width: 150px;
+}
+
+.movie-queue .after {
+  color: #FFF;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.movie-queue:hover .after{
+  background: rgba(0, 0, 0, 0.8);
+  color: #f85658;
+  cursor: pointer;
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes animatetop {
+  from {top: -300px; opacity: 0} 
+  to {top: 0; opacity: 1}
+}

@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.query('movie', {
       page: params.page,
-      size: 10
+      size: 12
     });
   }
 });

@@ -1,5 +1,12 @@
 {{outlet}}
-
+  <div class="queue">
+    {{#each queueArray as |movie|}}
+      <div class= "col-md-1">
+        <img class="thumbnail" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+      </div>
+    {{/each}}
+</div>
+<br>
 {{#each model as |movie|}}
   <div class= "col-md-4">
     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -11,6 +18,7 @@
           <p class= "title"><b>{{movie.title}}</b></p>
           <p class= "overview"><b>Synopsis:</b> <br>{{movie.overview}}</p>
           <p class= "date"><b>Released: </b>{{movie.year}}</p>
+          <button {{action "addMovie" movie}}>Add to Queue</button>
         </div>
       </div>
     </div>

@@ -72,6 +72,7 @@ img {max-width:100%;}
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
+  background-color: #fff0e6;
   padding: 2rem;
   font-size: 1.4rem;
 }
@@ -82,4 +83,10 @@ img {max-width:100%;}
 
 #grid {
   padding-top: 110px;
+}
+
+.queue {
+  display: block;
+  text-align: center;
+  margin: auto;
 }

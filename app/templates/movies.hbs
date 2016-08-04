@@ -35,7 +35,7 @@
 <div class="allmovies">
   {{#each model.m as |movie|}}
       {{#link-to "movie" movie.title}}
-        <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail">
+        <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail all-movie-img">
       {{/link-to}}
   {{/each}}
 </div>

@@ -13,7 +13,7 @@ export default Ember.Controller.extend({
     },
     prevPage(){
       if (this.page > 1) {
-        this.set('page', this.page - 1)
+        this.set('page', this.page - 1);
       }
     },
     addMovie(movie) {
@@ -29,7 +29,6 @@ export default Ember.Controller.extend({
     clearQueue() {
       var queueArray = this.get('queue');
       queueArray.clear();
-      this.queueEmpty;
     }
   }
 });

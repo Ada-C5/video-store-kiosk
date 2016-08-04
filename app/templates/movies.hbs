@@ -1,0 +1,20 @@
+<h2>Showing the Movies</h2>
+<!-- {{outlet}} -->
+<button class="prev" {{action "pageBack"}}> Previous </button>
+<button class="next" {{action "pageForward"}}> Next </button>
+
+{{#each model as |movieBox|}}
+  {{movie-listing movie=movieBox addToQueue=(action "addMovie")}}
+{{/each}}
+
+<aside>
+  <h1>Your Queue</h1>
+  <button class="clearQueue" {{action "clearQueue"}}>Clear your Queue</button>
+
+  {{#each queue as |queueMovie|}}
+    <img class="queueImage" src="http://localhost:3000/images/posters/{{queueMovie.poster_filename}}">
+    <button class="deleteFromQueue" {{action "deleteFromQueue" queueMovie}}>Delete</button>
+  {{/each}}
+</aside>
+
+{{outlet}}

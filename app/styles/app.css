@@ -1,0 +1,48 @@
+html { font: normal normal 16px/1.2 serif; }
+
+/** { margin: 0; padding: 0; }*/
+
+body {
+  background: #abc;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*ul {
+  width: 75%;
+  float: left;
+}*/
+
+li {
+  list-style: none;
+}
+
+/*aside {
+  width: 20%;
+  float: right;
+  text-align: center;
+}*/
+
+img {
+  width: 100%;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.show-body {
+  margin: 0 auto;
+}
+
+.movie-container {
+  width: 18%;
+  float:left;
+  margin: 0.5rem;
+}
+
+.queueImage {
+  width: 10%;
+}

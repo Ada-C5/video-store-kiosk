@@ -1,12 +1,23 @@
 {{outlet}}
   <div class="queue">
+  <div class= "container">
+  <div class="row">
+    <div class= "col-lg-12">
     {{#each queueArray as |movie|}}
-      <div class= "col-md-1">
+      <div class= "col-md-2">
         <img class="thumbnail" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+        <button {{action "removeMovie" movie}}>Remove</button>
       </div>
     {{/each}}
+  </div>
+  </div>
+</div>
 </div>
 <br>
+<div class="container">
+<div class="row">
+    <div class= "col-lg-12">
+    <h2>Movies</h2>
 {{#each model as |movie|}}
   <div class= "col-md-4">
     <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
@@ -24,6 +35,9 @@
     </div>
   </div>
 {{/each}}
+</div>
+</div>
+</div>
 
 <div class="buttons">
 <button {{action "previousPage"}}> Previous </button>

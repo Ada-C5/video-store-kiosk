@@ -27,12 +27,3 @@ export default Ember.Controller.extend({
       })
     }}
 });
-
-// showOverview(movieId) {
-//   let q = this.get('model.movies').find(function (model) {return model.id === movieId})
-//   q.set('selected', 'selected')
-// }
-//
-// hideOverview
-// ...
-// q.set('selected', '')

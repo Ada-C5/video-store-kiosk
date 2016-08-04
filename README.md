@@ -10,12 +10,12 @@ __Project API:__ I've provided a [Node/Express app to act as the project's backe
 
 ### Primary View
 - Show a paginated collection of Movies, __10 per page__ ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
-- Allow a user to interact/select a Movie via click, touch, or some other event
+- Allow a user to interact/select a Movie via click, touch, or some other event ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
   - when selected, a Movie shows more information ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
   - when deselected, a Movie returns to its default state ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
   - only 1 movie can be selected at a time ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
   - selecting a second movie deselects the first ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
-- When a Movie is selected, it can be added to the Queue
+- When a Movie is selected, it can be added to the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 - Changing pages deselects all Movies ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 - Changing pages does not clear the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 

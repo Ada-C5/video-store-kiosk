@@ -1,0 +1,41 @@
+<div class="queue-menu">
+<div class="row">
+{{#bs-accordion}}
+  {{#bs-accordion-item value="1" title="your queue"}}
+    <p class="nothing-added">nothing added yet!</p>
+    {{#each queue as |movie|}}
+      <div class="show-image">
+        <a href="#" class="remove-queue">
+        <img src="http://localhost:3000/images/posters/{{movie}}" class="queue-img"> <span class="remove-btn"><button {{action "removeMovie" movie}}>remove from queue</button></span></a>
+      </div>
+    {{/each}} 
+    <button class="queue-clear" {{action "clearQueue"}}>clear queue</button>
+  {{/bs-accordion-item}}
+{{/bs-accordion}} 
+</div>
+</div>
+
+<div id="movie-container" class="col-md-10">
+  {{#each model as |movie|}}
+    <div class="poster">
+      <div class="box">
+        <a class="button" href="#popup1" {{action "selectMovie" movie.title movie.overview}}><img src="http://localhost:3000/images/posters/{{movie.poster_filename}}"></a></div><br>
+        <div id="popup1" class="overlay">
+          <div class="popup">
+            <h2>{{displayTitle}}</h2>
+            <a class="close" href="#" {{action "closeMovie"}}>&times;</a>
+            <div class="content">
+              {{displayOverview}}<br>
+              <button class="queue overview" id="btn-text" onclick={{action "addMovie" movie.poster_filename}}>add to queue</button>
+            </div>
+          </div>
+         </div>
+    <div class="queue-button">
+      <button class="queue" id="btn-text" onclick={{action "addMovie" movie.poster_filename}}>add to queue</button>
+    </div>
+  </div> 
+  {{/each}}
+</div>
+
+<button class="prev" onclick={{action "prevPage"}}>Previous</button>
+<button class="next" onclick={{action "nextPage"}}>Next</button>

@@ -4,13 +4,8 @@
     margin-bottom: 1rem;
 }
 
-.imgwrapper {
-  display: inline;
-}
-
 h1, h2 {
   text-align: center;
-  color: red;
 }
 
 .buttons {
@@ -76,8 +71,4 @@ h1, h2 {
   margin-bottom: 2rem;
   height: 10rem;
   width: 10rem;
-}
-
-a {
-  text-decoration: none;
 }

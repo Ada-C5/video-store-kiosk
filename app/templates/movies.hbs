@@ -15,6 +15,8 @@
       <tbody>
       {{#each model as |movies|}}
         <td>
+          <!-- access the component movie-listing, and pass along these two things (movie and addtoqueue) that are being set here to values -->
+          <!-- components dont know about anything, so anything you want it to know about, you need to give it, like this -->
           {{movie-listing movie=movies addToQueue=(action 'addMovie')}}
 
         </td>
@@ -22,6 +24,11 @@
         {{/each}}
       </tbody>
     </table>
+
+
+
+
+
 
 <div class="things">
   <div class="queue-section">

@@ -28,7 +28,6 @@ body {
 }
 
 .inventory {
-  /*text-align: center;*/
   display: inline-block;
   float: left;
   padding: 0 0 0 43%;

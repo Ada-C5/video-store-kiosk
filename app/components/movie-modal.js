@@ -5,7 +5,9 @@ export default Ember.Component.extend({
   actions: {
     ok: function() {
       this.$('.modal').modal('hide');
-      this.sendAction('addQueue'); //This should add to queue
+    },
+    addQueue: function(movie) {
+      this.sendAction('addQueue', movie); //This should add to queue
     }
   }
 });

@@ -10,10 +10,8 @@
   </section>
 
   {{/each}}
-
-  {{#movie-modal movie=modalMovie}}
+  {{#movie-modal movie=modalMovie addQueue=(action 'addQueue')}}
   {{/movie-modal}}
-
 
   <section>
     <button class="btn btn-primary glyphicon glyphicon-chevron-left" {{action "prevPage"}}></button>

@@ -1,0 +1,22 @@
+{{yield}}
+
+<div class='movie-container' {{action "toggleDetails"}}>
+  <a class="add-overlay" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+  <img src="http://localhost:3000/images/posters/{{movie.posterFilename}}">
+</div>
+
+{{#if isExpanded}}
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close" {{action "toggleDetails"}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+      <h2>
+      {{movie.title}}
+      <a class="add-to-queue" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+      </h2>
+      <p class="overview">{{movie.overview}}</p>
+      <p>In stock: {{movie.inventory}}</p>
+    </div>
+
+  </div>
+{{/if}}

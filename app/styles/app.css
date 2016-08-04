@@ -54,12 +54,21 @@ h1, h2 {
 }
 
 .queuemovie {
-  background-color:red;
   float: left;
 }
 
+.overlay    {
+   opacity:0;
+   -webkit-transition: opacity .25s ease;
+   -moz-transition: opacity .25s ease;
+   text-align: center;
+ }
+
+.queuemovie:hover .overlay {
+               opacity:1;}
+
 .queuemovie:hover {
-    background-color:yellow;
+  background-color: gray;
 }
 
 .leftnavbtn {

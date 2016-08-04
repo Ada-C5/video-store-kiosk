@@ -18,8 +18,12 @@
     <div class="queuemovie">
       <a href="#" {{action "deleteFromQueue" movie}}>
         <img src="http://localhost:3000/images/posters/{{movie}}" class="queueimg">
-        <span>remove</span>
       </a>
+
+      <div class="overlay">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remove
+      </div>
+
     </div>
   {{/each}}
 </div>

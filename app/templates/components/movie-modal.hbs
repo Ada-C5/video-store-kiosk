@@ -1,0 +1,19 @@
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{movie.title}}</h4>
+        </div>
+        <div class="modal-body">
+          <p>{{movie.overview}}</p>
+          <br/>
+          <p>{{movie.release_date}}</p>
+        </div>
+        <div class="modal-footer">
+          <p class="inventory">Inventory: {{movie.inventory}}</p>
+          <button class="btn btn-success btn-xs glyphicon glyphicon-ok" {{action "addQueue" movie}}></button>
+        </div>
+      </div>
+    </div>
+  </div>

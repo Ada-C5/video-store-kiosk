@@ -1,0 +1,31 @@
+<h2>List of Movies</h2>
+
+<section class="col-md-9">
+  {{#each model.movies as |movie|}}
+
+  <section class="movie-card">
+    <img class="movie-poster" {{action "showModal" movie}} src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+    <p class="movie-title">{{movie.title}}</p>
+    <button class="btn btn-success btn-xs glyphicon glyphicon-ok" {{action "addQueue" movie}}></button>
+  </section>
+
+  {{/each}}
+  {{#movie-modal movie=modalMovie addQueue=(action 'addQueue')}}
+  {{/movie-modal}}
+
+  <section>
+    <button class="btn btn-primary glyphicon glyphicon-chevron-left" {{action "prevPage"}}></button>
+    <button class="btn btn-primary glyphicon glyphicon-chevron-right" {{action "nextPage"}}></button>
+  </section>
+</section>
+
+<aside class="col-md-3">
+  <h2>Queue</h2>
+  {{#each queue as |movie|}}
+  <p>
+    {{movie.title}}
+    <button {{action "removeQueue" movie}} class="glyphicon glyphicon-fire btn btn-danger btn-xs" aria-hidden="true"></button>
+  </p>
+  {{/each}}
+  <button class="btn btn-danger btn-xs glyphicon glyphicon-trash" {{action "resetQueue"}}></button>
+</aside>

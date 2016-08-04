@@ -5,6 +5,7 @@ export default Ember.Controller.extend({
   page: 1,
   size: 12,
   queueArray: Ember.A([]),
+  showArray: Ember.A([]),
   actions: {
     nextPage: function() {
       if (this.page <10) {
@@ -19,7 +20,9 @@ export default Ember.Controller.extend({
     },
 
     addMovie: function(movie) {
+      if (this.queueArray.includes(movie) !== true) {
       this.queueArray.pushObject(movie);
+      }
     },
 
     removeMovie: function(movie) {

@@ -1,0 +1,18 @@
+{{outlet}}
+
+
+
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close" {{action "lessInfo"}}>X</span>
+
+    {{model.title}}
+
+    <p>{{model.overview}}</p>
+    <p>In stock: {{model.inventory}}</p>
+    <br>
+  </div>
+
+</div>

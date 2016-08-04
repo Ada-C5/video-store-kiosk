@@ -1,0 +1,41 @@
+{{outlet}}
+
+
+
+
+
+<div class="queue">
+  {{#each model.q as |queued|}}
+  <button type="button" class="btn btn-primary" class="buttonBackground"{{action "deQueue" queued}}>
+  <img src="http://localhost:3000/images/posters/{{queued}}">
+</button>
+  {{/each}}
+  <h2>Your movies go Here</h2>
+</div>
+
+<div class="movies">
+
+{{#each model.m as |movie|}}
+    <button class="poster"{{action "enQueue" movie.poster_filename}}>
+    <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+    </button>
+    {{#link-to "movie" movie.title}}
+    <button type="button" class="btn btn-primary" {{over-view movie=movie}}>more info</button>
+    {{/link-to}}
+{{/each}}
+</div>
+
+
+
+<form {{action "clearQueue"}}>
+  <button type="button" class="btn btn-primary" type="submit">Clear</button>
+</form>
+
+
+<form {{action "nextTen" pageNumber on="submit"}}>
+  <button type="button" class="btn btn-primary"  type="submit">next page</button>
+</form>
+
+<form {{action "previousTen" pageNumber on="submit"}}>
+  <button type="button" class="btn btn-primary"  type="submit">previous page</button>
+</form>

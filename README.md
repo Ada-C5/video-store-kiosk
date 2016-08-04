@@ -43,3 +43,32 @@ What makes for a good kiosk user experience?
   - Show the appropriate number of Movies per page _based on the user's device_ (user agent)
 - Queue Sorting
   - Allow a user to sort their Queue by implmenting drag-and-drop controls
+
+
+
+
+
+models model function
+    - responsible for creating data object that template and controllers will use
+    - should wrap up
+    -uses promises
+
+routers
+  - return model object avaiable in template and controller
+  - information comes from routes
+  - mapping urls to functionality
+  - set up urls
+  - example this.rout('movies')
+      this.route('page')
+      this.route('queue')
+
+controllers are optional
+  - for establising how the user interacts with that data
+  - mostly plain javascript actions hash
+  -
+
+template are required
+  -models go to templates
+  -handlebars run a component {{#}} or output data {{}}
+  -define own components in components directory
+  -consuming the model actually called model

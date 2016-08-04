@@ -1,0 +1,25 @@
+<button {{action "prev"}}> << </button>
+<button {{action "next"}}> >> </button>
+
+<div class="flexbox-container">
+
+{{#each model as |movie|}}
+  <div class="movie">
+   <img class="poster" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+   <h2 class="name">{{movie.title}}</h2>
+    <div class="info isActive:false" {{action 'changeClass' on="click"}}>{{movie.release_date}}{{movie.overview}}</div>
+    <button {{action "addToQueue" movie}} >+</button>
+  </div>
+{{/each}}
+</div>
+
+<aside class="queue">
+  {{#each model.queue as |movie|}}
+    movie
+    <div class="movie">
+     <img class="poster" src="http://localhost:3000/images/posters/{{movie.poster_filename}}"/>
+     <h2 class="name"></h2>
+   </div>
+   {{/each}}
+   <button {{action "clearQueue"}}>clear</button>
+</aside>

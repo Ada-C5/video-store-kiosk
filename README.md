@@ -10,13 +10,13 @@ __Project API:__ I've provided a [Node/Express app to act as the project's backe
 
 ### Primary View
 - Show a paginated collection of Movies, __10 per page__ ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
-- Allow a user to interact/select a Movie via click, touch, or some other event
-  - when selected, a Movie shows more information
-  - when deselected, a Movie returns to its default state
-  - only 1 movie can be selected at a time
-  - selecting a second movie deselects the first
-- When a Movie is selected, it can be added to the Queue
-- Changing pages deselects all Movies
+- Allow a user to interact/select a Movie via click, touch, or some other event ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+  - when selected, a Movie shows more information ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+  - when deselected, a Movie returns to its default state ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+  - only 1 movie can be selected at a time ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+  - selecting a second movie deselects the first ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- When a Movie is selected, it can be added to the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Changing pages deselects all Movies ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 - Changing pages does not clear the Queue ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 
 ### Queue View
@@ -30,9 +30,9 @@ __Project API:__ I've provided a [Node/Express app to act as the project's backe
 ### User Experience
 What makes for a good kiosk user experience?
 
-- Prioritize finger-friendliness in page design and controls
-- Ensure text is clear, legible from a distance of 18 inches
-- Control the structure of the page at all times; appearing elements that disrupt/change the flow of the page makes for a jarring experience
+- Prioritize finger-friendliness in page design and controls ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Ensure text is clear, legible from a distance of 18 inches ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
+- Control the structure of the page at all times; appearing elements that disrupt/change the flow of the page makes for a jarring experience ![heartDone](http://www.greenamericatoday.org/images/icon-tiny-heart.jpg)
 
 ### Bonus Fun
 - Sorting

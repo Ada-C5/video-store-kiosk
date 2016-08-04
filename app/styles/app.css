@@ -1,0 +1,71 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+head {
+	display: block;
+	margin-left: 30px;
+	padding-bottom: 30px;
+	position: fixed;
+	background-color: white;
+	display: block;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+}
+
+.movie-detail {
+	float: right;
+	width: 75%;
+	height: 80%;
+	position: relative;
+	margin-top: 125px;
+	margin-left: 400px;
+	text-align: center;
+}
+
+button#prev-next:hover {
+	background-color: blue;
+}
+
+.movie-detail < button#prev-next {
+	position: fixed;
+	margin: 0;
+	padding: 5px;
+	border: 0;
+	font-size: 100%;
+	border-radius: 4px;
+	text-align: center;
+}
+
+button#add-queue {
+	margin: 0;
+	padding: 5px;
+	border: 0;
+	font-size: 100%;
+	border-radius: 4px;
+	text-align: center;
+	display: block;
+}
+
+.movie:hover > .hidden {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar {
+	position: fixed;
+	z-index: 10;
+	width: 20%;
+	height: 80%;
+	background-color: white;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 125px;
+	overflow: scroll;
+	text-align: center;
+}

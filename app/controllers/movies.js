@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
 
   page: 0,
   queue: [],
-  isExpanded:false,
+
 
 
 
@@ -35,6 +35,10 @@ export default Ember.Controller.extend({
 
     toggleDetails(){
       this.toggleProperty('isExpanded')
+    },
+
+    clearQueue(){
+      this.queue.clear()
     }
 
 

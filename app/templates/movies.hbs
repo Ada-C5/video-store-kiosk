@@ -26,13 +26,15 @@
 
 
 
-
+<form {{action "clearQueue"}}>
+  <button type="submit">Clear</button>
+</form>
 
 
 <form {{action "nextTen" pageNumber on="submit"}}>
-  <button type="submit">Next Page</button>
+  <button type="submit">next page</button>
 </form>
 
 <form {{action "previousTen" pageNumber on="submit"}}>
-  <button type="submit">Previous Page</button>
+  <button type="submit">previous page</button>
 </form>

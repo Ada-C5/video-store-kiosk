@@ -16,6 +16,7 @@ background-color: black;
   clear: top;
   float:left;
 }
+
 .buttonBackground:focus{
   outline: 0;
 }
@@ -26,12 +27,16 @@ background-color: black;
   width: 10rem;
   border-radius: 10%;
 
+
 }
 .buttonBackground{
   height: 15rem;
   width: 15rem;
   display: inline-block;
   background-color: black;
+  border-style: none;
+  background: transparent;
+
 }
 
 .button:focus{

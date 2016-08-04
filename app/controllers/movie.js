@@ -7,12 +7,13 @@ export default Ember.Controller.extend({
     unselect: function() {
       this.transitionToRoute('movies');
     },
-    
+
     addtoqueue(movie) {
       var img_link = movie
       if (this.get('queue').includes(img_link) === false) {
         this.get('queue').pushObject(img_link)
       }
+      this.transitionToRoute('movies');
     }
   }
 });

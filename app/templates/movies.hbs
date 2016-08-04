@@ -1,0 +1,32 @@
+<div class="queue">
+  <button id="clear-completed" {{action "clearQueue"}}>Clear Queue</button>
+  {{#each queueArray as |title|}}
+    <ul>
+      <li>{{title}} <button id="clear-completed" {{action "removeFromQueue" title}}>Remove</button></li>
+    </ul>
+  {{/each}}
+</div>
+
+<div class="top">
+  <h1>Movies</h1>
+  <button id="clear-completed" {{action "getNext"}}>Next</button>
+  <button id="clear-completed" {{action "getPrev"}}>Previous</button>
+</div>
+
+<div class='movie-detail'>
+ {{#each model as |movie|}}
+   <div {{action "toggleSelected"}}class="movie">
+     <h3> {{movie.title}} </h3>
+     <img class="poster" alt="cover image of movie" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+   </div>
+   <p class="info">Synopsis: {{movie.overview}} </p>
+   <p class="info">Release Date: {{movie.year}} </p>
+   <p class="info">Inventory: {{movie.inventory}} </p>
+   <p class="info"><button id="clear-completed" {{action "addToQueue" movie.title}}>Add to Queue</button></p>
+ {{/each}}
+</div>
+
+<button id="clear-completed" {{action "getNext"}}>Next</button>
+<button id="clear-completed" {{action "getPrev"}}>Previous</button>
+
+{{outlet}}

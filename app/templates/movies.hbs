@@ -1,25 +1,21 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+<div class="queuecontainer">
+  <div class="queueheader">
     Your Queue
-    <br>
+
     {{#if model.q}}
+    <br>
       <button {{action "deleteQueue"}} class="btn btn-danger">
         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Clear All
       </button>
-      <br>
     {{/if}}
-
-    <div class="navbar-header">
-      <p class="navbar-text">
-        {{#each model.q as |movie|}}
-            <a href="#" {{action "deleteFromQueue" movie}}>
-              <img src="http://localhost:3000/images/posters/{{movie}}" class="queueimg">
-            </a>
-        {{/each}}
-      </p>
-    </div>
   </div>
-</nav>
+
+  {{#each model.q as |movie|}}
+    <a href="#" {{action "deleteFromQueue" movie}}>
+      <img src="http://localhost:3000/images/posters/{{movie}}" class="queueimg">
+    </a>
+  {{/each}}
+</div>
 
 <div class="buttons">
   <button {{action "previousPage"}} class="btn btn-primary navbtn leftnavbtn">

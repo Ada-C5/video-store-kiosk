@@ -30,15 +30,24 @@ h1, h2 {
     margin-bottom: 2rem;
 }
 
+.queuecontainer {
+  background-color: red;
+  float:left;
+  min-height:100px;
+  width:100%;
+  clear: both;
+}
+
+.queueheader {
+  background-color: blue;
+  text-align: center;
+}
+
 .queueimg {
   width: 10rem;
   height: 12rem;
   padding-right: .5rem;
   /*padding-top: .5rem;*/
-}
-
-.container-fluid {
-  text-align: center;
 }
 
 .leftnavbtn {

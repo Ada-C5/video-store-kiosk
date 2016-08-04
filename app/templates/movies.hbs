@@ -1,0 +1,59 @@
+<div class="queuecontainer">
+
+  <div class="queueheader">
+    Your Queue
+
+    {{#if model.q}}
+    <br>
+      <button {{action "deleteQueue"}} class="btn btn-danger">
+        <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Clear All
+      </button>
+    {{else}}
+      <br><br>
+      No movies added yet...
+    {{/if}}
+  </div>
+
+  {{#each model.q as |movie|}}
+    <div class="queuemovie">
+      <a href="#" {{action "deleteFromQueue" movie}}>
+        <img src="http://localhost:3000/images/posters/{{movie}}" class="queueimg">
+      </a>
+
+      <div class="overlay">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Remove
+      </div>
+
+    </div>
+  {{/each}}
+</div>
+
+<div class="buttons">
+  <button {{action "previousPage"}} class="btn btn-primary navbtn leftnavbtn">
+    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+  </button>
+
+  <button {{action "nextPage"}} class="btn btn-primary navbtn rightnavbtn">
+    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+  </button>
+</div>
+
+<div class="movieoutlet">
+{{outlet}}
+</div>
+
+{{#each model.m as |movie|}}
+    {{#link-to "movie" movie.title}}
+      <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="img-thumbnail all-movie-img">
+    {{/link-to}}
+{{/each}}
+
+<div class="buttons">
+  <button {{action "previousPage"}} class="btn btn-primary navbtn leftnavbtn">
+    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+  </button>
+
+  <button {{action "nextPage"}} class="btn btn-primary navbtn rightnavbtn">
+    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+  </button>
+</div>

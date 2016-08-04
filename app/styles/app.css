@@ -1,0 +1,74 @@
+.all-movie-img {
+    width: 20%;
+    float: right;
+    margin-bottom: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.selectedmovie {
+  width: 60%;
+  text-align: center;
+  min-height:30rem;
+  max-height:30rem;
+}
+
+.movieoutlet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.queuecontainer {
+  background-color: lightblue;
+  float:left;
+  min-height:10rem;
+  width:100%;
+  clear: both;
+}
+
+.queueheader {
+  text-align: center;
+}
+
+.queueimg {
+  width: 10rem;
+  height: 12rem;
+  padding: .5rem;
+}
+
+.queuemovie {
+  float: left;
+}
+
+.overlay    {
+   opacity:0;
+   -webkit-transition: opacity .25s ease;
+   -moz-transition: opacity .25s ease;
+   text-align: center;
+ }
+
+.queuemovie:hover .overlay {
+               opacity:1;}
+
+.queuemovie:hover {
+  background-color: gray;
+}
+
+.leftnavbtn {
+  margin-right: 40rem;
+}
+
+.navbtn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 10rem;
+  width: 10rem;
+}

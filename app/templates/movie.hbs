@@ -1,0 +1,20 @@
+<div class="selectedmovie">
+
+  <h2> {{model.title}} </h2>
+  <br>
+  {{model.overview}}
+  <br><br>
+  Copies Available: {{model.inventory}}
+  <br><br>
+
+  <div class="selectedmoviebuttons">
+    <button {{action "addtoqueue" model.poster_filename}} class="btn btn-success">
+      <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add to Queue
+    </button>
+
+    <button {{action "unselect"}} class="btn btn-danger">
+      <span class="glyphicon glyphicon-zoom-out" aria-hidden="true"></span> Unselect
+    </button>
+  </div>
+
+</div>

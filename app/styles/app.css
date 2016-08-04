@@ -21,7 +21,6 @@ h1, h2 {
 .selectedmovie {
   width: 60%;
   text-align: center;
-  background-color:yellow;
   min-height:30rem;
   max-height:30rem;
 }
@@ -39,11 +38,9 @@ h1, h2 {
   min-height:10rem;
   width:100%;
   clear: both;
-  /*border-radius: 4rem;*/
 }
 
 .queueheader {
-  /*background-color: blue;*/
   text-align: center;
 }
 

@@ -16,12 +16,14 @@ h1, h2 {
 
 .buttons {
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .selectedmovie {
   width: 60%;
   text-align: center;
+  background-color:yellow;
+  min-height:30rem;
+  max-height:30rem;
 }
 
 .movieoutlet {
@@ -32,23 +34,23 @@ h1, h2 {
 }
 
 .queuecontainer {
-  background-color: red;
+  background-color: lightblue;
   float:left;
   min-height:10rem;
   width:100%;
   clear: both;
+  /*border-radius: 4rem;*/
 }
 
 .queueheader {
-  background-color: blue;
+  /*background-color: blue;*/
   text-align: center;
 }
 
 .queueimg {
   width: 10rem;
   height: 12rem;
-  padding-right: .5rem;
-  /*padding-top: .5rem;*/
+  padding: .5rem;
 }
 
 .leftnavbtn {
@@ -56,6 +58,8 @@ h1, h2 {
 }
 
 .navbtn {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   height: 10rem;
   width: 10rem;
 }

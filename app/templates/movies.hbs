@@ -1,0 +1,53 @@
+<div class="wholecontainer">
+  <h1></h1>
+
+<!-- {{model}} -->
+
+{{ model.meta.pagination.last.number }}
+{{name}}
+  <div class="moviescontainer">
+    <div class="left">
+      <button {{action 'prev'}} type="submit" class="prev">&lt;</button>
+    </div>
+    <div class="middle">
+      <ul>
+        {{#each model as |movie|}}
+          <li>
+            <div class="poster">
+              <button id="myBtn" {{action 'select' movie.title movie.overview movie.poster_filename}}>
+                <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}" class="image" alt="Movie">
+              </button>
+            </div>
+
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <button class="close" {{action 'close'}}>x</button>
+                  <h2>{{displayTitle}}</h2>
+                  <img class="displayImg" src="http://localhost:3000/images/posters/{{displayImg}}" alt="Movie">
+                  <p>{{displayOverview}} </p>
+                  <button id="queue" {{action 'queues' displayImg}}>              + Add to Queue</button>
+              </div>
+
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="right">
+      <button {{action 'next'}} type="submit" class="next">&gt;</button>
+    </div>
+  </div>
+
+  <div class="queuecontainer">
+    {{#each queue as |movie|}}
+    <!-- {{@index}}: {{this}} -->
+      <button {{action 'closequeue' movie @index}} id="queueclose" class="queueclose" >x</button>
+      <img class="queueImg" src="http://localhost:3000/images/posters/{{movie}}" alt="Movie" />
+    {{/each}}
+
+      <button {{action 'clearqueue'}} class="queueclear" {{action 'close'}}>clear</button>
+  </div>
+
+</div>
+ <!-- style="width:304px;height:228px;"> -->

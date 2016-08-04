@@ -53,6 +53,15 @@ h1, h2 {
   padding: .5rem;
 }
 
+.queuemovie {
+  background-color:red;
+  float: left;
+}
+
+.queuemovie:hover {
+    background-color:yellow;
+}
+
 .leftnavbtn {
   margin-right: 40rem;
 }

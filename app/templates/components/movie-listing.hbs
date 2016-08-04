@@ -1,0 +1,47 @@
+{{yield}}
+
+
+
+<div class="pic" {{action "toggleDetails"}}>
+  <!-- <input class="image" onclick={{action "info"}} type="image" src="http://localhost:3000/images/posters/{{movies.poster_filename}}" alt="movie poster" /> -->
+  <img src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+</div>
+<br>
+<div class="info">{{movie.title}}</div>
+
+
+
+
+
+{{#if isExpanded}}
+ <div id="myModal" class="modal">
+
+   <div class="modal-content">
+     <span class="close" {{action "toggleDetails"}}><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></span>
+     <h2>
+     {{movie.title}}
+     </h2>
+     <p>{{movie.overview}}</p>
+     <p>In stock: {{movie.inventory}}</p>
+     <div class="add">
+       <!-- this button has an action, and it is passing along movie bc the action takes an arguement ( this is to know which movie to add to the queue) -->
+        <a class="add-to-queue" {{action "addToQueue" movie}}><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span></a>
+        <p>Add to Queue</p>
+     </div>
+     <br>
+   </div>
+
+ </div>
+{{/if}}
+
+{{#if movieAdded}}
+<div id="myModal" class="modal">
+
+  <div class="modal-ok">
+    <p>Movie added to Queue</p>
+    <button type="button" class="btn btn-success" {{action "toggleDeets"}}>That's cool.</button>
+    <br>
+  </div>
+
+</div>
+{{/if}}

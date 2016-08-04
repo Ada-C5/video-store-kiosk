@@ -1,0 +1,56 @@
+<div class="stuffs">
+<br>
+  <div class= "buttons">
+
+    <button class="buttonLeft" {{action "previousPage"}}>◀︎</button>
+    <button class="buttonRight" {{action "nextPage"}}>▶︎</button>
+
+
+  </div>
+
+
+
+    <table class="table">
+
+      <tbody>
+      {{#each model as |movies|}}
+        <td>
+          <!-- access the component movie-listing, and pass along these two things (movie and addtoqueue) that are being set here to values -->
+          <!-- components dont know about anything, so anything you want it to know about, you need to give it, like this -->
+          {{movie-listing movie=movies addToQueue=(action 'addMovie')}}
+
+        </td>
+
+        {{/each}}
+      </tbody>
+    </table>
+
+
+
+
+
+
+<div class="things">
+  <div class="queue-section">
+    <h2 class="queue">Queue</h2>
+    <div class="queued-movies">
+      {{#each queue as |movie|}}
+        <div class="movie-queue">
+          <p class="queue-title">{{movie.title}} <a class="remove-queue" {{action 'removeMovie' movie}}><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span></a></p>
+          <div class='queue-poster'>
+            <img class="thumb" src="http://localhost:3000/images/posters/{{movie.poster_filename}}">
+          </div>
+        </div>
+      {{/each}}
+    </div>
+      <a {{action 'clearQueue'}}><h3 class="clear-all">Clear</h3></a>
+      <br>
+  </div>
+  <br>
+</div>
+<br>
+
+
+
+    {{outlet}}
+</div>
